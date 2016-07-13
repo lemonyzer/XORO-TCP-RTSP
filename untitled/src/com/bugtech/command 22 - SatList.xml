@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <parm>
+    <SatName>Nilesat</SatName>
+    <SatNo>0</SatNo>
+    <SatAngle>70</SatAngle>
+    <SatDir>1</SatDir>
+  </parm>
+  <parm>
+    <SatName>Badr 4/5/6</SatName>
+    <SatNo>1</SatNo>
+    <SatAngle>260</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Hotbird</SatName>
+    <SatNo>2</SatNo>
+    <SatAngle>130</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>ASTRA</SatName>
+    <SatNo>3</SatNo>
+    <SatAngle>192</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 3C</SatName>
+    <SatNo>4</SatNo>
+    <SatAngle>30</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Astra 4A</SatName>
+    <SatNo>5</SatNo>
+    <SatAngle>49</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 7A </SatName>
+    <SatNo>6</SatNo>
+    <SatAngle>70</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 9A </SatName>
+    <SatNo>7</SatNo>
+    <SatAngle>90</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 10A</SatName>
+    <SatNo>8</SatNo>
+    <SatAngle>100</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 16A </SatName>
+    <SatNo>9</SatNo>
+    <SatAngle>160</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 21A </SatName>
+    <SatNo>10</SatNo>
+    <SatAngle>216</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Astra 3A/3B</SatName>
+    <SatNo>11</SatNo>
+    <SatAngle>235</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Astra 2</SatName>
+    <SatNo>12</SatNo>
+    <SatAngle>282</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Arabsat 5A </SatName>
+    <SatNo>13</SatNo>
+    <SatAngle>305</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Arabsat 5A </SatName>
+    <SatNo>14</SatNo>
+    <SatAngle>305</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Astra 1G </SatName>
+    <SatNo>15</SatNo>
+    <SatAngle>315</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 33A </SatName>
+    <SatNo>16</SatNo>
+    <SatAngle>330</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat36A/B</SatName>
+    <SatNo>17</SatNo>
+    <SatAngle>360</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Paksat 1R </SatName>
+    <SatNo>18</SatNo>
+    <SatAngle>380</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Hellas Sat 2 </SatName>
+    <SatNo>19</SatNo>
+    <SatAngle>390</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Turksat 2A/3A</SatName>
+    <SatNo>20</SatNo>
+    <SatAngle>420</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Intelsat 12 </SatName>
+    <SatNo>21</SatNo>
+    <SatAngle>450</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Yamal 202 </SatName>
+    <SatNo>22</SatNo>
+    <SatAngle>490</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Yahsat 1A </SatName>
+    <SatNo>23</SatNo>
+    <SatAngle>525</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Express AM22 </SatName>
+    <SatNo>24</SatNo>
+    <SatAngle>530</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Bonum 1</SatName>
+    <SatNo>25</SatNo>
+    <SatAngle>560</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>NSS 12 </SatName>
+    <SatNo>26</SatNo>
+    <SatAngle>570</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_NSS 12 </SatName>
+    <SatNo>27</SatNo>
+    <SatAngle>570</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Intelsat 904 </SatName>
+    <SatNo>28</SatNo>
+    <SatAngle>600</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Intelsat 904 </SatName>
+    <SatNo>29</SatNo>
+    <SatAngle>600</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Intelsat 902 </SatName>
+    <SatNo>30</SatNo>
+    <SatAngle>620</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Intelsat 902 </SatName>
+    <SatNo>31</SatNo>
+    <SatAngle>620</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Intelsat 906 </SatName>
+    <SatNo>32</SatNo>
+    <SatAngle>642</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Intelsat 17 </SatName>
+    <SatNo>33</SatNo>
+    <SatAngle>660</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Intelsat 20</SatName>
+    <SatNo>34</SatNo>
+    <SatAngle>685</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Intelsat 20</SatName>
+    <SatNo>35</SatNo>
+    <SatAngle>685</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 70A </SatName>
+    <SatNo>36</SatNo>
+    <SatAngle>705</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Insat 3C/4CR</SatName>
+    <SatNo>37</SatNo>
+    <SatAngle>740</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_Insat 3C/4CR</SatName>
+    <SatNo>38</SatNo>
+    <SatAngle>740</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>ABS 1 </SatName>
+    <SatNo>39</SatNo>
+    <SatAngle>750</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Thaicom 5 </SatName>
+    <SatNo>40</SatNo>
+    <SatAngle>785</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Insat 2E/4A</SatName>
+    <SatNo>41</SatNo>
+    <SatAngle>830</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Intelsat 15 </SatName>
+    <SatNo>42</SatNo>
+    <SatAngle>852</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>ST 2 </SatName>
+    <SatNo>43</SatNo>
+    <SatAngle>880</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Yamal 201 </SatName>
+    <SatNo>44</SatNo>
+    <SatAngle>900</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Eutelsat 5</SatName>
+    <SatNo>45</SatNo>
+    <SatAngle>50</SatAngle>
+    <SatDir>1</SatDir>
+  </parm>
+  <parm>
+    <SatName>C_AsiaSat 3S </SatName>
+    <SatNo>46</SatNo>
+    <SatAngle>1055</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+  <parm>
+    <SatName>Telstar 18 </SatName>
+    <SatNo>47</SatNo>
+    <SatAngle>1380</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+</Command>

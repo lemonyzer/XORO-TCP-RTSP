@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.bugtech.Client">
+  <grid id="27dc6" binding="panelMain" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1569" height="879"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="1cb39" binding="panelSouth" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="line"/>
+        <children>
+          <tabbedpane id="727c" binding="tabbedPane3" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="7b839" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="JTextArea"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="3ed5e">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="fe64a" class="javax.swing.JTextArea" binding="textAreaCommands">
+                        <constraints/>
+                        <properties>
+                          <text value="Start0000156End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;998&quot;&gt;&lt;data&gt;GT-I9100&lt;/data&gt;&lt;uuid&gt;359778043456670-98:0C:82:A4:AC:4C&lt;/uuid&gt;&lt;/Command&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;3&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;23&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;16&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;22&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;24&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;12&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;0&lt;/FromIndex&gt;&lt;ToIndex&gt;99&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;100&lt;/FromIndex&gt;&lt;ToIndex&gt;199&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;200&lt;/FromIndex&gt;&lt;ToIndex&gt;299&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;300&lt;/FromIndex&gt;&lt;ToIndex&gt;399&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;400&lt;/FromIndex&gt;&lt;ToIndex&gt;499&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;500&lt;/FromIndex&gt;&lt;ToIndex&gt;599&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
+              <grid id="986c3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="JList"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="c2dbe" class="javax.swing.JList" binding="listCommands">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <enabled value="true"/>
+                      <model>
+                        <item value="Start0000156End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;998&quot;&gt;&lt;data&gt;GT-I9100&lt;/data&gt;&lt;uuid&gt;359778043456670-98:0C:82:A4:AC:4C&lt;/uuid&gt;&lt;/Command&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;3&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;23&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;16&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;22&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;24&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;12&quot; /&gt;"/>
+                        <item value="Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;"/>
+                        <item value="Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;0&lt;/FromIndex&gt;&lt;ToIndex&gt;99&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        <item value="Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;100&lt;/FromIndex&gt;&lt;ToIndex&gt;199&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        <item value="Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;200&lt;/FromIndex&gt;&lt;ToIndex&gt;299&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        <item value="Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;300&lt;/FromIndex&gt;&lt;ToIndex&gt;399&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        <item value="Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;400&lt;/FromIndex&gt;&lt;ToIndex&gt;499&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        <item value="Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;500&lt;/FromIndex&gt;&lt;ToIndex&gt;599&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                      </model>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </tabbedpane>
+        </children>
+      </grid>
+      <grid id="f13af" binding="panelEast" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="East"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <tabbedpane id="86e79" binding="tabbedPane2" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <tabPlacement value="2"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="9b3d0" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="TCP Frames"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="901e7" class="javax.swing.JList" binding="listRecvPaket">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="9ee5c" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Sat List"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="b1b71" class="javax.swing.JList" binding="listSat">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="902f9" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Transponder List"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="29941" class="javax.swing.JList" binding="listTp">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="5d93e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Channels"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="3a20c" class="javax.swing.JList" binding="listChan">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </tabbedpane>
+        </children>
+      </grid>
+      <grid id="6d6c5" binding="panelNorth" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="dcc0f" class="javax.swing.JTextField" binding="tfIP">
+            <constraints/>
+            <properties>
+              <text value="192.168.178.254"/>
+            </properties>
+          </component>
+          <component id="679ff" class="javax.swing.JTextField" binding="tfPort">
+            <constraints/>
+            <properties>
+              <text value="20000"/>
+            </properties>
+          </component>
+          <component id="6fb07" class="javax.swing.JButton" binding="btnConnect">
+            <constraints/>
+            <properties>
+              <text value="Connect"/>
+            </properties>
+          </component>
+          <component id="b7d92" class="javax.swing.JButton" binding="btnAutoSend">
+            <constraints/>
+            <properties>
+              <text value="Auto Send"/>
+            </properties>
+          </component>
+          <component id="cf3c3" class="javax.swing.JButton" binding="btnDisconnect">
+            <constraints/>
+            <properties>
+              <text value="Disconnect"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="36fb1" binding="panelWest" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="West"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="7714c" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="9d495" class="javax.swing.JList" binding="listXmlFiles">
+                <constraints/>
+                <properties>
+                  <model>
+                    <item value="command 0 - from 0 to 1.xml"/>
+                    <item value="command 22 - SatList - short.xml"/>
+                    <item value="command 24 - TransponderList - short.xml"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="6c787" class="javax.swing.JButton" binding="XMLTestButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <text value="XML Test"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="7059f" binding="panelCenter" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="line"/>
+        <children>
+          <tabbedpane id="fb7b" binding="tabbedPane1" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="ba46a" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="TCP Nachrichten Protokol"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="77ea7">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="fdd58" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
+              <grid id="b0033" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="XML Test"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <splitpane id="cb098">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="200" height="200"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <dividerLocation value="360"/>
+                      <dividerSize value="10"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="8545b" class="javax.swing.JTextArea" binding="textAreaCursor">
+                        <constraints>
+                          <splitpane position="left"/>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="Cursor"/>
+                        </properties>
+                      </component>
+                      <component id="55a5f" class="javax.swing.JTextArea" binding="textAreaIterator">
+                        <constraints>
+                          <splitpane position="right"/>
+                        </constraints>
+                        <properties>
+                          <toolTipText value="Iterator"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </splitpane>
+                </children>
+              </grid>
+              <grid id="76669" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="STSP Test"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </tabbedpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
