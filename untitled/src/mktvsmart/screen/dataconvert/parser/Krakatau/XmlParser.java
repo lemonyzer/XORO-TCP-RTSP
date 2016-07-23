@@ -1,4 +1,4 @@
-package mktvsmart.screen.dataconvert.parser.Krakatau.;
+package mktvsmart.screen.dataconvert.parser.Krakatau;
 
 public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser {
     public XmlParser()

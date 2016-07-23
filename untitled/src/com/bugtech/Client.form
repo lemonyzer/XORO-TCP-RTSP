@@ -25,7 +25,7 @@
               <grid id="7b839" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="JTextArea"/>
+                  <tabbedpane title="Auto Send Commands"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
@@ -40,7 +40,7 @@
                       <component id="fe64a" class="javax.swing.JTextArea" binding="textAreaCommands">
                         <constraints/>
                         <properties>
-                          <text value="Start0000156End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;998&quot;&gt;&lt;data&gt;GT-I9100&lt;/data&gt;&lt;uuid&gt;359778043456670-98:0C:82:A4:AC:4C&lt;/uuid&gt;&lt;/Command&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;3&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;23&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;16&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;22&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;24&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;12&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;0&lt;/FromIndex&gt;&lt;ToIndex&gt;99&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;100&lt;/FromIndex&gt;&lt;ToIndex&gt;199&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;200&lt;/FromIndex&gt;&lt;ToIndex&gt;299&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;300&lt;/FromIndex&gt;&lt;ToIndex&gt;399&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;400&lt;/FromIndex&gt;&lt;ToIndex&gt;499&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;500&lt;/FromIndex&gt;&lt;ToIndex&gt;599&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                          <text value="&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;190&lt;/FromIndex&gt;&lt;ToIndex&gt;190&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;7&lt;/FromIndex&gt;&lt;ToIndex&gt;07&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;219&lt;/FromIndex&gt;&lt;ToIndex&gt;220&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
                         </properties>
                       </component>
                     </children>
@@ -84,6 +84,64 @@
                   </component>
                 </children>
               </grid>
+              <grid id="ce6f7" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <tabbedpane title="Cmd Generator"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="b63df">
+                    <constraints border-constraint="Center"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="4c034" class="javax.swing.JTextArea" binding="textAreaGeneratedCommands">
+                        <constraints/>
+                        <properties>
+                          <text value="Start0000156End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;998&quot;&gt;&lt;data&gt;GT-I9100&lt;/data&gt;&lt;uuid&gt;359778043456670-98:0C:82:A4:AC:4C&lt;/uuid&gt;&lt;/Command&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;3&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;23&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;16&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;22&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;24&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;12&quot; /&gt;&#10;Start0000080End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;20&quot; /&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;0&lt;/FromIndex&gt;&lt;ToIndex&gt;99&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;100&lt;/FromIndex&gt;&lt;ToIndex&gt;199&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;200&lt;/FromIndex&gt;&lt;ToIndex&gt;299&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;300&lt;/FromIndex&gt;&lt;ToIndex&gt;399&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;400&lt;/FromIndex&gt;&lt;ToIndex&gt;499&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;Start0000146End&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;0&quot;&gt;&lt;parm&gt;&lt;FromIndex&gt;500&lt;/FromIndex&gt;&lt;ToIndex&gt;599&lt;/ToIndex&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;1000&quot;&gt;&lt;parm&gt;&lt;TvState&gt;0&lt;/TvState&gt;&lt;ProgramId&gt;00030028110301&lt;/ProgramId&gt;&lt;/parm&gt;&lt;/Command&gt;&#10;&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;Command request=&quot;1009&quot;&gt;&lt;parm&gt;&lt;TvState&gt;0&lt;/TvState&gt;&lt;ProgramId&gt;00030028110301&lt;/ProgramId&gt;&lt;/parm&gt;&lt;/Command&gt;"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <grid id="e8286" binding="JPanelControls" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="East"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="9497e" class="javax.swing.JButton" binding="btnGenerateCommands">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Generate Commands"/>
+                        </properties>
+                      </component>
+                      <component id="5b0eb" class="javax.swing.JTextField" binding="tfGenCmdTo">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value="40"/>
+                        </properties>
+                      </component>
+                      <component id="62d3d" class="javax.swing.JTextField" binding="tfGenCmdFrom">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value="0"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
             </children>
           </tabbedpane>
         </children>
@@ -105,6 +163,29 @@
             </properties>
             <border type="none"/>
             <children>
+              <grid id="5d93e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Channels"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="85dd4">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="3a20c" class="javax.swing.JList" binding="listChan">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
               <grid id="9b3d0" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
@@ -113,14 +194,19 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="901e7" class="javax.swing.JList" binding="listRecvPaket">
+                  <scrollpane id="31f47">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
-                  </component>
+                    <border type="none"/>
+                    <children>
+                      <component id="901e7" class="javax.swing.JList" binding="listRecvPaket">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
                 </children>
               </grid>
               <grid id="9ee5c" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -131,14 +217,19 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="b1b71" class="javax.swing.JList" binding="listSat">
+                  <scrollpane id="f73ab">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
-                  </component>
+                    <border type="none"/>
+                    <children>
+                      <component id="b1b71" class="javax.swing.JList" binding="listSat">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
                 </children>
               </grid>
               <grid id="902f9" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -149,32 +240,19 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="29941" class="javax.swing.JList" binding="listTp">
+                  <scrollpane id="4f21b">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
-                  </component>
-                </children>
-              </grid>
-              <grid id="5d93e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints>
-                  <tabbedpane title="Channels"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="3a20c" class="javax.swing.JList" binding="listChan">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="50"/>
-                      </grid>
-                    </constraints>
-                    <properties/>
-                  </component>
+                    <border type="none"/>
+                    <children>
+                      <component id="29941" class="javax.swing.JList" binding="listTp">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
                 </children>
               </grid>
             </children>
@@ -214,6 +292,13 @@
             <constraints/>
             <properties>
               <text value="Disconnect"/>
+            </properties>
+          </component>
+          <component id="1031f" class="javax.swing.JCheckBox" binding="checkBoxCustomLoginProcess">
+            <constraints/>
+            <properties>
+              <selected value="true"/>
+              <text value="use Auto Send Commands after Login"/>
             </properties>
           </component>
         </children>

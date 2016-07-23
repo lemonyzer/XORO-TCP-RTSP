@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <parm>
+    <SatName>Nilesat</SatName>
+    <SatNo>0</SatNo>
+    <SatAngle>70</SatAngle>
+    <SatDir>1</SatDir>
+  </parm>
+  <parm>
+    <SatName>Badr 4/5/6</SatName>
+    <SatNo>1</SatNo>
+    <SatAngle>260</SatAngle>
+    <SatDir>0</SatDir>
+  </parm>
+</Command>

@@ -73,7 +73,129 @@ public class GsZilb
         }
     }
 
-    public static byte[] UnCompress(byte[] a) throws IOException
+    public static byte[] UnCompress(byte[] compr) throws IOException
+    {
+        int comprLen = compr.length;
+        int uncomprLen = 500000;
+        byte[] uncompr = new byte[uncomprLen];
+        int err;
+
+        Inflater inflater = new Inflater();
+
+        inflater.setInput(compr);
+        inflater.setOutput(uncompr);
+
+        err=inflater.init();
+        CHECK_ERR(inflater, err, "inflateInit");
+
+        while(inflater.total_out<uncomprLen &&
+                inflater.total_in<comprLen) {
+
+            inflater.avail_in=inflater.avail_out=1; /* force small buffers */
+            err=inflater.inflate(JZlib.Z_NO_FLUSH);
+            if(err==JZlib.Z_STREAM_END)
+                break;
+
+            if (CHECK_ERR(inflater, err, "inflate"))
+                return null;
+
+        }
+
+        System.out.println("Inflater: total uncompressed data length = " + inflater.total_out);
+
+        return uncompr;
+
+    }
+
+    static boolean CHECK_ERR(ZStream z, int err, String msg) {
+        if(err != JZlib.Z_OK)
+        {
+            if(z.msg!=null)
+                System.out.print(z.msg+" ");
+            System.out.println(msg+" error: "+err);
+            return true;
+        }
+        return false;
+    }
+
+    public static byte[] UnCompressTranslated(byte[] compressedData) throws IOException
+    {
+        byte[] a0 = new byte[3145728];
+        try
+        {
+            java.io.ByteArrayInputStream in = new java.io.ByteArrayInputStream(compressedData);
+            com.jcraft.jzlib.ZInputStream zIn = new com.jcraft.jzlib.ZInputStream((java.io.InputStream)in);
+            java.io.DataInputStream dataIn = new java.io.DataInputStream((java.io.InputStream)zIn);
+            int nextReadLength = 1024;
+            int totalNumOfBytesRead = 0;
+            while(true)
+            {
+                int numberOfBytesActuallyRead  = dataIn.read(a0, totalNumOfBytesRead, nextReadLength);
+                if (numberOfBytesActuallyRead == -1)
+                {
+                    // end of stream
+                    byte[] a4 = new byte[totalNumOfBytesRead];
+                    System.arraycopy((Object)a0, 0, (Object)a4, 0, totalNumOfBytesRead);
+                    dataIn.close();
+                    zIn.close();
+                    in.close();
+                    return a4;
+                }
+                totalNumOfBytesRead += numberOfBytesActuallyRead;
+                nextReadLength += totalNumOfBytesRead;
+                while(nextReadLength > 3145728 - totalNumOfBytesRead)
+                {
+                    nextReadLength /= 2;
+                }
+            }
+        }
+        catch(java.io.IOException a5)
+        {
+            a5.printStackTrace();
+            throw a5;
+        }
+    }
+
+    public static byte[] UnCompressUNFINISHED(byte[] compressedData) throws IOException
+    {
+        byte[] a0 = new byte[3145728];
+        try
+        {
+            java.io.ByteArrayInputStream in = new java.io.ByteArrayInputStream(compressedData);
+            com.jcraft.jzlib.ZInputStream zIn = new com.jcraft.jzlib.ZInputStream((java.io.InputStream)in);
+            java.io.DataInputStream dataIn = new java.io.DataInputStream((java.io.InputStream)zIn);
+            int i = 1024;
+            int i0 = 0;
+            while(true)
+            {
+                // http://stackoverflow.com/questions/7475611/unknown-buffer-size-to-be-read-from-a-datainputstream-in-java
+                int numberOfBytesActuallyRead  = dataIn.read(a0, i0, i);
+                if (numberOfBytesActuallyRead == -1)
+                {
+                    // end of stream
+                    byte[] a4 = new byte[i0];
+                    System.arraycopy((Object)a0, 0, (Object)a4, 0, i0);
+                    dataIn.close();
+                    zIn.close();
+                    in.close();
+                    return a4;
+                }
+                i0 = i0 + numberOfBytesActuallyRead;
+                i = i + i0;
+                while(i > 3145728 - i0)
+                {
+                    i = i / 2;
+                }
+            }
+        }
+        catch(java.io.IOException a5)
+        {
+            a5.printStackTrace();
+            throw a5;
+        }
+    }
+
+    public static byte[] UnCompressSLOW(byte[] a) throws IOException
     {
         byte[] a0 = new byte[3145728];
         try

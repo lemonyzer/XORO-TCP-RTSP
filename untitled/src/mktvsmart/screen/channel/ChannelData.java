@@ -1,5 +1,6 @@
 package mktvsmart.screen.channel;
 
+import android.util.Log;
 import mktvsmart.screen.exception.ProgramNotFoundException;
 
 public class ChannelData {
@@ -258,6 +259,15 @@ public class ChannelData {
         return (java.util.List)(Object)a1;
     }
 
+    /**
+     * Param a == satList
+     * Param a0 == chanList
+     * Param s == Fav Groupe Name | SatList Name
+     * @param a
+     * @param a0
+     * @param s
+     * @return
+     */
     public static java.util.List getSatList(java.util.List a, java.util.List a0, String s)
     {
         java.util.ArrayList a1 = new java.util.ArrayList();
@@ -333,12 +343,17 @@ public class ChannelData {
         return mktvsmart.screen.channel.ChannelData.getInstance();
     }
 
+
+    // a received, xml-parsed mixed list
+    // a0 Tv Channel List
+    // a1 Radio Channel List
     private void separateRadioAndTv(java.util.List a, java.util.List a0, java.util.List a1)
     {
         if (a != null && a.size() != 0)
         {
             if (this.isRadioProgramNumOrderOfSmallestToLargest())
             {
+                // XORO platform == 8 => isRadioProgramNumOrderOfSmallestToLargest = FALSE
                 if (((mktvsmart.screen.dataconvert.model.DataConvertChannelModel)a.get(0)).GetProgramIndex() == 0)
                 {
                     a1.clear();
@@ -363,6 +378,7 @@ public class ChannelData {
             }
             else
             {
+                // XORO
                 Object a5 = a;
                 Object a6 = a0;
                 Object a7 = a1;
@@ -380,7 +396,15 @@ public class ChannelData {
                     }
                     i0 = i0 + 1;
                 }
+                System.out.println("separateRadioAndTv separated " + i0 + " elements");
             }
+            System.out.println("separateRadioAndTv results");
+            System.out.println("separateRadioAndTv mTvChannelList.size() =" + mTvChannelList.size());
+            System.out.println("separateRadioAndTv mTvChannelList.size() =" + mRadioChannelList.size());
+            Log.d("separateRadioAndTv", "");
+            Log.d("separateRadioAndTv", "");
+            Log.d("separateRadioAndTv", "");
+
         }
     }
 
@@ -635,6 +659,7 @@ public class ChannelData {
             a3.printStackTrace();
             a0 = a2;
         }
+        System.out.println("initChannelListData parsed " + ((java.util.List)a0).size() + " elements");
         this.separateRadioAndTv((java.util.List)a0, this.mTvChannelList, this.mRadioChannelList);
         return (java.util.List)a0;
     }

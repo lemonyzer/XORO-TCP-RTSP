@@ -1,7 +1,14 @@
 package mktvsmart.screen.dataconvert.model;
 
-/**
- * Created by it on 11.07.2016.
- */
-public class DataConvertInputMethodModel {
+public class DataConvertInputMethodModel
+{
+    private int keyCode;
+
+    public int getKeyCode() {
+        return this.keyCode;
+    }
+
+    public void setKeyCode(final int keyCode) {
+        this.keyCode = keyCode;
+    }
 }

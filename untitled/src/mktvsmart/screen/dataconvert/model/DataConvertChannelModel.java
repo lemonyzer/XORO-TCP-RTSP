@@ -1,5 +1,10 @@
 package mktvsmart.screen.dataconvert.model;
 
+import javafx.scene.control.ListCell;
+
+import javax.swing.*;
+import java.awt.*;
+
 public class DataConvertChannelModel implements java.io.Serializable {
     final private static long serialVersionUID = 1831321093741944842L;
     private int FavMark;
@@ -36,7 +41,7 @@ public class DataConvertChannelModel implements java.io.Serializable {
     private int videoPid;
 
     public String toString() {
-        return ProgramName;
+        return ProgramIndex + " " + ProgramName;
     }
 
     public DataConvertChannelModel()

@@ -1,7 +1,14 @@
 package mktvsmart.screen.dataconvert.model;
 
-/**
- * Created by it on 11.07.2016.
- */
-public class DataConvertRcuModel {
+public class DataConvertRcuModel
+{
+    private int keyValue;
+
+    public int getKeyValue() {
+        return this.keyValue;
+    }
+
+    public void setKeyValue(final int keyValue) {
+        this.keyValue = keyValue;
+    }
 }

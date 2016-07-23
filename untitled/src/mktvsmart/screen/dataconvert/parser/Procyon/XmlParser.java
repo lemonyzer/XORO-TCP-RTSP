@@ -1,7 +1,8 @@
-package mktvsmart.screen.dataconvert.parser.Procyon.;
+package mktvsmart.screen.dataconvert.parser.Procyon;
 
 import android.util.*;
 import mktvsmart.screen.*;
+import mktvsmart.screen.dataconvert.parser.DataParser;
 import mktvsmart.screen.gchat.bean.*;
 import java.io.*;
 import mktvsmart.screen.vlc.*;
@@ -11,6 +12,38 @@ import java.util.*;
 
 public class XmlParser implements DataParser
 {
+
+    public static final int DATACONVERTSORTMODEL = 13;
+    public static final int DATACONVERTCHANNELTYPPEMODEL = 12;
+    public static final int DATACONVERTCHANNELMODEL = 0;
+    public static final int DATACONVERTTIMEMODEL_1 = 7;
+    public static final int DATACONVERTTIMEMODEL_2 = 9 ;
+    public static final int DATACONVERTTIMEMODEL_3 = 1;
+    public static final int DATACONVERTTIMEMODEL_4 = 4;
+    public static final int DATACONVERTCONTROLMODEL = 2;
+    public static final int DATACONVERTUPDATEMODEL = 3;
+    public static final int GSEPGEVENT = 6;
+    public static final int DATACONVERTCHANNELMODEL_2 = 8;
+    public static final int DATACONVERTFAVORMODEL = 10;
+    public static final int DATACONVERTCONTROLMODEL_2 = 11;
+    public static final int DATACONVERTSTBINFOMODEL = 14;
+    public static final int STRING_DATACONVERTONEDATAMODEL = 15;
+    public static final int GMSCREENGLOBALINFO_AND_CURRENT_CHANNEL_TV_RADIO_TYPE = 17;
+    public static final int MAP = 16;
+    public static final int DATACONVERTSATMODEL = 18;
+    public static final int DATACONVERTTPMODEL = 19;
+    public static final int DATACONVERTPVRINFOMODEL = 20;
+    public static final int GSCHATSETTINGS = 21;
+    public static final int GSCHATSETTINGS_2 = 25;
+    public static final int DATACONVERTCHATMSGMODEL = 23;
+    public static final int GSCHATROOMINFO_AND_GSCHATUSER = 22;
+    public static final int GSCHATUSER = 24;
+    public static final int DATACONVERTGCHATCHANNELINFOMODEL = 26;
+    public static final int DATACONVERTUSERNAMEMODEL = 27;
+
+
+
+
     public byte[] IntToByteArray(final int n) {
         final byte[] array = new byte[8];
         for (int i = 0; i < 8; ++i) {
@@ -48,14 +81,14 @@ public class XmlParser implements DataParser
                     list = null;
                     break;
                 }
-                case 13: {
+                case DATACONVERTSORTMODEL: {
                     List<?> list2 = null;
                     DataConvertSortModel dataConvertSortModel = null;
                     final XmlPullParser pullParser = Xml.newPullParser();
                     pullParser.setInput(inputStream, "UTF-8");
                     i = pullParser.getEventType();
                     Label_0215_Outer:
-                    while (i != 1) {
+                    while (i != XmlPullParser.END_DOCUMENT) {
                         DataConvertSortModel dataConvertSortModel2 = dataConvertSortModel;
                         List<?> list3 = list2;
                         while (true) {
@@ -65,17 +98,17 @@ public class XmlParser implements DataParser
                                     dataConvertSortModel2 = dataConvertSortModel;
                                     break Label_0215;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list3 = new ArrayList<Object>();
                                     dataConvertSortModel2 = dataConvertSortModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser.next();
                                     dataConvertSortModel = dataConvertSortModel2;
                                     list2 = list3;
                                     continue Label_0215_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser.getName().equals("parm")) {
                                         dataConvertSortModel2 = new DataConvertSortModel();
                                         list3 = list2;
@@ -121,7 +154,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertSortModel2 = dataConvertSortModel;
                                     list3 = list2;
                                     if (pullParser.getName().equals("parm")) {
@@ -137,7 +170,7 @@ public class XmlParser implements DataParser
                     }
                     return list2;
                 }
-                case 12: {
+                case DATACONVERTCHANNELTYPPEMODEL: {
                     List<?> list4 = null;
                     DataConvertChannelTypeModel dataConvertChannelTypeModel = null;
                     final XmlPullParser pullParser2 = Xml.newPullParser();
@@ -154,17 +187,17 @@ public class XmlParser implements DataParser
                                     dataConvertChannelTypeModel2 = dataConvertChannelTypeModel;
                                     break Label_0623;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list5 = new ArrayList<Object>();
                                     dataConvertChannelTypeModel2 = dataConvertChannelTypeModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser2.next();
                                     dataConvertChannelTypeModel = dataConvertChannelTypeModel2;
                                     list4 = list5;
                                     continue Label_0623_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser2.getName().equals("parm")) {
                                         dataConvertChannelTypeModel2 = new DataConvertChannelTypeModel();
                                         list5 = list4;
@@ -187,7 +220,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertChannelTypeModel2 = dataConvertChannelTypeModel;
                                     list5 = list4;
                                     if (pullParser2.getName().equals("parm")) {
@@ -203,7 +236,7 @@ public class XmlParser implements DataParser
                     }
                     return list4;
                 }
-                case 0: {
+                case DATACONVERTCHANNELMODEL: {
 
                     /* ChannelList */
 
@@ -224,17 +257,17 @@ public class XmlParser implements DataParser
                                     dataConvertChannelModel2 = dataConvertChannelModel;
                                     break Label_0911;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list7 = new ArrayList<Object>();
                                     dataConvertChannelModel2 = dataConvertChannelModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser3.next();
                                     dataConvertChannelModel = dataConvertChannelModel2;
                                     list6 = list7;
                                     continue Label_0911_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser3.getName().equals("parm")) {
                                         dataConvertChannelModel2 = new DataConvertChannelModel();
                                         list7 = list6;
@@ -467,7 +500,7 @@ public class XmlParser implements DataParser
                                     }
                                     break;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertChannelModel2 = dataConvertChannelModel;
                                     list7 = list6;
                                     if (pullParser3.getName().equals("parm")) {
@@ -485,7 +518,7 @@ public class XmlParser implements DataParser
                     }
                     return list6;
                 }
-                case 7: {
+                case DATACONVERTTIMEMODEL_1: {
                     List<?> list8 = null;
                     DataConvertTimeModel dataConvertTimeModel = null;
                     final XmlPullParser pullParser4 = Xml.newPullParser();
@@ -506,17 +539,17 @@ public class XmlParser implements DataParser
                                     dataConvertTimeModel2 = dataConvertTimeModel;
                                     break Label_2555;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list9 = new ArrayList<Object>();
                                     dataConvertTimeModel2 = dataConvertTimeModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser4.next();
                                     dataConvertTimeModel = dataConvertTimeModel2;
                                     list8 = list9;
                                     continue Label_2555_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser4.getName().equals("parm")) {
                                         dataConvertTimeModel2 = new DataConvertTimeModel();
                                         list9 = list8;
@@ -539,7 +572,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertTimeModel2 = dataConvertTimeModel;
                                     list9 = list8;
                                     if (pullParser4.getName().equals("parm")) {
@@ -555,7 +588,7 @@ public class XmlParser implements DataParser
                     }
                     break;
                 }
-                case 9: {
+                case DATACONVERTTIMEMODEL_2: {
                     List<?> list10 = null;
                     Object o = null;
                     final XmlPullParser pullParser5 = Xml.newPullParser();
@@ -576,17 +609,17 @@ public class XmlParser implements DataParser
                                     o2 = o;
                                     break Label_2843;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list11 = new ArrayList<Object>();
                                     o2 = o;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser5.next();
                                     o = o2;
                                     list10 = list11;
                                     continue Label_2843_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser5.getName().equals("StbMonth")) {
                                         pullParser5.next();
                                         DataConvertTimeModel.stbMonth = Integer.parseInt(pullParser5.getText());
@@ -618,7 +651,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     o2 = o;
                                     list11 = list10;
                                     if (pullParser5.getName().equals("parm")) {
@@ -634,8 +667,8 @@ public class XmlParser implements DataParser
                     }
                     break;
                 }
-                case 1:
-                case 4: {
+                case DATACONVERTTIMEMODEL_3:
+                case DATACONVERTTIMEMODEL_4: {
                     List<?> list12 = null;
                     DataConvertTimeModel dataConvertTimeModel3 = null;
                     final XmlPullParser pullParser6 = Xml.newPullParser();
@@ -656,17 +689,17 @@ public class XmlParser implements DataParser
                                     dataConvertTimeModel4 = dataConvertTimeModel3;
                                     break Label_3195;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list13 = new ArrayList<Object>();
                                     dataConvertTimeModel4 = dataConvertTimeModel3;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser6.next();
                                     dataConvertTimeModel3 = dataConvertTimeModel4;
                                     list12 = list13;
                                     continue Label_3195_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser6.getName().equals("Confirm")) {
                                         pullParser6.next();
                                         DataConvertTimeModel.isConfirm = Integer.parseInt(pullParser6.getText());
@@ -759,7 +792,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertTimeModel4 = dataConvertTimeModel3;
                                     list13 = list12;
                                     if (pullParser6.getName().equals("parm")) {
@@ -775,7 +808,7 @@ public class XmlParser implements DataParser
                     }
                     break;
                 }
-                case 2: {
+                case DATACONVERTCONTROLMODEL: {
                     List<?> list14 = null;
                     DataConvertControlModel dataConvertControlModel = null;
                     final XmlPullParser pullParser7 = Xml.newPullParser();
@@ -792,17 +825,17 @@ public class XmlParser implements DataParser
                                     dataConvertControlModel2 = dataConvertControlModel;
                                     break Label_3967;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list15 = new ArrayList<Object>();
                                     dataConvertControlModel2 = dataConvertControlModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser7.next();
                                     dataConvertControlModel = dataConvertControlModel2;
                                     list14 = list15;
                                     continue Label_3967_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser7.getName().equals("parm")) {
                                         dataConvertControlModel2 = new DataConvertControlModel();
                                         dataConvertControlModel2.SetPowerOff(-1);
@@ -882,7 +915,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertControlModel2 = dataConvertControlModel;
                                     list15 = list14;
                                     if (pullParser7.getName().equals("parm")) {
@@ -898,7 +931,7 @@ public class XmlParser implements DataParser
                     }
                     return list14;
                 }
-                case 3: {
+                case DATACONVERTUPDATEMODEL: {
                     List<?> list16 = null;
                     DataConvertUpdateModel dataConvertUpdateModel = null;
                     final XmlPullParser pullParser8 = Xml.newPullParser();
@@ -915,17 +948,17 @@ public class XmlParser implements DataParser
                                     dataConvertUpdateModel2 = dataConvertUpdateModel;
                                     break Label_4651;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list17 = new ArrayList<Object>();
                                     dataConvertUpdateModel2 = dataConvertUpdateModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser8.next();
                                     dataConvertUpdateModel = dataConvertUpdateModel2;
                                     list16 = list17;
                                     continue Label_4651_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser8.getName().equals("parm")) {
                                         dataConvertUpdateModel2 = new DataConvertUpdateModel();
                                         list17 = list16;
@@ -955,7 +988,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertUpdateModel2 = dataConvertUpdateModel;
                                     list17 = list16;
                                     if (pullParser8.getName().equals("parm")) {
@@ -971,7 +1004,7 @@ public class XmlParser implements DataParser
                     }
                     return list16;
                 }
-                case 6: {
+                case GSEPGEVENT: {
                     int n = 0;
                     int n2 = 0;
                     List<?> list18 = null;
@@ -997,14 +1030,14 @@ public class XmlParser implements DataParser
                                     gsEPGEvent2 = gsEPGEvent;
                                     break Label_5026;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list19 = new ArrayList<Object>();
                                     gsEPGEvent2 = gsEPGEvent;
                                     i = n2;
                                     o4 = o3;
                                     n3 = n;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     j = pullParser9.next();
                                     gsEPGEvent = gsEPGEvent2;
                                     n2 = i;
@@ -1013,7 +1046,7 @@ public class XmlParser implements DataParser
                                     list18 = list19;
                                     continue Label_5026_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser9.getName().equals("prog_epg")) {
                                         o4 = new GsEPGTableChannel();
                                         gsEPGEvent2 = gsEPGEvent;
@@ -1244,7 +1277,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     if (pullParser9.getName().equals("prog_epg")) {
                                         list18.add(o3);
                                         o4 = null;
@@ -1283,7 +1316,7 @@ public class XmlParser implements DataParser
                     }
                     return list18;
                 }
-                case 8: {
+                case DATACONVERTCHANNELMODEL_2: {
                     List<?> list20 = null;
                     DataConvertChannelModel dataConvertChannelModel3 = null;
                     final XmlPullParser pullParser10 = Xml.newPullParser();
@@ -1300,17 +1333,17 @@ public class XmlParser implements DataParser
                                     dataConvertChannelModel4 = dataConvertChannelModel3;
                                     break Label_6663;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list21 = new ArrayList<Object>();
                                     dataConvertChannelModel4 = dataConvertChannelModel3;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser10.next();
                                     dataConvertChannelModel3 = dataConvertChannelModel4;
                                     list20 = list21;
                                     continue Label_6663_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser10.getName().equals("parm")) {
                                         dataConvertChannelModel4 = new DataConvertChannelModel();
                                         list21 = list20;
@@ -1333,7 +1366,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertChannelModel4 = dataConvertChannelModel3;
                                     list21 = list20;
                                     if (pullParser10.getName().equals("parm")) {
@@ -1349,7 +1382,7 @@ public class XmlParser implements DataParser
                     }
                     return list20;
                 }
-                case 10: {
+                case DATACONVERTFAVORMODEL: {
                     List<?> list22 = null;
                     DataConvertFavorModel dataConvertFavorModel = null;
                     final XmlPullParser pullParser11 = Xml.newPullParser();
@@ -1366,17 +1399,17 @@ public class XmlParser implements DataParser
                                     list23 = list22;
                                     break Label_6951;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list23 = new ArrayList<Object>();
                                     dataConvertFavorModel2 = dataConvertFavorModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser11.next();
                                     list22 = list23;
                                     dataConvertFavorModel = dataConvertFavorModel2;
                                     continue Label_6951_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser11.getName().equals("favMaxNum")) {
                                         pullParser11.next();
                                         DataConvertFavorModel.favorNum = Integer.parseInt(pullParser11.getText());
@@ -1406,7 +1439,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     list23 = list22;
                                     dataConvertFavorModel2 = dataConvertFavorModel;
                                     if (pullParser11.getName().equals("parm")) {
@@ -1422,7 +1455,7 @@ public class XmlParser implements DataParser
                     }
                     return list22;
                 }
-                case 11: {
+                case DATACONVERTCONTROLMODEL_2: {
                     List<?> list24 = null;
                     DataConvertControlModel dataConvertControlModel3 = null;
                     final XmlPullParser pullParser12 = Xml.newPullParser();
@@ -1439,17 +1472,17 @@ public class XmlParser implements DataParser
                                     list25 = list24;
                                     break Label_7291;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list25 = new ArrayList<Object>();
                                     dataConvertControlModel4 = dataConvertControlModel3;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser12.next();
                                     list24 = list25;
                                     dataConvertControlModel3 = dataConvertControlModel4;
                                     continue Label_7291_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser12.getName().equals("parm")) {
                                         dataConvertControlModel4 = new DataConvertControlModel();
                                         list25 = list24;
@@ -1486,7 +1519,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     list25 = list24;
                                     dataConvertControlModel4 = dataConvertControlModel3;
                                     if (pullParser12.getName().equals("parm")) {
@@ -1502,7 +1535,7 @@ public class XmlParser implements DataParser
                     }
                     return list24;
                 }
-                case 14: {
+                case DATACONVERTSTBINFOMODEL: {
                     List<?> list26 = null;
                     DataConvertStbInfoModel dataConvertStbInfoModel = null;
                     final XmlPullParser pullParser13 = Xml.newPullParser();
@@ -1519,17 +1552,17 @@ public class XmlParser implements DataParser
                                     dataConvertStbInfoModel2 = dataConvertStbInfoModel;
                                     break Label_7679;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list27 = new ArrayList<Object>();
                                     dataConvertStbInfoModel2 = dataConvertStbInfoModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser13.next();
                                     dataConvertStbInfoModel = dataConvertStbInfoModel2;
                                     list26 = list27;
                                     continue Label_7679_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser13.getName().equals("parm")) {
                                         dataConvertStbInfoModel2 = new DataConvertStbInfoModel();
                                         list27 = list26;
@@ -1580,7 +1613,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertStbInfoModel2 = dataConvertStbInfoModel;
                                     list27 = list26;
                                     if (pullParser13.getName().equals("parm")) {
@@ -1596,7 +1629,7 @@ public class XmlParser implements DataParser
                     }
                     return list26;
                 }
-                case 15: {
+                case STRING_DATACONVERTONEDATAMODEL: {
                     final XmlPullParser pullParser14 = Xml.newPullParser();
                     pullParser14.setInput(inputStream, "UTF-8");
                     List<?> list28 = null;
@@ -1613,17 +1646,17 @@ public class XmlParser implements DataParser
                                     o6 = o5;
                                     break Label_8159;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list29 = new ArrayList<Object>();
                                     o6 = o5;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser14.next();
                                     o5 = o6;
                                     list28 = list29;
                                     continue Label_8159_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     o6 = o5;
                                     list29 = list28;
                                     if (pullParser14.getName().equals("Data")) {
@@ -1633,7 +1666,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     o6 = o5;
                                     list29 = list28;
                                     if (pullParser14.getName().equals("parm")) {
@@ -1649,7 +1682,7 @@ public class XmlParser implements DataParser
                     }
                     return list28;
                 }
-                case 17: {
+                case GMSCREENGLOBALINFO_AND_CURRENT_CHANNEL_TV_RADIO_TYPE: {
                     final XmlPullParser pullParser15 = Xml.newPullParser();
                     pullParser15.setInput(inputStream, "UTF-8");
                     List<?> list30 = null;
@@ -1666,17 +1699,17 @@ public class XmlParser implements DataParser
                                     o8 = o7;
                                     break Label_8367;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list31 = new ArrayList<Object>();
                                     o8 = o7;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser15.next();
                                     o7 = o8;
                                     list30 = list31;
                                     continue Label_8367_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser15.getName().equals("cur_channel_list_type")) {
                                         pullParser15.next();
                                         o8 = new String(pullParser15.getText());
@@ -1715,7 +1748,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     o8 = o7;
                                     list31 = list30;
                                     if (pullParser15.getName().equals("parm")) {
@@ -1731,7 +1764,7 @@ public class XmlParser implements DataParser
                     }
                     return list30;
                 }
-                case 16: {
+                case MAP: {
                     final XmlPullParser pullParser16 = Xml.newPullParser();
                     pullParser16.setInput(inputStream, "UTF-8");
                     List<?> list32 = null;
@@ -1748,17 +1781,17 @@ public class XmlParser implements DataParser
                                     map2 = map;
                                     break Label_8791;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list33 = new ArrayList<Object>();
                                     map2 = map;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser16.next();
                                     map = map2;
                                     list32 = list33;
                                     continue Label_8791_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser16.getName().equals("success")) {
                                         pullParser16.next();
                                         map2 = new HashMap<String, Integer>();
@@ -1783,7 +1816,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     map2 = map;
                                     list33 = list32;
                                     if (pullParser16.getName().equals("parm")) {
@@ -1799,7 +1832,7 @@ public class XmlParser implements DataParser
                     }
                     return list32;
                 }
-                case 18: {
+                case DATACONVERTSATMODEL: {
                     final XmlPullParser pullParser17 = Xml.newPullParser();
                     pullParser17.setInput(inputStream, "UTF-8");
                     List<?> list34 = null;
@@ -1816,17 +1849,17 @@ public class XmlParser implements DataParser
                                     dataConvertSatModel2 = dataConvertSatModel;
                                     break Label_9119;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list35 = new ArrayList<Object>();
                                     dataConvertSatModel2 = dataConvertSatModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser17.next();
                                     dataConvertSatModel = dataConvertSatModel2;
                                     list34 = list35;
                                     continue Label_9119_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser17.getName().equals("parm")) {
                                         dataConvertSatModel2 = new DataConvertSatModel();
                                         list35 = list34;
@@ -1863,7 +1896,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertSatModel2 = dataConvertSatModel;
                                     list35 = list34;
                                     if (pullParser17.getName().equals("parm")) {
@@ -1879,7 +1912,7 @@ public class XmlParser implements DataParser
                     }
                     return list34;
                 }
-                case 19: {
+                case DATACONVERTTPMODEL: {
                     final XmlPullParser pullParser18 = Xml.newPullParser();
                     pullParser18.setInput(inputStream, "UTF-8");
                     List<?> list36 = null;
@@ -1896,17 +1929,17 @@ public class XmlParser implements DataParser
                                     dataConvertTpModel2 = dataConvertTpModel;
                                     break Label_9503;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list37 = new ArrayList<Object>();
                                     dataConvertTpModel2 = dataConvertTpModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser18.next();
                                     dataConvertTpModel = dataConvertTpModel2;
                                     list36 = list37;
                                     continue Label_9503_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser18.getName().equals("parm")) {
                                         dataConvertTpModel2 = new DataConvertTpModel();
                                         list37 = list36;
@@ -1971,7 +2004,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertTpModel2 = dataConvertTpModel;
                                     list37 = list36;
                                     if (pullParser18.getName().equals("parm")) {
@@ -1987,7 +2020,7 @@ public class XmlParser implements DataParser
                     }
                     return list36;
                 }
-                case 20: {
+                case DATACONVERTPVRINFOMODEL: {
                     final XmlPullParser pullParser19 = Xml.newPullParser();
                     pullParser19.setInput(inputStream, "UTF-8");
                     List<?> list38 = null;
@@ -2004,17 +2037,17 @@ public class XmlParser implements DataParser
                                     dataConvertPvrInfoModel2 = dataConvertPvrInfoModel;
                                     break Label_10047;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list39 = new ArrayList<Object>();
                                     dataConvertPvrInfoModel2 = dataConvertPvrInfoModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser19.next();
                                     dataConvertPvrInfoModel = dataConvertPvrInfoModel2;
                                     list38 = list39;
                                     continue Label_10047_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser19.getName().equals("parm")) {
                                         dataConvertPvrInfoModel2 = new DataConvertPvrInfoModel();
                                         list39 = list38;
@@ -2065,7 +2098,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertPvrInfoModel2 = dataConvertPvrInfoModel;
                                     list39 = list38;
                                     if (pullParser19.getName().equals("parm")) {
@@ -2081,7 +2114,7 @@ public class XmlParser implements DataParser
                     }
                     return list38;
                 }
-                case 21: {
+                case GSCHATSETTINGS: {
                     final XmlPullParser pullParser20 = Xml.newPullParser();
                     pullParser20.setInput(inputStream, "UTF-8");
                     List<?> list40 = null;
@@ -2098,17 +2131,17 @@ public class XmlParser implements DataParser
                                     gsChatSetting = instance;
                                     break Label_10527;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list41 = new ArrayList<Object>();
                                     gsChatSetting = instance;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser20.next();
                                     instance = gsChatSetting;
                                     list40 = list41;
                                     continue Label_10527_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser20.getName().equals("parm")) {
                                         instance = GsChatSetting.getInstance();
                                     }
@@ -2136,7 +2169,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     gsChatSetting = instance;
                                     list41 = list40;
                                     if (pullParser20.getName().equals("parm")) {
@@ -2152,7 +2185,7 @@ public class XmlParser implements DataParser
                     }
                     return list40;
                 }
-                case 25: {
+                case GSCHATSETTINGS_2: {
                     final XmlPullParser pullParser21 = Xml.newPullParser();
                     pullParser21.setInput(inputStream, "UTF-8");
                     List<?> list42 = null;
@@ -2169,17 +2202,17 @@ public class XmlParser implements DataParser
                                     instance2 = gsChatSetting2;
                                     break Label_10851;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list43 = new ArrayList<Object>();
                                     instance2 = gsChatSetting2;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser21.next();
                                     gsChatSetting2 = instance2;
                                     list42 = list43;
                                     continue Label_10851_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser21.getName().equals("parm")) {
                                         instance2 = GsChatSetting.getInstance();
                                         list43 = list42;
@@ -2216,7 +2249,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     instance2 = gsChatSetting2;
                                     list43 = list42;
                                     if (pullParser21.getName().equals("parm")) {
@@ -2232,7 +2265,7 @@ public class XmlParser implements DataParser
                     }
                     return list42;
                 }
-                case 23: {
+                case DATACONVERTCHATMSGMODEL: {
                     final XmlPullParser pullParser22 = Xml.newPullParser();
                     pullParser22.setInput(inputStream, "UTF-8");
                     List<?> list44 = null;
@@ -2249,17 +2282,17 @@ public class XmlParser implements DataParser
                                     dataConvertChatMsgModel2 = dataConvertChatMsgModel;
                                     break Label_11235;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list45 = new ArrayList<Object>();
                                     dataConvertChatMsgModel2 = dataConvertChatMsgModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser22.next();
                                     dataConvertChatMsgModel = dataConvertChatMsgModel2;
                                     list44 = list45;
                                     continue Label_11235_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser22.getName().equals("parm")) {
                                         dataConvertChatMsgModel2 = new DataConvertChatMsgModel();
                                         list45 = list44;
@@ -2307,7 +2340,7 @@ public class XmlParser implements DataParser
                                     }
                                     break;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertChatMsgModel2 = dataConvertChatMsgModel;
                                     list45 = list44;
                                     if (pullParser22.getName().equals("parm")) {
@@ -2323,7 +2356,7 @@ public class XmlParser implements DataParser
                     }
                     return list44;
                 }
-                case 22: {
+                case GSCHATROOMINFO_AND_GSCHATUSER: {
                     final XmlPullParser pullParser23 = Xml.newPullParser();
                     pullParser23.setInput(inputStream, "UTF-8");
                     List<?> list46 = null;
@@ -2343,19 +2376,19 @@ public class XmlParser implements DataParser
                                     gsChatUser2 = gsChatUser;
                                     break Label_11663;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list47 = new ArrayList<Object>();
                                     gsChatUser2 = gsChatUser;
                                     o10 = o9;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser23.next();
                                     gsChatUser = gsChatUser2;
                                     o9 = o10;
                                     list46 = list47;
                                     continue Label_11663_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser23.getName().equals("parm")) {
                                         o9 = new GsChatRoomInfo();
                                     }
@@ -2409,7 +2442,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     if (pullParser23.getName().equals("parm")) {
                                         list46.add(o9);
                                         o10 = null;
@@ -2434,7 +2467,7 @@ public class XmlParser implements DataParser
                     }
                     return list46;
                 }
-                case 24: {
+                case GSCHATUSER: {
                     final XmlPullParser pullParser24 = Xml.newPullParser();
                     pullParser24.setInput(inputStream, "UTF-8");
                     List<?> list48 = null;
@@ -2451,17 +2484,17 @@ public class XmlParser implements DataParser
                                     gsChatUser4 = gsChatUser3;
                                     break Label_12203;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list49 = new ArrayList<Object>();
                                     gsChatUser4 = gsChatUser3;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser24.next();
                                     gsChatUser3 = gsChatUser4;
                                     list48 = list49;
                                     continue Label_12203_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser24.getName().equals("parm")) {
                                         gsChatUser4 = new GsChatUser();
                                         list49 = list48;
@@ -2484,7 +2517,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     gsChatUser4 = gsChatUser3;
                                     list49 = list48;
                                     if (pullParser24.getName().equals("parm")) {
@@ -2500,7 +2533,7 @@ public class XmlParser implements DataParser
                     }
                     return list48;
                 }
-                case 26: {
+                case DATACONVERTGCHATCHANNELINFOMODEL: {
                     final XmlPullParser pullParser25 = Xml.newPullParser();
                     pullParser25.setInput(inputStream, "UTF-8");
                     List<?> list50 = null;
@@ -2517,17 +2550,17 @@ public class XmlParser implements DataParser
                                     dataConvertGChatChannelInfoModel2 = dataConvertGChatChannelInfoModel;
                                     break Label_12491;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list51 = new ArrayList<Object>();
                                     dataConvertGChatChannelInfoModel2 = dataConvertGChatChannelInfoModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser25.next();
                                     dataConvertGChatChannelInfoModel = dataConvertGChatChannelInfoModel2;
                                     list50 = list51;
                                     continue Label_12491_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser25.getName().equals("parm")) {
                                         dataConvertGChatChannelInfoModel2 = new DataConvertGChatChannelInfoModel();
                                         list51 = list50;
@@ -2564,7 +2597,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertGChatChannelInfoModel2 = dataConvertGChatChannelInfoModel;
                                     list51 = list50;
                                     if (pullParser25.getName().equals("parm")) {
@@ -2580,7 +2613,7 @@ public class XmlParser implements DataParser
                     }
                     return list50;
                 }
-                case 27: {
+                case DATACONVERTUSERNAMEMODEL: {
                     final XmlPullParser pullParser26 = Xml.newPullParser();
                     pullParser26.setInput(inputStream, "UTF-8");
                     List<?> list52 = null;
@@ -2597,17 +2630,17 @@ public class XmlParser implements DataParser
                                     dataConvertUsernameModel2 = dataConvertUsernameModel;
                                     break Label_12875;
                                 }
-                                case 0: {
+                                case XmlPullParser.START_DOCUMENT: {
                                     list53 = new ArrayList<Object>();
                                     dataConvertUsernameModel2 = dataConvertUsernameModel;
                                 }
-                                case 1: {
+                                case XmlPullParser.END_DOCUMENT: {
                                     i = pullParser26.next();
                                     dataConvertUsernameModel = dataConvertUsernameModel2;
                                     list52 = list53;
                                     continue Label_12875_Outer;
                                 }
-                                case 2: {
+                                case XmlPullParser.START_TAG: {
                                     if (pullParser26.getName().equals("parm")) {
                                         dataConvertUsernameModel2 = new DataConvertUsernameModel();
                                         list53 = list52;
@@ -2623,7 +2656,7 @@ public class XmlParser implements DataParser
                                     }
                                     continue;
                                 }
-                                case 3: {
+                                case XmlPullParser.END_TAG: {
                                     dataConvertUsernameModel2 = dataConvertUsernameModel;
                                     list53 = list52;
                                     if (pullParser26.getName().equals("parm")) {
@@ -2643,6 +2676,129 @@ public class XmlParser implements DataParser
         }
         return list;
     }
+
+    /**
+     * serialize cmd's with list == NULL
+     */
+    // serializer.attribute("", "request", new StringBuilder(String.valueOf(n)).toString());
+
+    /**
+     * serialize cmd's with first list element == DataConvertChannelModel.class
+     */
+    public static final int CHANNEL_DATA_REQUEST = 0;
+    public static final int CHANGE_CHANNEL_REQUEST = 1000;
+    public static final int START_STREAM_REQUEST = 1009;
+    public static final int RENAME_CHANNEL_REQUEST = 1001;
+    public static final int DELETE_CHANNEL_REQUEST = 1002;
+    public static final int ADD_TO_FAVO_CHANNEL_REQUEST = 1004;
+    public static final int MOVE_CHANNEL_REQUEST = 1005;
+    public static final int EPG_REQUEST = 5;
+    public static final int UNKNOWN = 1100;
+    public static final int UNKNOWN_2 = 104;
+
+    /**
+     * serialize cmd's with first list element == DataConvertFavChannelModel.class
+     */
+    public static final int UNKNOWN_FAV = 1011;
+
+    /**
+     * serialize cmd's with first list element == DataConvertEditChannelLockModel.class
+     */
+    // 1003
+
+    /**
+     * serialize cmd's with first list element == DataConvertTimeModel.class
+     */
+    // 1020
+    // 1021
+    // 1022
+    // 1023
+
+    /**
+     * serialize cmd's with first list element == DataConvertControlModel.class
+     */
+    // 1050
+    // 1051
+    // 1052
+
+    /**
+     * serialize cmd's with first list element == DataConvertUpdateModel.class
+     */
+    // 1010
+
+    /**
+     * serialize cmd's with first list element == DataConvertDebugModel.class
+     */
+    // 1054
+
+    /**
+     * serialize cmd's with first list element == DataConvertRcuModel.class
+     */
+    // 1040
+
+    /**
+     * serialize cmd's with first list element == DataConvertFavorModel.class
+     */
+    // 1055
+
+    /**
+     * serialize cmd's with first list element == DataConvertChannelTypeModel.class
+     */
+    // 1007
+
+
+    /**
+     * serialize cmd's with first list element == DataConvertInputMethodModel.class
+     */
+    // 1059
+
+
+    /**
+     * serialize cmd's with first list element == DataConvertSortModel.class
+     */
+    // 1006
+
+
+    /**
+     * serialize cmd's with first list element == DataConvertOneDataModel.class
+     */
+    // -
+
+
+    /**
+     * serialize cmd's with first list element == DataConvertSatModel.class
+     */
+    // 1060
+
+
+    /**
+     * serialize cmd's with first list element == instanceof Map
+     */
+    // -
+
+
+    /**
+     * serialize cmd's with first list element == instanceof DataConvertChatMsgModel
+     */
+    // 1102
+
+
+    /**
+     * serialize cmd's with first list element == instanceof GsChatSetting
+     */
+    // 1104
+
+
+    /**
+     * serialize cmd's with first list element == instanceof GsChatUser
+     */
+    // 1103
+
+
+    /**
+     * serialize cmd's with first list element == instanceof DataConvertUsernameModel
+     */
+    // 1105
 
     public String serialize(final List<?> list, int n) throws Exception {
         final XmlSerializer serializer = Xml.newSerializer();

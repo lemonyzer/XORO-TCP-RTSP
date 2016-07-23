@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <parm>
+    <ProgramId>00030028110301</ProgramId>
+    <ProgramName>Das Erste HD</ProgramName>
+    <ProgramIndex>0</ProgramIndex>
+    <ProgramType>0</ProgramType>
+    <IsProgramHD>1</IsProgramHD>
+    <FavMark>0</FavMark>
+    <LockMark>0</LockMark>
+    <HaveEPG>0</HaveEPG>
+    <IsPlaying>0</IsPlaying>
+    <WillBePlayed>0</WillBePlayed>
+    <ChannelType>0</ChannelType>
+    <ModulationSystem>1</ModulationSystem>
+    <ModulationType>1</ModulationType>
+    <RollOff>35</RollOff>
+    <PilotTones>1</PilotTones>
+    <VideoPid>5101</VideoPid>
+    <AudioPid>5102,5103,5106</AudioPid>
+    <TtxPid>5104</TtxPid>
+    <SubPid>5105</SubPid>
+    <PmtPid>5100</PmtPid>
+    <IsTuner2>0</IsTuner2>
+  </parm>
+
+  <parm>
+    <ProgramId>00030027411110</ProgramId>
+    <ProgramName>ZDF HD</ProgramName>
+    <ProgramIndex>1</ProgramIndex>
+    <ProgramType>0</ProgramType>
+    <IsProgramHD>1</IsProgramHD>
+    <FavMark>0</FavMark>
+    <LockMark>0</LockMark>
+    <HaveEPG>0</HaveEPG>
+    <IsPlaying>0</IsPlaying>
+    <WillBePlayed>0</WillBePlayed>
+    <ChannelType>0</ChannelType>
+    <ModulationSystem>1</ModulationSystem>
+    <ModulationType>1</ModulationType>
+    <RollOff>35</RollOff>
+    <PilotTones>1</PilotTones>
+    <VideoPid>6110</VideoPid>
+    <AudioPid>6120,6121,6122,6123</AudioPid>
+    <TtxPid>6130</TtxPid>
+    <SubPid>6131</SubPid>
+    <PmtPid>6100</PmtPid>
+    <IsTuner2>0</IsTuner2>
+  </parm>
+
+</Command>
+
