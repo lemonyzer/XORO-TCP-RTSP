@@ -1144,7 +1144,7 @@ public class Client {
 
                 // Windows-1252
                 //
-                // encodingOffset = 2
+                // encodingOffset = 2       /// <--- variable!
                 // beginByte = 1000011
 
                 int encodingOffset = 3;
@@ -1165,7 +1165,7 @@ public class Client {
             System.out.println("String: \t" + y + " / " + string.length());
             System.out.println("Array : \t" + i + " / " + array.length);
 //            System.out.println(string.charAt(y) + " = " + binaryString + " byte2ascii " + (char)Integer.parseInt(array[i]));
-            System.out.println(string.charAt(y) + " = " + binaryString + " byte2ascii " + (char)array[i]);
+            System.out.println(string.charAt(y) + " = " + binaryString + " ; byte2int " + (int)array[i]  + " ; byte2ascii " + (char)array[i]);
             System.out.println();
             //System.out.println(string.substring(i,i+1) + " = " + binaryString + " = " + string.subSequence(y,y+1));
 
