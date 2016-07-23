@@ -120,6 +120,14 @@ public class GsMobileLoginInfo {
         }
     }
 
+    @Override
+    public String toString() {
+        return "GsMobileLoginInfo{" +
+                "model_name='" + model_name + '\'' +
+                ", platform_id=" + platform_id +
+                '}';
+    }
+
     private String SerialNumberToDisp(byte[] a)
     {
         if (a == null)

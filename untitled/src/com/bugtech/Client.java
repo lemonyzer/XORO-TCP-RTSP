@@ -12,6 +12,7 @@ import mktvsmart.screen.dataconvert.model.*;
 import mktvsmart.screen.dataconvert.parser.DataParser;
 import mktvsmart.screen.dataconvert.parser.ParserFactory;
 import mktvsmart.screen.exception.ProgramNotFoundException;
+import mktvsmart.screen.socketthread.UdpSocketReceiveBroadcastThread;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -68,6 +69,8 @@ public class Client {
     private JTextField tfGenCmdTo;
     private JTextField tfGenCmdFrom;
     private JCheckBox checkBoxCustomLoginProcess;
+    private JButton btnStartStream;
+    private JList listStbBroadcast;
 
     private String ip;
     private int port;
@@ -124,6 +127,25 @@ public class Client {
 
         mChannelData = ChannelData.getInstance();
         customChannelList = new ArrayList<DataConvertChannelModel>();
+
+        UdpSocketReceiveBroadcastThread udpSocketReceiveBroadcastThread = new UdpSocketReceiveBroadcastThread(this);
+        udpSocketReceiveBroadcastThread.start();
+
+        stbDiscoveryListModel = new DefaultListModel<GsMobileLoginInfo>();
+        stbDeviceDiscoveryList = new ArrayList<GsMobileLoginInfo>();
+    }
+
+    DefaultListModel<GsMobileLoginInfo> stbDiscoveryListModel;
+    List<GsMobileLoginInfo> stbDeviceDiscoveryList;
+
+    public void AddDiscoveredStbDeviceToList(GsMobileLoginInfo stbDevice) {
+        stbDeviceDiscoveryList.add(stbDevice);
+        InitJList(stbDeviceDiscoveryList,listStbBroadcast,stbDiscoveryListModel);
+    }
+
+    public void UpdateDiscoveredStbList(List<GsMobileLoginInfo> newStbDeviceList) {
+        stbDeviceDiscoveryList = newStbDeviceList;
+        InitJList(stbDeviceDiscoveryList,listStbBroadcast,stbDiscoveryListModel);
     }
 
     public void GenerateCommands() {
@@ -1215,8 +1237,8 @@ public class Client {
         switch (currentMsgHeader.getN2()) {
             case 0:
 
-                //ReceiveChannelListProcess(responseMsg);
-                HandleChannelListResponse(currentMsgHeader, responseMsg.getData().getByteArray("ReceivedData"));
+                ReceiveChannelListProcess(responseMsg);
+                //HandleChannelListResponse(currentMsgHeader, responseMsg.getData().getByteArray("ReceivedData"));
 
                 break;
             case 3:

@@ -1,5 +1,7 @@
 package mktvsmart.screen.socketthread;
 
+import com.bugtech.Client;
+
 /**
  * Created by it on 16.07.2016.
  */
@@ -8,18 +10,22 @@ public class UdpSocketReceiveBroadcastThread extends Thread {
     final private static int TIMEOUT_5S = 5000;
     private String TAG;
     private boolean interruptFlag;
-    private mktvsmart.screen.message.process.MessageProcessor msgProc;
+    //private mktvsmart.screen.message.process.MessageProcessor msgProc;
     private java.util.ArrayList stbInfoList;
     private long timeMark;
     private java.net.DatagramSocket udpBroadcastSocket;
     private java.net.DatagramPacket udpPacket;
 
-    public UdpSocketReceiveBroadcastThread()
+    private Client client;
+
+    public UdpSocketReceiveBroadcastThread(Client client)
     {
         super("UdpSocketReceiveBroadcastThread");
         this.TAG = mktvsmart.screen.socketthread.UdpSocketReceiveBroadcastThread.class.getSimpleName();
         this.interruptFlag = false;
         this.stbInfoList = new java.util.ArrayList();
+
+        this.client = client;
     }
 
     public static void scramble_stb_info_for_broadcast(byte[] a, int i)
@@ -55,7 +61,9 @@ public class UdpSocketReceiveBroadcastThread extends Thread {
         android.os.Message a = android.os.Message.obtain();
         a.what = 4113;
         a.obj = this.stbInfoList;
-        this.msgProc.postMessage(a);
+        //this.msgProc.postMessage(a);
+        //client.AddDiscoveredStbDeviceToList(stbInfoList);
+        client.UpdateDiscoveredStbList(stbInfoList);
     }
 
     public void interrupt()
@@ -72,8 +80,8 @@ public class UdpSocketReceiveBroadcastThread extends Thread {
 
     public void run()
     {
-        ((Thread)this).run();
-        this.msgProc = mktvsmart.screen.message.process.MessageProcessor.obtain();
+        //((Thread)this).run();
+        //this.msgProc = mktvsmart.screen.message.process.MessageProcessor.obtain();
         try
         {
             this.udpBroadcastSocket = new java.net.DatagramSocket(25860);
