@@ -318,7 +318,8 @@
           <component id="1031f" class="javax.swing.JCheckBox" binding="checkBoxCustomLoginProcess">
             <constraints/>
             <properties>
-              <selected value="true"/>
+              <enabled value="true"/>
+              <selected value="false"/>
               <text value="use Auto Send Commands after Login"/>
             </properties>
           </component>

@@ -25,34 +25,37 @@ public class ReceiveSocketThread extends Thread {
     private boolean enableRecvUsefulData;
     private java.io.InputStream inStream;
     private boolean interruptFlag;
-    private mktvsmart.screen.message.process.MessageProcessor msgProc;
+//    private mktvsmart.screen.message.process.MessageProcessor msgProc;
     private int totalDataCount;
+
+    private Client client;
 
     static
     {
         TAG = com.bugtech.ReceiveSocketThread.class.getSimpleName();
     }
 
-    public ReceiveSocketThread(java.io.InputStream a)
+    public ReceiveSocketThread(java.io.InputStream a, Client client)
     {
         super("SocketReceiveThread");
         this.interruptFlag = false;
         this.totalDataCount = 0;
         this.SOCKET_KEEP_ALIVE_TIMEOUT = 30000;
         this.inStream = a;
+        this.client = client;
     }
 
     public void interrupt()
     {
         this.interruptFlag = true;
-        ((Thread)this).interrupt();
+//        ((Thread)this).interrupt();
     }
 
     public void run()
     {
         java.net.Socket a = null;
         byte[] a0 = new byte[2048];
-        this.msgProc = mktvsmart.screen.message.process.MessageProcessor.obtain();
+//        this.msgProc = mktvsmart.screen.message.process.MessageProcessor.obtain();
         mktvsmart.screen.CreateSocket a1 = new mktvsmart.screen.CreateSocket("", 0);
         try
         {
@@ -141,7 +144,7 @@ public class ReceiveSocketThread extends Thread {
                                             i4 = i1;
                                             b1 = b;
                                             j0 = j;
-                                            this.msgProc.postMessage(a9);
+//                                            this.msgProc.postMessage(a9);
                                             i2 = i5;
                                             i3 = i0;
                                             i4 = i1;
@@ -234,7 +237,8 @@ public class ReceiveSocketThread extends Thread {
                                             i2 = i;
                                             i3 = i0;
                                             i4 = i1;
-                                            this.msgProc.postMessage(a10);
+                                            client.HandleResponse(a10);
+//                                            this.msgProc.postMessage(a10);
                                         }
                                         this.enableRecvUsefulData = false;
                                         continue label6;
@@ -258,7 +262,7 @@ public class ReceiveSocketThread extends Thread {
                                                 i4 = i1;
                                                 b1 = b;
                                                 j0 = j;
-                                                this.msgProc.postEmptyMessage(4112);
+//                                                this.msgProc.postEmptyMessage(4112);
                                                 this.interruptFlag = true;
                                                 mktvsmart.screen.exception.AppDebug.writeLog("App return login menu, because receive data is empty.");
                                                 continue;
@@ -346,7 +350,7 @@ public class ReceiveSocketThread extends Thread {
                                 i4 = i1;
                                 b1 = b;
                                 j0 = j;
-                                this.msgProc.postEmptyMessage(4112);
+//                                this.msgProc.postEmptyMessage(4112);
                                 this.interruptFlag = true;
                                 mktvsmart.screen.exception.AppDebug.writeLog(new StringBuilder("App return login menu, SocketException :\n").append(a4.getMessage()).toString());
                                 continue;
@@ -372,7 +376,7 @@ public class ReceiveSocketThread extends Thread {
                                 i4 = i1;
                                 b1 = b;
                                 j0 = j;
-                                this.msgProc.postEmptyMessage(4112);
+//                                this.msgProc.postEmptyMessage(4112);
                                 this.interruptFlag = true;
                                 android.util.Log.d(TAG, "send heartrun over 30 seconds, nothing reveive");
                                 mktvsmart.screen.exception.AppDebug.writeLog("App return login menu, kepp alive msg timeout beyond 3 times");

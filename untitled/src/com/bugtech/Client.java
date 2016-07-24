@@ -1256,10 +1256,44 @@ public class Client {
                 break;
             case 24:
                 // Tp List
-//                ChannelData.getInstance().initTpList(responseMsg.getData().getByteArray("ReceivedData"));
-//                java.util.List tpList = ChannelData.getInstance().getmAllTpList();
-//                DefaultListModel<DataConvertChannelModel> tpListModel = new DefaultListModel<DataConvertChannelModel>();
-//                InitJList(tpList,listTp,tpListModel);
+                ChannelData.getInstance().initTpList(responseMsg.getData().getByteArray("ReceivedData"));
+                java.util.List tpList = ChannelData.getInstance().getmAllTpList();
+                DefaultListModel<DataConvertChannelModel> tpListModel = new DefaultListModel<DataConvertChannelModel>();
+                InitJList(tpList,listTp,tpListModel);
+
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void HandleResponse(Message responseMsg) {
+        switch (responseMsg.what) {
+            case 0:
+
+                ReceiveChannelListProcess(responseMsg);
+                //HandleChannelListResponse(currentMsgHeader, responseMsg.getData().getByteArray("ReceivedData"));
+
+                break;
+            case 3:
+
+                ReceiveChannelUpdate(responseMsg);
+
+                break;
+            case 22:
+                // Sat List
+                ChannelData.getInstance().initSatList(responseMsg.getData().getByteArray("ReceivedData"));
+                java.util.List satList = ChannelData.getInstance().getmAllSatList();
+                DefaultListModel<DataConvertChannelModel> satListModel = new DefaultListModel<DataConvertChannelModel>();
+                InitJList(satList,listSat,satListModel);
+
+                break;
+            case 24:
+                // Tp List
+                ChannelData.getInstance().initTpList(responseMsg.getData().getByteArray("ReceivedData"));
+                java.util.List tpList = ChannelData.getInstance().getmAllTpList();
+                DefaultListModel<DataConvertChannelModel> tpListModel = new DefaultListModel<DataConvertChannelModel>();
+                InitJList(tpList,listTp,tpListModel);
 
                 break;
             default:
