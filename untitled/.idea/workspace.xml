@@ -21,19 +21,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
+            <state relative-caret-position="17">
               <caret line="1258" column="0" selection-start-line="1258" selection-start-column="0" selection-end-line="1261" selection-end-column="53" />
               <folding>
                 <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
                 <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
                 <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
-                <element signature="e#23368#23369#0" expanded="true" />
-                <element signature="e#23394#23395#0" expanded="true" />
                 <element signature="e#29354#29420#0" expanded="false" />
-                <element signature="e#50571#50596#0" expanded="true" />
                 <marker date="1469326585019" expanded="false" signature="51914:51939" ph="&lt;~&gt;" />
               </folding>
             </state>
@@ -50,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReceiveSocketThread.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReceiveSocketThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="5611">
+              <caret line="402" column="47" selection-start-line="402" selection-start-column="34" selection-end-line="402" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +90,6 @@
         <option value="$PROJECT_DIR$/src/System/Clock.java" />
         <option value="$PROJECT_DIR$/src/android/os/Clock.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/message/process/MessageProcessor.java" />
-        <option value="$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java" />
         <option value="$PROJECT_DIR$/../../../_reverse engineering android apps/_best G-MScreen_2.2.97_apk-dl.com-dex2jar.jar/GsConnectToSTB krakatau.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/CreateSocket.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/model/DataConvertOneDataModel.java" />
@@ -137,9 +133,10 @@
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/socketthread/UdpSocketReceiveBroadcastThread.java" />
         <option value="$PROJECT_DIR$/src/android/os/SystemClock.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/exception/AppDebug.java" />
-        <option value="$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java" />
         <option value="$PROJECT_DIR$/src/com/bugtech/Client.java" />
         <option value="$PROJECT_DIR$/src/com/bugtech/Client.form" />
+        <option value="$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java" />
+        <option value="$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java" />
       </list>
     </option>
   </component>
@@ -250,6 +247,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="socketthread" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="process" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -330,7 +349,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="343" />
   </component>
   <component name="RecentsManager">
@@ -664,8 +683,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -714,13 +733,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/GsEPGTableChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/model/DataConvertPvrInfoModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
@@ -1030,12 +1042,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="1258" column="0" selection-start-line="1258" selection-start-column="0" selection-end-line="1261" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
+            <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
+            <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
+            <element signature="e#29354#29420#0" expanded="false" />
+            <marker date="1469326585019" expanded="false" signature="51914:51939" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -1048,30 +1075,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.form">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="1258" column="0" selection-start-line="1258" selection-start-column="0" selection-end-line="1261" selection-end-column="53" />
+        <state relative-caret-position="5611">
+          <caret line="402" column="47" selection-start-line="402" selection-start-column="34" selection-end-line="402" selection-end-column="47" />
           <folding>
-            <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
-            <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
-            <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
-            <element signature="e#23368#23369#0" expanded="true" />
-            <element signature="e#23394#23395#0" expanded="true" />
-            <element signature="e#29354#29420#0" expanded="false" />
-            <element signature="e#50571#50596#0" expanded="true" />
-            <marker date="1469326585019" expanded="false" signature="51914:51939" ph="&lt;~&gt;" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
