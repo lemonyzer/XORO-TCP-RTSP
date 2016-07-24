@@ -123,11 +123,16 @@ public class UdpSocketReceiveBroadcastThread extends Thread {
                                         if (i < this.stbInfoList.size())
                                         {
                                             mktvsmart.screen.GsMobileLoginInfo a2 = (mktvsmart.screen.GsMobileLoginInfo)this.stbInfoList.get(i);
+//                                            System.out.println(a2.getStb_sn_disp() + " == " + a1.getStb_sn_disp() + " ???? ");
                                             if (!a2.getStb_sn_disp().equals((Object)a1.getStb_sn_disp()))
                                             {
+//                                                System.out.println("false");
+
                                                 i = i + 1;
                                                 continue;
                                             }
+//                                            System.out.println("true");
+
                                             a2.setLastFoundTime(a1.getLastFoundTime());
                                             if (a1.getIs_current_stb_connected_full() != 1)
                                             {
@@ -191,6 +196,7 @@ public class UdpSocketReceiveBroadcastThread extends Thread {
                         while(i0 < this.stbInfoList.size())
                         {
                             mktvsmart.screen.GsMobileLoginInfo a4 = (mktvsmart.screen.GsMobileLoginInfo)this.stbInfoList.get(i0);
+                            System.out.println("Time difference = " + (android.os.SystemClock.uptimeMillis() - a4.getLastFoundTime()));
                             if (android.os.SystemClock.uptimeMillis() - a4.getLastFoundTime() <= 5000L)
                             {
                                 i0 = i0 + 1;

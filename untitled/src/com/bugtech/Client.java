@@ -1302,6 +1302,7 @@ public class Client {
     private <T> void InitJList(java.util.List<T> list, JList jList, DefaultListModel<T> listModel) {
         // http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_07_001.htm#mj9078abc2bd800d30d4ced5d5411f280a
         if (list != null) {
+            listModel.clear();
             for(int x=0; x<list.size(); x++)
             {
                 listModel.addElement((T)list.get(x));
