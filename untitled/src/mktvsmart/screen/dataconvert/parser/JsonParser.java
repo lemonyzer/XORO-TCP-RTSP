@@ -680,8 +680,11 @@ public class JsonParser implements mktvsmart.screen.dataconvert.parser.DataParse
         return null;
     }
 
-    public String serialize(java.util.List a, int i)
-    {
+    public SerializedDataModel serialize(java.util.List a, int i)
+    { return null;}
+
+    //public String serialize(java.util.List a, int i)
+    //{
         /*com.alibaba.fastjson.JSONObject a0 = new com.alibaba.fastjson.JSONObject(true);
         com.alibaba.fastjson.JSONArray a1 = new com.alibaba.fastjson.JSONArray();
         label0: if (a != null)
@@ -1152,6 +1155,6 @@ public class JsonParser implements mktvsmart.screen.dataconvert.parser.DataParse
             a0.put("request", (Object)new StringBuilder(String.valueOf(i)).toString());
         }
         return a0.toString();*/
-        return null;
-    }
+    //    return null;
+    //}
 }

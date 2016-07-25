@@ -56,7 +56,7 @@ public class Client {
         Message currentSendingMessage = new Message();
         currentSendingMessage.what = whatCmdId;
         currentSendingMessage.arg1 = cmdLength;
-//        currentSendingMessage.obj =
+        currentSendingMessage.obj = a.dataType;
         Bundle sentData = new Bundle();
         sentData.putByteArray(BundleSentDataString, a.serializedData);
         currentSendingMessage.setData(sentData);
@@ -583,9 +583,13 @@ public class Client {
 
             loginDataList.add(loginData);
 
-            byte[] loginCmd = new mktvsmart.screen.dataconvert.parser.XmlParser().serialize((java.util.List)(Object)loginDataList, 998).getBytes();
+            SerializedDataModel loginDataModel;
+            loginDataModel = new mktvsmart.screen.dataconvert.parser.XmlParser().serialize((java.util.List)(Object)loginDataList, 998);
+//            byte[] loginCmd = new mktvsmart.screen.dataconvert.parser.XmlParser().serialize((java.util.List)(Object)loginDataList, 998).getBytes();
+            byte[] loginCmd = loginDataModel.serializedDataAsString.getBytes();
 
-            GsSendSocket.sendSocketToStb(loginCmd, socket, 0, loginCmd.length, 998);
+//            GsSendSocket.sendSocketToStb(loginCmd, socket, 0, loginCmd.length, 998);
+            GsSendSocket.sendSocketToStb(loginDataModel, socket, 0, 998);
 
             Thread.sleep(300L);
 
@@ -918,7 +922,8 @@ public class Client {
             list.add(dataConvertChannelModel);
             list.add(dataConvertChannelModel2);
             parser = ParserFactory.getParser();
-            GsSendSocket.sendSocketToStb(this.dataBuff = this.parser.serialize(list, 0).getBytes("UTF-8"), this.tcpSocket, 0, this.dataBuff.length, 0);
+//            GsSendSocket.sendSocketToStb(this.dataBuff = this.parser.serialize(list, 0).getBytes("UTF-8"), this.tcpSocket, 0, this.dataBuff.length, 0);
+            GsSendSocket.sendSocketToStb(this.dataBuff = this.parser.serialize(list, 0).serializedDataAsString.getBytes("UTF-8"), this.tcpSocket, 0, this.dataBuff.length, 0);
         }
         catch (Exception ex) {
             ex.printStackTrace();

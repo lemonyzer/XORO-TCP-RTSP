@@ -13,11 +13,21 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
-                "what=" + what +
-                ", arg1=" + arg1 +
-                ", arg2=" + arg2 +
-                '}';
+
+        if(obj != null)
+            return "Message{" +
+                    "what=" + what +
+                    ", arg1=" + arg1 +
+                    ", arg2=" + arg2 +
+                    ", Type=" + obj.getClass().toString() +
+                    '}';
+        else
+            return "Message{" +
+                    "what=" + what +
+                    ", arg1=" + arg1 +
+                    ", arg2=" + arg2 +
+                    ", Type=" + "NULL" +
+                    '}';
     }
 
     public Message() {

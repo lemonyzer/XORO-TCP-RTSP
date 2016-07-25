@@ -6388,8 +6388,9 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
 
 
 
-    public String serialize(java.util.List list, int cmdId) {
+    public SerializedDataModel serialize(java.util.List list, int cmdId) {
 
+        SerializedDataModel returnData = new SerializedDataModel();
         List a = list;
         int i = cmdId;
 
@@ -6418,6 +6419,10 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
 
                         // Empty Command Request
                         writer.writeAttribute("request", String.valueOf(cmdId));
+
+                        returnData.isEmpty = true;
+                        returnData.dataType = null;
+
                     }
                     else
                     {
@@ -6482,6 +6487,9 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                             InstanceOfDataConvertUsernameModel(a,a0,a1,a3,i);
                         }
 
+                        returnData.dataType = a3;
+
+
                     }
 
                 }
@@ -6493,6 +6501,8 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
             e.printStackTrace();
         }
 
-        return out2string.toString();
+        returnData.serializedDataAsString = out2string.toString();
+        return returnData;
+        //return out2string.toString();
     }
 }

@@ -3,6 +3,8 @@ package mktvsmart.screen;
 import com.bugtech.Client;
 import mktvsmart.screen.dataconvert.parser.SerializedDataModel;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * Created by it on 18.07.2016.
  */
@@ -18,19 +20,19 @@ public class GsSendSocket {
         {
 
             a0 = a1.serialize((java.util.List)null, i);
-            a0.serializedData = a0.serializedDataAsString.getBytes("UTF-8");
+            //a0.serializedData = a0.serializedDataAsString.getBytes("UTF-8");
         }
         catch(Exception a2)
         {
             a2.printStackTrace();
             a0 = null;
         }
-        //return mktvsmart.screen.GsSendSocket.sendSocketToStb(a0, a, 0, a0.length, i, dataType);
-        return mktvsmart.screen.GsSendSocket.sendSocketToStb(a0, a, 0, a0.length, i, dataType);
+        //return mktvsmart.screen.GsSendSocket.sendSocketToStb(a0, a, 0, a0.length, i);
+        return mktvsmart.screen.GsSendSocket.sendSocketToStb(a0, a, 0, i);
 
     }
 
-    public static boolean sendSocketToStb(SerializedDataModel a, java.net.Socket socket, int i, int i0, int i1)
+    public static boolean sendSocketToStb(SerializedDataModel a, java.net.Socket socket, int i, int whatCmdId)
     {
         boolean b = false;
         //monenter(mktvsmart.screen.GsSendSocket.class);
@@ -38,6 +40,19 @@ public class GsSendSocket {
         {
             if(a == null)
                 return false;
+
+            try {
+                a.serializedData = a.serializedDataAsString.getBytes("UTF-8");
+
+            }
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            int i0 = 0;
+            if(a.serializedData != null)
+                i0 = a.serializedData.length;
+
             String s = new String(mktvsmart.screen.GsSendSocket.subBytes(a.serializedData, i, i0));
             int i2 = new StringBuilder().append(i0).toString().length();
             String s0 = "";
@@ -52,7 +67,7 @@ public class GsSendSocket {
             try
             {
                 System.out.println("ssWrite to Socket: " + new String(a1, "UTF-8"));
-                Client.getInstance().AddSentCommand(a, i, i0, i1);
+                Client.getInstance().AddSentCommand(a, i, i0, whatCmdId);
                 java.io.OutputStream a2 = socket.getOutputStream();
                 a2.write(a1, 0, a1.length);
                 a2.flush();
