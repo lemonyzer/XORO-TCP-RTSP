@@ -1084,8 +1084,10 @@ public class Client {
                 }
 
                 String var9 = (String)var6.get(0);
+                Log.d("ReceiveChannelUpdate", var9);
                 if(mChannelData.getmTvChannelList() != null) {
                     DataConvertChannelModel var8;
+                    Log.d("ReceiveChannelUpdate", "isSat2ipStarted == " + (isSat2ipStarted ? "true" : "false"));
                     if(this.isSat2ipStarted) {
                         try {
                             DataConvertChannelModel var11 = mChannelData.getProgramByProgramId(currentSat2ipChannelProgramId);
@@ -1104,7 +1106,9 @@ public class Client {
                     for(int loop = 0; loop < mChannelData.getmTvChannelList().size(); ++loop) {
                         var8 = (DataConvertChannelModel)mChannelData.getmTvChannelList().get(loop);
                         if(var9.equals(var8.GetProgramId())) {
+                            Log.d("ReceiveChannelUpdate", var8.getProgramName() + " is active!");
                             var8.setIsPlaying(1);
+                            //currentPlayingProgram = var8;
                         } else {
                             var8.setIsPlaying(0);
                         }
@@ -1113,6 +1117,7 @@ public class Client {
                     for(int loop = 0; loop < mChannelData.getmRadioChannelList().size(); ++loop) {
                         var8 = (DataConvertChannelModel)mChannelData.getmRadioChannelList().get(loop);
                         if(var9.equals(var8.GetProgramId())) {
+                            Log.d("ReceiveChannelUpdate", var8.getProgramName() + " is active!");
                             var8.setIsPlaying(1);
                         } else {
                             var8.setIsPlaying(0);
@@ -1267,8 +1272,52 @@ public class Client {
         }
     }
 
+    public void Special(android.os.Message a)
+    {
+        int i = 0;
+        switch(a.what){
+            case 2019: {
+                i = 22;
+                break;
+            }
+            case 2013: {
+                i = 12;
+                break;
+            }
+            case 2009: {
+                i = 23;
+                break;
+            }
+            case 2004: {
+                i = 17;
+                break;
+            }
+            case 2001: {
+                i = 3;
+                break;
+            }
+            default: {
+                i = 9999;
+            }
+        }
+        mktvsmart.screen.GsSendSocket.sendOnlyCommandSocketToStb(tcpSocket, i);
+    }
+
+
     public void HandleResponse(Message responseMsg) {
         switch (responseMsg.what) {
+
+            case 2019:
+            case 2013:
+            case 2009:
+            case 2004:
+            case 2001:
+            {
+                Special(responseMsg);
+                break;
+            }
+
+
             case 0:
 
                 ReceiveChannelListProcess(responseMsg);
@@ -1335,15 +1384,24 @@ public class Client {
 
     private <T> void InitJList(java.util.List<T> list, JList jList, DefaultListModel<T> listModel) {
         // http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_07_001.htm#mj9078abc2bd800d30d4ced5d5411f280a
+
+        int selectedItemIndex = -1;
+
         if (list != null) {
             listModel.clear();
             for(int x=0; x<list.size(); x++)
             {
                 listModel.addElement((T)list.get(x));
+                if(list.get(x) instanceof DataConvertChannelModel) {
+                    if(((DataConvertChannelModel) list.get(x)).getIsPlaying() == 1)
+                        selectedItemIndex = x;
+                }
                 //Log(list.get(x).toString());
             }
         }
         jList.setModel(listModel);
+        if(selectedItemIndex >= 0)
+            jList.setSelectedIndex(selectedItemIndex);
         jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         jList.setCellRenderer(new ChannelCellRenderer());               // cell Renderer
     }

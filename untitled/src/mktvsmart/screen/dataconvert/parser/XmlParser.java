@@ -1,7 +1,6 @@
 package mktvsmart.screen.dataconvert.parser;
 
 import android.util.Xml;
-import com.bugtech.android2javase.AndroidXmlSerializerToJavaSE;
 import com.sun.deploy.xml.XMLEncoding;
 import com.sun.org.apache.xerces.internal.xni.parser.XMLPullParserConfiguration;
 import mktvsmart.screen.CreateSocket;
