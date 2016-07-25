@@ -6,10 +6,19 @@ package android.os;
 public class Message {
     public int what;
     public Object obj;
-    public int arg1;
+    public int arg1;            // Message length
     public int arg2;
 
     Bundle data;
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "what=" + what +
+                ", arg1=" + arg1 +
+                ", arg2=" + arg2 +
+                '}';
+    }
 
     public Message() {
 

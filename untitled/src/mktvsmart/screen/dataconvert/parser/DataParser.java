@@ -8,6 +8,7 @@ public abstract interface DataParser
     public abstract List<?> parse(InputStream paramInputStream, int paramInt)
             throws Exception;
 
-    public abstract String serialize(List<?> paramList, int paramInt)
+    public abstract SerializedDataModel serialize(List<?> paramList, int paramInt)
             throws Exception;
 }
+

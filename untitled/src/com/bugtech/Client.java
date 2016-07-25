@@ -11,6 +11,7 @@ import mktvsmart.screen.channel.ChannelData;
 import mktvsmart.screen.dataconvert.model.*;
 import mktvsmart.screen.dataconvert.parser.DataParser;
 import mktvsmart.screen.dataconvert.parser.ParserFactory;
+import mktvsmart.screen.dataconvert.parser.SerializedDataModel;
 import mktvsmart.screen.exception.ProgramNotFoundException;
 import mktvsmart.screen.socketthread.UdpSocketReceiveBroadcastThread;
 import org.w3c.dom.Document;
@@ -38,6 +39,43 @@ import java.util.zip.DataFormatException;
  * Created by it on 10.07.2016.
  */
 public class Client {
+
+    private static Client INSTANCE;
+
+    public static Client getInstance()
+    {
+        if(INSTANCE != null)
+            return INSTANCE;
+
+        return null;
+    }
+
+    public final static String BundleSentDataString = "SentData";
+
+    public void AddSentCommand(SerializedDataModel a, int startIndex, int cmdLength, int whatCmdId) {
+        Message currentSendingMessage = new Message();
+        currentSendingMessage.what = whatCmdId;
+        currentSendingMessage.arg1 = cmdLength;
+//        currentSendingMessage.obj =
+        Bundle sentData = new Bundle();
+        sentData.putByteArray(BundleSentDataString, a.serializedData);
+        currentSendingMessage.setData(sentData);
+
+        sentMessageListModel.addElement(currentSendingMessage);
+    }
+
+    public void AddSentCommand(byte[] a, int startIndex, int cmdLength, int whatCmdId) {
+        Message currentSendingMessage = new Message();
+        currentSendingMessage.what = whatCmdId;
+        currentSendingMessage.arg1 = cmdLength;
+//        currentSendingMessage.obj =
+        Bundle sentData = new Bundle();
+        sentData.putByteArray(BundleSentDataString, a);
+        currentSendingMessage.setData(sentData);
+
+        sentMessageListModel.addElement(currentSendingMessage);
+    }
+
     private JPanel panelMain;
     private JPanel panelSouth;
     private JPanel panelEast;
@@ -71,6 +109,11 @@ public class Client {
     private JCheckBox checkBoxCustomLoginProcess;
     private JButton btnStartStream;
     private JList listStbBroadcast;
+    private JTabbedPane tabbedPane4;
+    private JList listMessageReceived;
+    private JList listMessageSent;
+//    private static br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp sRtsp;
+
 
     private String ip;
     private int port;
@@ -79,6 +122,9 @@ public class Client {
     private OutputStream out;
 
     public Client() {
+
+        INSTANCE = this;
+
         btnAutoSend.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -133,7 +179,25 @@ public class Client {
 
         stbDiscoveryListModel = new DefaultListModel<GsMobileLoginInfo>();
         stbDeviceDiscoveryList = new ArrayList<GsMobileLoginInfo>();
+
+        InitMessageLists ();
     }
+
+    void InitMessageLists() {
+        // receiving
+        receiveMessageListModel = new DefaultListModel<Message>();
+        receiveMessageList = new ArrayList<Message>();
+        listMessageReceived.setModel(receiveMessageListModel);
+        // sending
+        sentMessageListModel = new DefaultListModel<Message>();
+        sentMessageList = new ArrayList<Message>();
+        listMessageSent.setModel(sentMessageListModel);
+    }
+
+    DefaultListModel<Message> receiveMessageListModel;
+    List<Message> receiveMessageList;
+    DefaultListModel<Message> sentMessageListModel;
+    List<Message> sentMessageList;
 
     DefaultListModel<GsMobileLoginInfo> stbDiscoveryListModel;
     List<GsMobileLoginInfo> stbDeviceDiscoveryList;
@@ -1031,9 +1095,9 @@ public class Client {
 
     }
 
-    private void adjustSelectionOfChannelListView(boolean var1) {
-        int var2 = 0;
-
+//    private void adjustSelectionOfChannelListView(boolean var1) {
+//        int var2 = 0;
+//
 //        for(Iterator var4 = this.mCurrentChannelList.iterator(); var4.hasNext(); ++var2) {
 //            if(((DataConvertChannelModel)var4.next()).getIsPlaying() == 1) {
 //                if(var1) {
@@ -1057,8 +1121,82 @@ public class Client {
 //        if(var2 == this.mCurrentChannelList.size()) {
 //            this.ChannelListView.setSelection(0);
 //        }
+//
+//    }
+
+
+    private void adjustSelectionOfChannelListView(boolean b)
+    {
+        java.util.Iterator a = this.mCurrentChannelList.iterator();
+        int index=0;
+
+        for (DataConvertChannelModel current : mCurrentChannelList) {
+
+            if(current.getIsPlaying() == 1) {
+                listChan.setSelectedIndex(index);
+            }
+            index ++;
+        }
 
     }
+
+//    private void adjustSelectionOfChannelListView(boolean b)
+//    {
+//        java.util.Iterator a = this.mCurrentChannelList.iterator();
+//        int i = 0;
+//        Object a0 = a;
+//        while(true)
+//        {
+//            label0: if (((java.util.Iterator)a0).hasNext())
+//            {
+//                if (((mktvsmart.screen.dataconvert.model.DataConvertChannelModel)((java.util.Iterator)a0).next()).getIsPlaying() != 1)
+//                {
+//                    i = i + 1;
+//                    continue;
+//                }
+//                if (b)
+//                {
+//                    if (i <= 5)
+//                    {
+//                        this.ChannelListView.setSelection(0);
+//                    }
+//                    else
+//                    {
+//                        this.ChannelListView.setSelection(i - 3);
+//                    }
+//                }
+//                else
+//                {
+//                    int i0 = this.mFirstVisibleChannelIdex;
+//                    label1: {
+//                        if (i < i0)
+//                        {
+//                            break label1;
+//                        }
+//                        if (i <= this.mLastVisibleChannelIndex)
+//                        {
+//                            break label0;
+//                        }
+//                    }
+//                    if (i <= this.mLastVisibleChannelIndex - this.mFirstVisibleChannelIdex)
+//                    {
+//                        this.ChannelListView.setSelection(0);
+//                    }
+//                    else
+//                    {
+//                        int i1 = (this.mLastVisibleChannelIndex - this.mFirstVisibleChannelIdex) / 2;
+//                        this.ChannelListView.setSelection(i - i1);
+//                    }
+//                }
+//            }
+//            if (i == this.mCurrentChannelList.size())
+//            {
+//                this.ChannelListView.setSelection(0);
+//            }
+//            return;
+//        }
+//    }
+
 
 
     // channellistactivity$17
@@ -1124,6 +1262,9 @@ public class Client {
                         }
                     }
                 }
+
+                if(listChan.getModel() != null)
+                    adjustSelectionOfChannelListView(false);
 
                 // from jd-gui standalone
 //                if (GsChannelListActivity.this.channelListAdapter == null) {
@@ -1305,6 +1446,9 @@ public class Client {
 
 
     public void HandleResponse(Message responseMsg) {
+
+        receiveMessageListModel.addElement(responseMsg);
+
         switch (responseMsg.what) {
 
             case 2019:
