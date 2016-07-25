@@ -1,5 +1,6 @@
 package mktvsmart.screen.channel;
 
+import android.os.Message;
 import android.util.Log;
 import mktvsmart.screen.exception.ProgramNotFoundException;
 
@@ -645,14 +646,17 @@ public class ChannelData {
         return this.mTvChannelList;
     }
 
-    public java.util.List initChannelListData(byte[] a)
+    public java.util.List initChannelListData(Message msg)
     {
+        byte[] a = msg.getData().getByteArray("ReceivedData");
+
         Object a0 = null;
         mktvsmart.screen.dataconvert.parser.DataParser a1 = mktvsmart.screen.dataconvert.parser.ParserFactory.getParser();
         java.util.ArrayList a2 = new java.util.ArrayList();
         try
         {
-            a0 = a1.parse((java.io.InputStream)new java.io.ByteArrayInputStream(a, 0, a.length), 0);
+            a0 = a1.parse(msg, 0);
+//            a0 = a1.parse((java.io.InputStream)new java.io.ByteArrayInputStream(a, 0, a.length), 0);
         }
         catch(Exception a3)
         {
@@ -664,12 +668,15 @@ public class ChannelData {
         return (java.util.List)a0;
     }
 
-    public void initSatList(byte[] a)
+    public void initSatList(Message msg)
     {
+        byte[] a = msg.getData().getByteArray("ReceivedData");
+
         mktvsmart.screen.dataconvert.parser.DataParser a0 = mktvsmart.screen.dataconvert.parser.ParserFactory.getParser();
         try
         {
-            this.mAllSatList = a0.parse((java.io.InputStream)new java.io.ByteArrayInputStream(a, 0, a.length), 18);
+            this.mAllSatList = a0.parse(msg, 18);
+//            this.mAllSatList = a0.parse((java.io.InputStream)new java.io.ByteArrayInputStream(a, 0, a.length), 18);
         }
         catch(Exception a1)
         {
@@ -678,12 +685,16 @@ public class ChannelData {
         }
     }
 
-    public void initTpList(byte[] a)
+    public void initTpList(Message msg)
     {
+        byte[] a = msg.getData().getByteArray("ReceivedData");
+
+
         mktvsmart.screen.dataconvert.parser.DataParser a0 = mktvsmart.screen.dataconvert.parser.ParserFactory.getParser();
         try
         {
-            this.mAllTpList = a0.parse((java.io.InputStream)new java.io.ByteArrayInputStream(a, 0, a.length), 19);
+            this.mAllTpList = a0.parse(msg, 19);
+//            this.mAllTpList = a0.parse((java.io.InputStream)new java.io.ByteArrayInputStream(a, 0, a.length), 19);
         }
         catch(Exception a1)
         {

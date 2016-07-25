@@ -335,8 +335,8 @@
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="West"/>
         <properties>
-          <minimumSize width="450" height="98"/>
-          <preferredSize width="450" height="250"/>
+          <minimumSize width="550" height="98"/>
+          <preferredSize width="550" height="250"/>
         </properties>
         <border type="none"/>
         <children>
@@ -362,7 +362,7 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <dividerLocation value="225"/>
+                      <dividerLocation value="275"/>
                     </properties>
                     <border type="none"/>
                     <children>

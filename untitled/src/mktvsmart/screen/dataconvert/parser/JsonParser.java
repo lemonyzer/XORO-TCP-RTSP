@@ -1,5 +1,7 @@
 package mktvsmart.screen.dataconvert.parser;
 
+import android.os.Message;
+
 public class JsonParser implements mktvsmart.screen.dataconvert.parser.DataParser {
     final private static String ARRAY = "array";
 
@@ -8,7 +10,8 @@ public class JsonParser implements mktvsmart.screen.dataconvert.parser.DataParse
         super();
     }
 
-    public java.util.List parse(java.io.InputStream a, int i)
+//    public java.util.List parse(java.io.InputStream a, int i)
+    public java.util.List parse(Message a, int i)
     {
         /*java.util.ArrayList a0 = null;
         com.alibaba.fastjson.JSONArray a1 = com.alibaba.fastjson.JSON.parseArray(mktvsmart.screen.common.tools.CommonHelper.getStrFromInputSteam(a));

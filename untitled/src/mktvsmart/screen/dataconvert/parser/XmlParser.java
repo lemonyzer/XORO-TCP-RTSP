@@ -1,5 +1,6 @@
 package mktvsmart.screen.dataconvert.parser;
 
+import android.os.Message;
 import android.util.Xml;
 import com.sun.deploy.xml.XMLEncoding;
 import com.sun.org.apache.xerces.internal.xni.parser.XMLPullParserConfiguration;
@@ -7,6 +8,7 @@ import mktvsmart.screen.CreateSocket;
 import mktvsmart.screen.GMScreenGlobalInfo;
 import mktvsmart.screen.GsSendSocket;
 import mktvsmart.screen.dataconvert.model.*;
+import mktvsmart.screen.gchat.bean.GsChatRoomInfo;
 import mktvsmart.screen.gchat.bean.GsChatSetting;
 import mktvsmart.screen.gchat.bean.GsChatUser;
 import org.xmlpull.v1.XmlPullParser;
@@ -69,8 +71,10 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
         return a;
     }
 
-    public java.util.List parse(java.io.InputStream a, int i)
+    public java.util.List parse(Message msg, int i)
     {
+        byte[] aa = msg.getData().getByteArray("ReceivedData");
+        java.io.InputStream a = (java.io.InputStream)new java.io.ByteArrayInputStream(aa, 0, aa.length);
         java.util.ArrayList a0 = null;
         switch(i){
             case 27: {
@@ -79,6 +83,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i0 = a1.getEventType();
                 java.util.ArrayList a2 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertUsernameModel a3 = null;
+                msg.obj = a3;
                 Object a4 = a1;
                 while(i0 != 1)
                 {
@@ -129,6 +134,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i1 = a5.getEventType();
                 java.util.ArrayList a6 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertGChatChannelInfoModel a7 = null;
+                msg.obj = a7;
                 Object a8 = a5;
                 while(i1 != 1)
                 {
@@ -197,6 +203,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i2 = a9.getEventType();
                 java.util.ArrayList a10 = null;
                 mktvsmart.screen.gchat.bean.GsChatSetting a11 = null;
+                msg.obj = a11;
                 Object a12 = a9;
                 while(i2 != 1)
                 {
@@ -265,6 +272,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i3 = a13.getEventType();
                 java.util.ArrayList a14 = null;
                 mktvsmart.screen.gchat.bean.GsChatUser a15 = null;
+                msg.obj = a15;
                 Object a16 = a13;
                 while(i3 != 1)
                 {
@@ -321,6 +329,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i4 = a17.getEventType();
                 java.util.ArrayList a18 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertChatMsgModel a19 = null;
+                msg.obj = new ArrayList<DataConvertChatMsgModel>();
                 Object a20 = a17;
                 while(i4 != 1)
                 {
@@ -400,6 +409,10 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 mktvsmart.screen.gchat.bean.GsChatRoomInfo a22 = null;
                 java.util.ArrayList a23 = null;
                 mktvsmart.screen.gchat.bean.GsChatUser a24 = null;
+                List<Object> list = new ArrayList<Object>();
+                list.add(new ArrayList<GsChatRoomInfo>());
+                list.add(new GsChatUser());
+                msg.obj = list;
                 Object a25 = a21;
                 while(i6 != 1)
                 {
@@ -486,6 +499,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 a26.setInput(a, "UTF-8");
                 int i7 = a26.getEventType();
                 mktvsmart.screen.gchat.bean.GsChatSetting a27 = null;
+                msg.obj = new GsChatSetting();
                 java.util.ArrayList a28 = null;
                 Object a29 = a26;
                 while(i7 != 1)
@@ -548,6 +562,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i8 = a30.getEventType();
                 java.util.ArrayList a31 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertPvrInfoModel a32 = null;
+                msg.obj = new ArrayList<DataConvertPvrInfoModel>();
                 Object a33 = a30;
                 while(i8 != 1)
                 {
@@ -628,6 +643,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i9 = a34.getEventType();
                 java.util.ArrayList a35 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertTpModel a36 = null;
+                msg.obj = new ArrayList<DataConvertTpModel>();
                 Object a37 = a34;
                 while(i9 != 1)
                 {
@@ -709,6 +725,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i10 = a38.getEventType();
                 java.util.ArrayList a39 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertSatModel a40 = null;
+                msg.obj = new DataConvertSatModel();
                 Object a41 = a38;
                 while(i10 != 1)
                 {
@@ -776,6 +793,10 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 a42.setInput(a, "UTF-8");
                 int i11 = a42.getEventType();
                 java.util.ArrayList a43 = null;
+                List<Object> list = new ArrayList<Object>();
+                list.add(new GMScreenGlobalInfo());
+                list.add(new DataConvertChannelTypeModel());
+                msg.obj = list;
                 String s0 = null;
                 Object a44 = a42;
                 while(i11 != 1)
@@ -847,6 +868,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i12 = a45.getEventType();
                 java.util.ArrayList a46 = null;
                 java.util.HashMap a47 = null;
+                msg.obj = a47;
                 Object a48 = a45;
                 while(i12 != 1)
                 {
@@ -904,6 +926,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 a49.setInput(a, "UTF-8");
                 int i13 = a49.getEventType();
                 java.util.ArrayList a50 = null;
+                msg.obj = new DataConvertOneDataModel();
                 String s1 = null;
                 Object a51 = a49;
                 while(i13 != 1)
@@ -947,6 +970,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i14 = a52.getEventType();
                 java.util.ArrayList a53 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertStbInfoModel a54 = null;
+                msg.obj = a54;
                 Object a55 = a52;
                 while(i14 != 1)
                 {
@@ -1027,6 +1051,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i15 = a56.getEventType();
                 java.util.ArrayList a57 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertSortModel a58 = null;
+                msg.obj = a58;
                 Object a59 = a56;
                 while(i15 != 1)
                 {
@@ -1106,6 +1131,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i17 = a62.getEventType();
                 java.util.ArrayList a63 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertChannelTypeModel a64 = null;
+                msg.obj = a64;
                 Object a65 = a62;
                 while(i17 != 1)
                 {
@@ -1162,6 +1188,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i18 = a66.getEventType();
                 java.util.ArrayList a67 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertControlModel a68 = null;
+                msg.obj = a68;
                 Object a69 = a66;
                 while(i18 != 1)
                 {
@@ -1230,6 +1257,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i19 = a70.getEventType();
                 java.util.ArrayList a71 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertFavorModel a72 = null;
+                msg.obj = a72;
                 Object a73 = a70;
                 while(i19 != 1)
                 {
@@ -1291,6 +1319,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 a74.setInput(a, "UTF-8");
                 int i20 = a74.getEventType();
                 a0 = null;
+                msg.obj = new DataConvertTimeModel();
                 Object a75 = a74;
                 while(i20 != 1)
                 {
@@ -1353,6 +1382,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i21 = a76.getEventType();
                 java.util.ArrayList a77 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertChannelModel a78 = null;
+                msg.obj = a78;
                 Object a79 = a76;
                 while(i21 != 1)
                 {
@@ -1409,6 +1439,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i22 = a80.getEventType();
                 a0 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertTimeModel a81 = null;
+                msg.obj = a81;
                 Object a82 = a80;
                 while(i22 != 1)
                 {
@@ -1468,6 +1499,10 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 java.util.ArrayList a84 = null;
                 mktvsmart.screen.GsEPGTableChannel a85 = null;
                 mktvsmart.screen.GsEPGEvent a86 = null;
+                List<Object> list = new ArrayList<Object>();
+                list.add(a85);
+                list.add(a86);
+                msg.obj = list;
                 Object a87 = a83;
                 while(i23 != 1)
                 {
@@ -1661,6 +1696,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i27 = a88.getEventType();
                 java.util.ArrayList a89 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertUpdateModel a90 = null;
+                msg.obj = a90;
                 Object a91 = a88;
                 while(i27 != 1)
                 {
@@ -1723,6 +1759,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i28 = a92.getEventType();
                 java.util.ArrayList a93 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertControlModel a94 = null;
+                msg.obj = a94;
                 Object a95 = a92;
                 while(i28 != 1)
                 {
@@ -1828,6 +1865,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i29 = a96.getEventType();
                 a0 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertTimeModel a97 = null;
+                msg.obj = a97;
                 Object a98 = a96;
                 while(i29 != 1)
                 {
@@ -1993,6 +2031,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i30 = a99.getEventType();
                 java.util.ArrayList a100 = null;
                 mktvsmart.screen.dataconvert.model.DataConvertChannelModel a101 = null;
+                msg.obj = a101;
                 Object a102 = a99;
                 while(i30 != 1)
                 {
@@ -2037,7 +2076,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                                 ((org.xmlpull.v1.XmlPullParser)a102).next();
                                 a101.SetProgramId(((org.xmlpull.v1.XmlPullParser)a102).getText());
                                 currentProgramId = a101.GetProgramId();
-                                System.out.println(a101.GetProgramId());
+                                //System.out.println(a101.GetProgramId());
                                 break;
                             }
                             else if (((org.xmlpull.v1.XmlPullParser)a102).getName().equals((Object)"ProgramName"))

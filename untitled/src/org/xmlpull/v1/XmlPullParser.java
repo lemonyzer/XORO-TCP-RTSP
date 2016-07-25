@@ -137,7 +137,7 @@ public class XmlPullParser {
 
     public String getText() {
         if(xmlPullParser.isEndElement()) {
-            System.out.println(xmlPullParser.getName() + " has no CHARACTERS/TEXT");
+            //System.out.println(xmlPullParser.getName() + " has no CHARACTERS/TEXT");          // DEBUG
             return "";
         }
         else {

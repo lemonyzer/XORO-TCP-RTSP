@@ -10,6 +10,7 @@
       <file url="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/FernFlower/XmlParser.java" />
       <directory url="file://$PROJECT_DIR$/src/mktvsmart/screen/message" includeSubdirectories="true" />
       <file url="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java" />
+      <file url="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/procyon/ChannelData.java" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

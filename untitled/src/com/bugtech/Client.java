@@ -271,18 +271,19 @@ public class Client {
                             "\n------------------------------------------------------------------------------------"
                     );
                     // send cmd 1000 change programm
-                    String cmd = "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request=\"1000\"><parm><TvState>0</TvState><ProgramId>" + reqChannel.GetProgramId()  +"</ProgramId></parm></Command>";
-                    try {
-                        socket.setSoTimeout(3000);
-                    } catch (SocketException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        byte[] changeChannelCmd = cmd.getBytes("UTF-8");
-                        GsSendSocket.sendSocketToStb(changeChannelCmd, socket, 0, changeChannelCmd.length, 1000);
-                    } catch (UnsupportedEncodingException e) {
-                        e.printStackTrace();
-                    }
+//                    String cmd = "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request=\"1000\"><parm><TvState>0</TvState><ProgramId>" + reqChannel.GetProgramId()  +"</ProgramId></parm></Command>";
+//                    try {
+//                        socket.setSoTimeout(3000);
+//                    } catch (SocketException e) {
+//                        e.printStackTrace();
+//                    }
+//                    try {
+//                        byte[] changeChannelCmd = cmd.getBytes("UTF-8");
+//                        GsSendSocket.sendSocketToStb(changeChannelCmd, socket, 0, changeChannelCmd.length, 1000);
+//                    } catch (UnsupportedEncodingException e) {
+//                        e.printStackTrace();
+//                    }
+                    trueNewChannelInStb(reqChannel.GetProgramIndex());
                 }
             }
         }
@@ -309,31 +310,34 @@ public class Client {
     }
 
     // switch program request 1000
-//    private void trueNewChannelInStb(int i)
-//    {
-//        try
-//        {
-//            mktvsmart.screen.dataconvert.model.DataConvertChannelModel a = (mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.channelListAdapter.getItem(i);
-//            String s = a.getProgramName();
-//            String s0 = a.GetProgramId();
-//            mktvsmart.screen.dataconvert.model.DataConvertChannelModel a0 = new mktvsmart.screen.dataconvert.model.DataConvertChannelModel();
-//            java.util.ArrayList a1 = new java.util.ArrayList();
-//            this.parser = mktvsmart.screen.dataconvert.parser.ParserFactory.getParser();
-//            a0.SetProgramIndex(i);
-//            a0.setProgramName(s);
-//            a0.SetProgramId(s0);
-//            a0.setChannelTpye(a.getChannelTpye());
-//            ((java.util.List)(Object)a1).add((Object)a0);
+    private void trueNewChannelInStb(int i)
+    {
+        try
+        {
+            mktvsmart.screen.dataconvert.model.DataConvertChannelModel a = (mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.listChan.getSelectedValue();
+            String s = a.getProgramName();
+            String s0 = a.GetProgramId();
+            mktvsmart.screen.dataconvert.model.DataConvertChannelModel a0 = new mktvsmart.screen.dataconvert.model.DataConvertChannelModel();
+            java.util.ArrayList a1 = new java.util.ArrayList();
+            this.parser = mktvsmart.screen.dataconvert.parser.ParserFactory.getParser();
+            a0.SetProgramIndex(i);
+            a0.setProgramName(s);
+            a0.SetProgramId(s0);
+            a0.setChannelTpye(a.getChannelTpye());
+            ((java.util.List)(Object)a1).add((Object)a0);
+            SerializedDataModel serializedDataModel = this.parser.serialize((java.util.List)(Object)a1, 1000);
+
 //            byte[] a2 = this.parser.serialize((java.util.List)(Object)a1, 1000).getBytes("UTF-8");
-//            this.tcpSocket.setSoTimeout(3000);
+            this.tcpSocket.setSoTimeout(3000);
+            mktvsmart.screen.GsSendSocket.sendSocketToStb(serializedDataModel, this.tcpSocket, 0, 1000);
 //            mktvsmart.screen.GsSendSocket.sendSocketToStb(a2, this.tcpSocket, 0, a2.length, 1000);
-//        }
-//        catch(Exception a3)
-//        {
-//            a3.printStackTrace();
-//            return;
-//        }
-//    }
+        }
+        catch(Exception a3)
+        {
+            a3.printStackTrace();
+            return;
+        }
+    }
 
 // start stream request 1009
 //    private void sendSat2ipChannelRequestToStb(int i)
@@ -938,7 +942,8 @@ public class Client {
                 Log.e("GSChannelListActivity", "recvData = " + byteArray);
             }
             else {
-                final List<DataConvertChannelModel> initChannelListData = this.mChannelData.initChannelListData(byteArray);
+                final List<DataConvertChannelModel> initChannelListData = this.mChannelData.initChannelListData(message);
+//                final List<DataConvertChannelModel> initChannelListData = this.mChannelData.initChannelListData(byteArray);
 //                if (this.waitDialog.isShowing()) {
 //                    this.waitDialog.dismiss();
 //                }
@@ -1217,7 +1222,8 @@ public class Client {
                 label59: {
                     List var7;
                     try {
-                        var7 = var3.parse(new ByteArrayInputStream(var2, 0, var2.length), 15);
+//                        var7 = var3.parse(new ByteArrayInputStream(var2, 0, var2.length), 15);
+                        var7 = var3.parse(var1, 15);
                     } catch (Exception var5) {
                         var5.printStackTrace();
                         break label59;
@@ -1352,37 +1358,37 @@ public class Client {
     }
 
 
-    public void HandleChannelListResponse(MessageHeader currentMsgHeader, byte[] uncompressedMsg) {
-        java.util.List channelList = ChannelData.getInstance().initChannelListData(uncompressedMsg);
-        // http://stackoverflow.com/questions/9509208/adding-objects-to-a-jlist
-        //listChan.setModel((ChannelData.getInstance().getmTvChannelList().toArray()));
-
-        for (Object chan : channelList) {
-            customChannelList.add ((DataConvertChannelModel)chan);
-            Log.d("HandleChannelListResponse", "Added " + ((DataConvertChannelModel)chan).getProgramName());
-            String2Binary(((DataConvertChannelModel)chan).getProgramName());
-        }
-
-        // Add to Channellist
-        //customChannelList.addAll(channelList);
-
-        /*
-        // Doesnt work if channel request starts anywhere
-        //java.util.List channelList = ChannelData.getInstance().getmTvChannelList();
-        */
-
-        if(channelList == null) {
-            System.out.println("getmTvChannelList == null");
-        }else
-        {
-            System.out.println("getmTvChannelList.size() == " + channelList.size());
-        }
-
-
-        // http://stackoverflow.com/questions/16004005/how-to-hold-data-within-a-defaultlistmodel-in-java
-        DefaultListModel<DataConvertChannelModel> chanListModel = new DefaultListModel<DataConvertChannelModel>();
-        InitJList(customChannelList,listChan,chanListModel);
-    }
+//    public void HandleChannelListResponse(MessageHeader currentMsgHeader, byte[] uncompressedMsg) {
+//        java.util.List channelList = ChannelData.getInstance().initChannelListData(uncompressedMsg);
+//        // http://stackoverflow.com/questions/9509208/adding-objects-to-a-jlist
+//        //listChan.setModel((ChannelData.getInstance().getmTvChannelList().toArray()));
+//
+//        for (Object chan : channelList) {
+//            customChannelList.add ((DataConvertChannelModel)chan);
+//            Log.d("HandleChannelListResponse", "Added " + ((DataConvertChannelModel)chan).getProgramName());
+//            String2Binary(((DataConvertChannelModel)chan).getProgramName());
+//        }
+//
+//        // Add to Channellist
+//        //customChannelList.addAll(channelList);
+//
+//        /*
+//        // Doesnt work if channel request starts anywhere
+//        //java.util.List channelList = ChannelData.getInstance().getmTvChannelList();
+//        */
+//
+//        if(channelList == null) {
+//            System.out.println("getmTvChannelList == null");
+//        }else
+//        {
+//            System.out.println("getmTvChannelList.size() == " + channelList.size());
+//        }
+//
+//
+//        // http://stackoverflow.com/questions/16004005/how-to-hold-data-within-a-defaultlistmodel-in-java
+//        DefaultListModel<DataConvertChannelModel> chanListModel = new DefaultListModel<DataConvertChannelModel>();
+//        InitJList(customChannelList,listChan,chanListModel);
+//    }
 
     public void HandleResponse(MessageHeader currentMsgHeader, Message responseMsg) {
         switch (currentMsgHeader.getN2()) {
@@ -1399,7 +1405,7 @@ public class Client {
                 break;
             case 22:
                 // Sat List
-                ChannelData.getInstance().initSatList(responseMsg.getData().getByteArray("ReceivedData"));
+                ChannelData.getInstance().initSatList(responseMsg);
                 java.util.List satList = ChannelData.getInstance().getmAllSatList();
                 DefaultListModel<DataConvertChannelModel> satListModel = new DefaultListModel<DataConvertChannelModel>();
                 InitJList(satList,listSat,satListModel);
@@ -1407,7 +1413,7 @@ public class Client {
                 break;
             case 24:
                 // Tp List
-                ChannelData.getInstance().initTpList(responseMsg.getData().getByteArray("ReceivedData"));
+                ChannelData.getInstance().initTpList(responseMsg);
                 java.util.List tpList = ChannelData.getInstance().getmAllTpList();
                 DefaultListModel<DataConvertChannelModel> tpListModel = new DefaultListModel<DataConvertChannelModel>();
                 InitJList(tpList,listTp,tpListModel);
@@ -1452,6 +1458,7 @@ public class Client {
 
     public void HandleResponse(Message responseMsg) {
 
+
         receiveMessageListModel.addElement(responseMsg);
 
         switch (responseMsg.what) {
@@ -1480,7 +1487,7 @@ public class Client {
                 break;
             case 22:
                 // Sat List
-                ChannelData.getInstance().initSatList(responseMsg.getData().getByteArray("ReceivedData"));
+                ChannelData.getInstance().initSatList(responseMsg);
                 java.util.List satList = ChannelData.getInstance().getmAllSatList();
                 DefaultListModel<DataConvertChannelModel> satListModel = new DefaultListModel<DataConvertChannelModel>();
                 InitJList(satList,listSat,satListModel);
@@ -1488,7 +1495,7 @@ public class Client {
                 break;
             case 24:
                 // Tp List
-                ChannelData.getInstance().initTpList(responseMsg.getData().getByteArray("ReceivedData"));
+                ChannelData.getInstance().initTpList(responseMsg);
                 java.util.List tpList = ChannelData.getInstance().getmAllTpList();
                 DefaultListModel<DataConvertChannelModel> tpListModel = new DefaultListModel<DataConvertChannelModel>();
                 InitJList(tpList,listTp,tpListModel);
