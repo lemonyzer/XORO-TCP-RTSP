@@ -181,6 +181,12 @@ public class Client {
         stbDeviceDiscoveryList = new ArrayList<GsMobileLoginInfo>();
 
         InitMessageLists ();
+        btnStartStream.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     void InitMessageLists() {
