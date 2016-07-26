@@ -25,4 +25,7 @@ public class Log {
         System.out.println("ERROR: " + tag + " " + msg);
     }
 
+    public static void v(String tag, String s) {
+        System.out.println("VERBOSE: " + tag + " " + s);
+    }
 }

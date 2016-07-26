@@ -8,6 +8,7 @@ import mktvsmart.screen.GMScreenGlobalInfo;
 import mktvsmart.screen.GsMobileLoginInfo;
 import mktvsmart.screen.GsSendSocket;
 import mktvsmart.screen.channel.ChannelData;
+import mktvsmart.screen.channel.Sat2ipUtil;
 import mktvsmart.screen.dataconvert.model.*;
 import mktvsmart.screen.dataconvert.parser.DataParser;
 import mktvsmart.screen.dataconvert.parser.ParserFactory;
@@ -184,10 +185,82 @@ public class Client {
         btnStartStream.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                btnPlayStreamClicked();
             }
         });
     }
+
+    private void btnPlayStreamClicked() {
+
+        if(!tcpSocket.isConnected())
+            return;
+
+        playStream(listChan.getSelectedIndex());
+
+    }
+
+    private void playStream(int value) {
+//        final FindPlayerAndPlayChannel findPlayerAndPlayChannel = new FindPlayerAndPlayChannel((Context)this.getParent());
+//        findPlayerAndPlayChannel.implementPlayByDesignatedPlayer(this.mPlayByDesignatedPlayer);
+//        findPlayerAndPlayChannel.selectPlayer(n);
+        startPlayStream(value);
+    }
+
+    private void startPlayStream(final int n) {
+//        if (this.waitDialog.isShowing()) {
+//            this.waitDialog.dismiss();
+//        }
+//        this.waitDialog = DialogBuilder.showProgressDialog(this.getParent(), 2131427641, 2131427520, false, GMScreenGlobalInfo.getmWaitDialogTimeOut(), this.timeOutRun);
+//        this.abtainPlayUrl(n, intent);
+        abtainPlayUrl(n);
+    }
+
+//    private void abtainPlayUrl(int i)
+//    {
+//        new Thread((Runnable)(Object)new mktvsmart.screen.channel.GsChannelListActivity$14(this, i, a)).start();
+//    }
+
+    // Luyten
+    private void abtainPlayUrl(final int n) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                switch (GMScreenGlobalInfo.getCurStbPlatform()) {
+                    default: {
+                        GMScreenGlobalInfo.playType = 2;
+//                        sendSat2ipChannelRequestToStb(n);
+//                        mPlayIntent = intent;
+                        Log.d("abtainPlayUrl", "getCurStbPlatform = " + GMScreenGlobalInfo.getCurStbPlatform() + " is not implemented!");
+                        break;
+                    }
+                    case 8:
+                    case 9: {
+//                        sRtsp = new Sat2IP_Rtsp();
+                        final String rtspUriBase = Sat2ipUtil.getRtspUriBase(tcpSocket.getInetAddress().toString());
+                        final String rtspUriQuery = Sat2ipUtil.getRtspUriQuery(mCurrentChannelList.get(n));
+                        Log.d("abtainPlayUrl", "rtspUriBase = "+ rtspUriBase);
+                        Log.d("abtainPlayUrl", "rtspUriQuery = "+ rtspUriQuery);
+//                        GMScreenGlobalInfo.playType = 2;
+//                        if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
+//                            if (((DataConvertChannelModel)listChan.getModel().getElementAt(n)).GetIsProgramScramble() == 0) {
+//                                mainHandler.sendMessage(mainHandler.obtainMessage(4, (Object).this.getString(2131427592)));
+//                            }
+//                            sRtsp = null;
+//                            return;
+//                        }
+//                        sendSat2ipChannelRequestToStb(n);
+//                        DVBtoIP.initResourceForPlayer(GsChannelListActivity.sRtsp.get_rtp_port(), FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this), 2);
+//                        intent.setDataAndType(Uri.parse("file://" + FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this)), "video/*");
+//                        GsChannelListActivity.this.mainHandler.sendMessage(GsChannelListActivity.this.mainHandler.obtainMessage(3, (Object)intent));
+                        break;
+                    }
+                }
+                bPlayWithOherPlayer = true;
+            }
+        }).start();
+    }
+
+    boolean bPlayWithOherPlayer = false;
 
     void InitMessageLists() {
         // receiving
@@ -346,36 +419,38 @@ public class Client {
     }
 
 // start stream request 1009
-//    private void sendSat2ipChannelRequestToStb(int i)
-//    {
-//        java.util.ArrayList a = new java.util.ArrayList();
-//        this.currentSat2ipChannelProgramId = ((mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.channelListAdapter.getItem(i)).GetProgramId();
-//        label0: {
-//            mktvsmart.screen.exception.ProgramNotFoundException a0 = null;
-//            try
-//            {
-//                try
-//                {
-//                    a.add((Object)(mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.channelListAdapter.getItem(i));
+    private void sendSat2ipChannelRequestToStb(int i)
+    {
+        java.util.ArrayList a = new java.util.ArrayList();
+        this.currentSat2ipChannelProgramId = ((mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.listChan.getModel().getElementAt(i)).GetProgramId();
+        label0: {
+            mktvsmart.screen.exception.ProgramNotFoundException a0 = null;
+            try
+            {
+                try
+                {
+                    a.add((Object)(mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.listChan.getModel().getElementAt(i));
+                    SerializedDataModel serializedDataModel = this.parser.serialize((java.util.List)(Object)a, 1009);
 //                    byte[] a1 = this.parser.serialize((java.util.List)(Object)a, 1009).getBytes("UTF-8");
-//                    this.tcpSocket.setSoTimeout(3000);
-//                    mktvsmart.screen.GsSendSocket.sendSocketToStb(a1, this.tcpSocket, 0, a1.length, 1009);
-//                    break label0;
-//                }
-//                catch(mktvsmart.screen.exception.ProgramNotFoundException a2)
-//                {
-//                    a0 = a2;
-//                }
-//            }
-//            catch(Exception a3)
-//            {
-//                a3.printStackTrace();
-//                return;
-//            }
-//            a0.printStackTrace();
-//            return;
-//        }
-//    }
+                    byte[] a1 = serializedDataModel.serializedDataAsString.getBytes("UTF-8");
+                    this.tcpSocket.setSoTimeout(3000);
+                    mktvsmart.screen.GsSendSocket.sendSocketToStb(a1, this.tcpSocket, 0, a1.length, 1009);
+                    break label0;
+                }
+                catch(mktvsmart.screen.exception.ProgramNotFoundException a2)
+                {
+                    a0 = a2;
+                }
+            }
+            catch(Exception a3)
+            {
+                a3.printStackTrace();
+                return;
+            }
+            a0.printStackTrace();
+            return;
+        }
+    }
 
 
     public void RemoveSelectedFromList ()
