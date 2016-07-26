@@ -3,6 +3,7 @@ package com.bugtech;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
+import br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp;
 import mktvsmart.screen.CreateSocket;
 import mktvsmart.screen.GMScreenGlobalInfo;
 import mktvsmart.screen.GsMobileLoginInfo;
@@ -113,7 +114,7 @@ public class Client {
     private JTabbedPane tabbedPane4;
     private JList listMessageReceived;
     private JList listMessageSent;
-//    private static br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp sRtsp;
+    private static br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp sRtsp;
 
 
     private String ip;
@@ -235,20 +236,20 @@ public class Client {
                     }
                     case 8:
                     case 9: {
-//                        sRtsp = new Sat2IP_Rtsp();
+                        sRtsp = new Sat2IP_Rtsp();
                         final String rtspUriBase = Sat2ipUtil.getRtspUriBase(tcpSocket.getInetAddress().toString());
                         final String rtspUriQuery = Sat2ipUtil.getRtspUriQuery(mCurrentChannelList.get(n));
                         Log.d("abtainPlayUrl", "rtspUriBase = "+ rtspUriBase);
                         Log.d("abtainPlayUrl", "rtspUriQuery = "+ rtspUriQuery);
-//                        GMScreenGlobalInfo.playType = 2;
-//                        if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
+                        GMScreenGlobalInfo.playType = 2;
+                        if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
 //                            if (((DataConvertChannelModel)listChan.getModel().getElementAt(n)).GetIsProgramScramble() == 0) {
 //                                mainHandler.sendMessage(mainHandler.obtainMessage(4, (Object).this.getString(2131427592)));
 //                            }
-//                            sRtsp = null;
-//                            return;
-//                        }
-//                        sendSat2ipChannelRequestToStb(n);
+                            sRtsp = null;
+                            return;
+                        }
+                        sendSat2ipChannelRequestToStb(n);
 //                        DVBtoIP.initResourceForPlayer(GsChannelListActivity.sRtsp.get_rtp_port(), FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this), 2);
 //                        intent.setDataAndType(Uri.parse("file://" + FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this)), "video/*");
 //                        GsChannelListActivity.this.mainHandler.sendMessage(GsChannelListActivity.this.mainHandler.obtainMessage(3, (Object)intent));
@@ -429,7 +430,7 @@ public class Client {
             {
                 try
                 {
-                    a.add((Object)(mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.listChan.getModel().getElementAt(i));
+                    a.add(this.listChan.getModel().getElementAt(i));
                     SerializedDataModel serializedDataModel = this.parser.serialize((java.util.List)(Object)a, 1009);
 //                    byte[] a1 = this.parser.serialize((java.util.List)(Object)a, 1009).getBytes("UTF-8");
                     byte[] a1 = serializedDataModel.serializedDataAsString.getBytes("UTF-8");

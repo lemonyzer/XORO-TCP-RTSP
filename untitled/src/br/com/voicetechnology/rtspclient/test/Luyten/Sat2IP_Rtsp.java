@@ -1,4 +1,4 @@
-package br.com.voicetechnology.rtspclient.test.Luyten.;
+package br.com.voicetechnology.rtspclient.test.Luyten;
 
 import br.com.voicetechnology.rtspclient.*;
 import br.com.voicetechnology.rtspclient.transport.*;
