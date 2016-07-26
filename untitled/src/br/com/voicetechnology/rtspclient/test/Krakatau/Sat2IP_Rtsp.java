@@ -1,24 +1,16 @@
-package br.com.voicetechnology.rtspclient.test;
+package br.com.voicetechnology.rtspclient.test.Krakatau;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-
-public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.ClientListener {
+public class Sat2IP_Rtsp implements com.voicetechnology.rtspclient.concepts.ClientListener {
     private static int[] $SWITCH_TABLE$com$voicetechnology$rtspclient$concepts$Request$Method;
     private static boolean isTearDown;
     private boolean _isSucc;
-    br.com.voicetechnology.rtspclient.RTSPClient client;
-    private br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp.EndOfFileListener eofListener;
+    com.voicetechnology.rtspclient.RTSPClient client;
+    private com.voicetechnology.rtspclient.test.Sat2IP_Rtsp$EndOfFileListener eofListener;
     String mBaseUrl;
     String mQueryStr;
     private int port;
     private int rtp_port;
     private int streamId;
-
-    abstract public interface EndOfFileListener {
-        abstract public void onEndOfFile();
-    }
-
 
     static int[] $SWITCH_TABLE$com$voicetechnology$rtspclient$concepts$Request$Method()
     {
@@ -27,8 +19,8 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         {
             return a;
         }
-        int[] a0 = new int[br.com.voicetechnology.rtspclient.concepts.Request$Method.values().length];
-        br.com.voicetechnology.rtspclient.concepts.Request$Method a1 = br.com.voicetechnology.rtspclient.concepts.Request$Method.DESCRIBE;
+        int[] a0 = new int[com.voicetechnology.rtspclient.concepts.Request$Method.values().length];
+        com.voicetechnology.rtspclient.concepts.Request$Method a1 = com.voicetechnology.rtspclient.concepts.Request$Method.DESCRIBE;
         try
         {
             a0[a1.ordinal()] = 2;
@@ -38,35 +30,35 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
         try
         {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.OPTIONS.ordinal()] = 1;
+            a0[com.voicetechnology.rtspclient.concepts.Request$Method.OPTIONS.ordinal()] = 1;
         }
         catch(NoSuchFieldError ignoredException0)
         {
         }
         try
         {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.PLAY.ordinal()] = 4;
+            a0[com.voicetechnology.rtspclient.concepts.Request$Method.PLAY.ordinal()] = 4;
         }
         catch(NoSuchFieldError ignoredException1)
         {
         }
         try
         {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.RECORD.ordinal()] = 5;
+            a0[com.voicetechnology.rtspclient.concepts.Request$Method.RECORD.ordinal()] = 5;
         }
         catch(NoSuchFieldError ignoredException2)
         {
         }
         try
         {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.SETUP.ordinal()] = 3;
+            a0[com.voicetechnology.rtspclient.concepts.Request$Method.SETUP.ordinal()] = 3;
         }
         catch(NoSuchFieldError ignoredException3)
         {
         }
         try
         {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.TEARDOWN.ordinal()] = 6;
+            a0[com.voicetechnology.rtspclient.concepts.Request$Method.TEARDOWN.ordinal()] = 6;
         }
         catch(NoSuchFieldError ignoredException4)
         {
@@ -80,9 +72,9 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         super();
         try
         {
-            this.client = new br.com.voicetechnology.rtspclient.RTSPClient();
-            this.client.setTransport((br.com.voicetechnology.rtspclient.concepts.Transport)(Object)new br.com.voicetechnology.rtspclient.transport.PlainTCP());
-            this.client.setClientListener((br.com.voicetechnology.rtspclient.concepts.ClientListener)(Object)this);
+            this.client = new com.voicetechnology.rtspclient.RTSPClient();
+            this.client.setTransport((com.voicetechnology.rtspclient.concepts.Transport)(Object)new com.voicetechnology.rtspclient.transport.PlainTCP());
+            this.client.setClientListener((com.voicetechnology.rtspclient.concepts.ClientListener)(Object)this);
             this.port = 10022;
             this.rtp_port = 0;
             isTearDown = true;
@@ -94,7 +86,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
     }
 
-    private void handleRequestFailed(br.com.voicetechnology.rtspclient.concepts.Client a)
+    private void handleRequestFailed(com.voicetechnology.rtspclient.concepts.Client a)
     {
         a.teardown();
         this._isSucc = false;
@@ -123,7 +115,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
     }
 
-    private void handleRequestFailed_NoTearDown(br.com.voicetechnology.rtspclient.concepts.Client a)
+    private void handleRequestFailed_NoTearDown(com.voicetechnology.rtspclient.concepts.Client a)
     {
         this._isSucc = false;
         //monenter(this);
@@ -161,7 +153,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
 
     public static void main(String[] a)
     {
-        br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp a0 = new br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp();
+        com.voicetechnology.rtspclient.test.Sat2IP_Rtsp a0 = new com.voicetechnology.rtspclient.test.Sat2IP_Rtsp();
         a0.setup("rtsp://192.168.0.101:554/", "?src=1&fe=1&freq=3840&pol=h&msys=dvbs2&mtype=8psk&ro=0.35&plts=on&sr=27500&fec=2&pids=0,16,17,20,257,512,8190,8191,8191,650");
         System.out.println(new StringBuilder("get rtp port: ").append(a0.get_rtp_port()).toString());
     }
@@ -173,7 +165,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         return i - 2;
     }
 
-    public void generalError(br.com.voicetechnology.rtspclient.concepts.Client a, Throwable a0)
+    public void generalError(com.voicetechnology.rtspclient.concepts.Client a, Throwable a0)
     {
         a0.printStackTrace();
     }
@@ -183,21 +175,21 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         return this.rtp_port;
     }
 
-    public void mediaDescriptor(br.com.voicetechnology.rtspclient.concepts.Client a, String s)
+    public void mediaDescriptor(com.voicetechnology.rtspclient.concepts.Client a, String s)
     {
     }
 
-    public void requestFailed(br.com.voicetechnology.rtspclient.concepts.Client a, br.com.voicetechnology.rtspclient.concepts.Request a0, Throwable a1)
+    public void requestFailed(com.voicetechnology.rtspclient.concepts.Client a, com.voicetechnology.rtspclient.concepts.Request a0, Throwable a1)
     {
         System.out.println(new StringBuilder("Request failed \n").append((Object)a0).toString());
         a1.printStackTrace();
-        if (a0.getMethod() != br.com.voicetechnology.rtspclient.concepts.Request.Method.TEARDOWN)
+        if (a0.getMethod() != com.voicetechnology.rtspclient.concepts.Request$Method.TEARDOWN)
         {
             this.handleRequestFailed(a);
         }
     }
 
-    public void response(br.com.voicetechnology.rtspclient.concepts.Client a, br.com.voicetechnology.rtspclient.concepts.Request a0, br.com.voicetechnology.rtspclient.concepts.Response a1)
+    public void response(com.voicetechnology.rtspclient.concepts.Client a, com.voicetechnology.rtspclient.concepts.Request a0, com.voicetechnology.rtspclient.concepts.Response a1)
     {
         label5: {
             label4: {
@@ -210,7 +202,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                     label10: try
                                     {
                                         a2 = a;
-                                        if (a0.getMethod() == br.com.voicetechnology.rtspclient.concepts.Request.Method.OPTIONS)
+                                        if (a0.getMethod() == com.voicetechnology.rtspclient.concepts.Request$Method.OPTIONS)
                                         {
                                             java.io.PrintStream a3 = System.out;
                                             a2 = a;
@@ -242,8 +234,8 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                                 break label10;
                                             }
                                             a2 = a;
-                                            br.com.voicetechnology.rtspclient.concepts.Request.Method a5 = a0.getMethod();
-                                            br.com.voicetechnology.rtspclient.concepts.Request.Method a6 = br.com.voicetechnology.rtspclient.concepts.Request.Method.OPTIONS;
+                                            com.voicetechnology.rtspclient.concepts.Request$Method a5 = a0.getMethod();
+                                            com.voicetechnology.rtspclient.concepts.Request$Method a6 = com.voicetechnology.rtspclient.concepts.Request$Method.OPTIONS;
                                             label7: {
                                                 if (a5 == a6)
                                                 {
@@ -258,7 +250,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                             break label12;
                                         }
                                         a2 = a;
-                                        int i1 = br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp.$SWITCH_TABLE$com$voicetechnology$rtspclient$concepts$Request$Method()[a0.getMethod().ordinal()];
+                                        int i1 = com.voicetechnology.rtspclient.test.Sat2IP_Rtsp.$SWITCH_TABLE$com$voicetechnology$rtspclient$concepts$Request$Method()[a0.getMethod().ordinal()];
                                         label2: {
                                             label3: {
                                                 label1: {
@@ -337,7 +329,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                     }
                                     catch(Throwable a11)
                                     {
-                                        this.generalError((br.com.voicetechnology.rtspclient.concepts.Client)a2, a11);
+                                        this.generalError((com.voicetechnology.rtspclient.concepts.Client)a2, a11);
                                         return;
                                     }
                                     return;
@@ -356,7 +348,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
     }
 
-    public void set_eof_listener(br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp.EndOfFileListener a)
+    public void set_eof_listener(com.voicetechnology.rtspclient.test.Sat2IP_Rtsp$EndOfFileListener a)
     {
         this.eofListener = a;
     }
@@ -367,13 +359,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         this.mBaseUrl = s;
         this.mQueryStr = s0;
         android.util.Log.v("sat2ip", new StringBuilder(String.valueOf((Object)s)).append(" query: ").append(s0).toString());
-        try {
-            this.client.setup(new java.net.URI(new StringBuilder(String.valueOf((Object)this.mBaseUrl)).append(this.mQueryStr).toString()), this.nextPort());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
+        this.client.setup(new java.net.URI(new StringBuilder(String.valueOf((Object)this.mBaseUrl)).append(this.mQueryStr).toString()), this.nextPort());
         isTearDown = false;
     }
 

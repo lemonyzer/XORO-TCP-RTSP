@@ -118,12 +118,23 @@ public class RTSPClient implements Client, TransportListener
 	{
 		try
 		{
-			send(messageFactory.outgoingRequest(uri.toString(), Method.PLAY,
-					nextCSeq(), session));
+			send(messageFactory.outgoingRequest(uri.toString(), Method.PLAY, nextCSeq(), session));
 		} catch(Exception e)
 		{
 			if(clientListener != null)
 				clientListener.generalError(this, e);
+		}
+	}
+
+	@Override
+	public void play(final String s) throws IOException {
+		try {
+			this.send(this.messageFactory.outgoingRequest(s, Request.Method.PLAY, this.nextCSeq(), this.session));
+		}
+		catch (Exception ex) {
+			if (this.clientListener != null) {
+				this.clientListener.generalError(this, ex);
+			}
 		}
 	}
 

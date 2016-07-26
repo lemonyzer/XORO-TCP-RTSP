@@ -79,6 +79,8 @@ public interface Client
 
 	void play() throws IOException;
 
+	void play(final String p0) throws IOException;
+
 	void record() throws IOException;
 
 	void options(String uri, URI endpoint) throws URISyntaxException, IOException;

@@ -34,7 +34,11 @@ import br.com.voicetechnology.rtspclient.transport.PlainTCP;
 
 public class SETUPandTEARDOWNTest implements ClientListener
 {
-	private final static String TARGET_URI = "rtsp://192.168.0.102/sample_50kbit.3gp";
+	private final static String rtspUriBase = "rtsp://192.168.178.254:554/";
+
+	private final static String rtspUriQuery = "?alisatid=3&freq=12545&pol=h&msys=dvbs2&mtype=8psk&ro=0.35&plts=on&sr=22000&fec=4&camode=0&vpid=511&apid=512,515&ttxpid=33&subtpid=329&pmt=97&prognumber=17501&pids=511,512,515,33,329,97";
+	//	private final static String TARGET_URI = "rtsp://192.168.178.254/sample_50kbit.3gp";
+	private final static String TARGET_URI = rtspUriBase+rtspUriQuery;
 
 	public static void main(String[] args) throws Throwable
 	{
@@ -53,9 +57,11 @@ public class SETUPandTEARDOWNTest implements ClientListener
 
 		client.setTransport(new PlainTCP());
 		client.setClientListener(this);
-		client.describe(new URI(TARGET_URI));
+		//client.describe(new URI(TARGET_URI));			// not needed
 		resourceList = Collections.synchronizedList(new LinkedList<String>());
-		port = 2000;
+		port = 10022;
+
+		client.setup(new URI(TARGET_URI),nextPort());
 	}
 
 	@Override
@@ -96,7 +102,7 @@ public class SETUPandTEARDOWNTest implements ClientListener
 						client.setup(new URI(controlURI), nextPort(), resourceList
 								.remove(0));
 					else
-						sessionSet(client);
+						sessionSet(client, response);
 					break;
 				}
 			} else
@@ -127,7 +133,7 @@ public class SETUPandTEARDOWNTest implements ClientListener
 		}
 	}
 	
-	protected void sessionSet(Client client) throws IOException
+	protected void sessionSet(Client client, Response response) throws IOException
 	{
 		client.teardown();	
 	}
