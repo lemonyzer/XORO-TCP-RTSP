@@ -142,12 +142,15 @@ public class Sat2IP_Rtsp implements ClientListener
                         }
                         switch ($SWITCH_TABLE$com$voicetechnology$rtspclient$concepts$Request$Method()[request.getMethod().ordinal()]) {
                             case 3: {
+                                // request.getMethod() == 2 == SETUP
                                 break;
                             }
                             case 4: {
+                                // request.getMethod() == 3 == PLAY
                                 break Label_0210;
                             }
                             case 1: {
+                                // request.getMethod() == 0 == OPTIONS
                                 break Label_0254;
                             }
                             default: {

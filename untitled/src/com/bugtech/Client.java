@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
 import br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp;
+import com.sun.jndi.toolkit.url.Uri;
 import mktvsmart.screen.CreateSocket;
 import mktvsmart.screen.GMScreenGlobalInfo;
 import mktvsmart.screen.GsMobileLoginInfo;
@@ -32,6 +33,7 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.awt.event.*;
 import java.io.*;
+import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.*;
@@ -114,6 +116,10 @@ public class Client {
     private JTabbedPane tabbedPane4;
     private JList listMessageReceived;
     private JList listMessageSent;
+    private JButton btnStreamRequest;
+    private JCheckBox checkBoxPlayType;
+    private JTextArea textAreaRTSP;
+    private JButton btnStopStreaming;
     private static br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp sRtsp;
 
 
@@ -189,6 +195,30 @@ public class Client {
                 btnPlayStreamClicked();
             }
         });
+        btnStreamRequest.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnStartStreamRequestClicked();
+            }
+        });
+        btnStopStreaming.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stopStream();
+            }
+        });
+    }
+
+    private void btnStartStreamRequestClicked() {
+
+        bPlayWithOherPlayer = true;
+
+        int selectedIndex = listChan.getSelectedIndex();
+        if( listChan.getModel().getSize() > 0 &&
+                selectedIndex >= 0 &&
+                selectedIndex < listChan.getModel().getSize()) {
+            sendSat2ipChannelRequestToStb(selectedIndex);
+        }
     }
 
     private void btnPlayStreamClicked() {
@@ -204,7 +234,20 @@ public class Client {
 //        final FindPlayerAndPlayChannel findPlayerAndPlayChannel = new FindPlayerAndPlayChannel((Context)this.getParent());
 //        findPlayerAndPlayChannel.implementPlayByDesignatedPlayer(this.mPlayByDesignatedPlayer);
 //        findPlayerAndPlayChannel.selectPlayer(n);
-        startPlayStream(value);
+        if(checkBoxPlayType.isSelected())
+        {
+            // playType = 1 ... ?
+            GMScreenGlobalInfo.playType = 1;
+            bPlayWithOherPlayer = true;
+            // GsPvr2SmallAcitivity.startPlayStream(value);
+        }
+        else
+        {
+            // playType = 2 ... ?
+            GMScreenGlobalInfo.playType = 2;
+            // bPlayWithOherPlayer = false ???
+            startPlayStream(value);
+        }
     }
 
     private void startPlayStream(final int n) {
@@ -242,13 +285,18 @@ public class Client {
                         Log.d("abtainPlayUrl", "rtspUriBase = "+ rtspUriBase);
                         Log.d("abtainPlayUrl", "rtspUriQuery = "+ rtspUriQuery);
                         GMScreenGlobalInfo.playType = 2;
-                        if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
+//                        if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
+//                            Log.d("abtainPlayUrl", "setup_blocked FAILED");
+//
 //                            if (((DataConvertChannelModel)listChan.getModel().getElementAt(n)).GetIsProgramScramble() == 0) {
-//                                mainHandler.sendMessage(mainHandler.obtainMessage(4, (Object).this.getString(2131427592)));
+//                                Log.d("abtainPlayUrl", "currentChannel isProgramScrambled == 0 -> msg.what 4");
+////                                mainHandler.sendMessage(mainHandler.obtainMessage(4, (Object).this.getString(2131427592)));
 //                            }
-                            sRtsp = null;
-                            return;
-                        }
+//                            sRtsp = null;
+//                            return;
+//                        }
+//                        Log.d("abtainPlayUrl", "setup_blocked SUCCESS");
+                        sRtsp.setup_not_blocked(rtspUriBase, rtspUriQuery);
                         sendSat2ipChannelRequestToStb(n);
 //                        DVBtoIP.initResourceForPlayer(GsChannelListActivity.sRtsp.get_rtp_port(), FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this), 2);
 //                        intent.setDataAndType(Uri.parse("file://" + FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this)), "video/*");
@@ -423,7 +471,7 @@ public class Client {
     private void sendSat2ipChannelRequestToStb(int i)
     {
         java.util.ArrayList a = new java.util.ArrayList();
-        this.currentSat2ipChannelProgramId = ((mktvsmart.screen.dataconvert.model.DataConvertChannelModel)this.listChan.getModel().getElementAt(i)).GetProgramId();
+        this.currentSat2ipChannelProgramId = ((DataConvertChannelModel)this.listChan.getModel().getElementAt(i)).GetProgramId();
         label0: {
             mktvsmart.screen.exception.ProgramNotFoundException a0 = null;
             try
@@ -435,7 +483,8 @@ public class Client {
 //                    byte[] a1 = this.parser.serialize((java.util.List)(Object)a, 1009).getBytes("UTF-8");
                     byte[] a1 = serializedDataModel.serializedDataAsString.getBytes("UTF-8");
                     this.tcpSocket.setSoTimeout(3000);
-                    mktvsmart.screen.GsSendSocket.sendSocketToStb(a1, this.tcpSocket, 0, a1.length, 1009);
+//                    mktvsmart.screen.GsSendSocket.sendSocketToStb(a1, this.tcpSocket, 0, a1.length, 1009);
+                    mktvsmart.screen.GsSendSocket.sendSocketToStb(serializedDataModel, this.tcpSocket, 0, 1009);
                     break label0;
                 }
                 catch(mktvsmart.screen.exception.ProgramNotFoundException a2)
@@ -707,7 +756,10 @@ public class Client {
         textArea1.append( "\t\tBEGIN DATA" + "\n");
         try {
             if(msg.getData() != null)
-                textArea1.append( new String(msg.getData().getByteArray("ReceivedData"), "UTF-8") + "\n");
+                if(msg.getData().getByteArray("ReceivedData") != null)
+                    textArea1.append( new String(msg.getData().getByteArray("ReceivedData"), "UTF-8") + "\n");
+                else
+                    textArea1.append( "NO 'ReceivedData' DATA\n");
             else
                 textArea1.append( "NO DATA\n");
         } catch (UnsupportedEncodingException e) {
@@ -1166,24 +1218,27 @@ public class Client {
 
 
     private void stopStream() {
-//        switch(GMScreenGlobalInfo.getCurStbPlatform()) {
-//            case 8:
-//            case 9:
-//                if(sRtsp != null) {
-//                    sRtsp.teardown();
-//                    sRtsp = null;
-//                    DVBtoIP.destroyResourceForPlayer();
-//                    this.isSat2ipStarted = false;
-//                    this.currentSat2ipChannelProgramId = "";
-//                    GMScreenGlobalInfo.playType = 0;
-//                    GsSendSocket.sendOnlyCommandSocketToStb(this.tcpSocket, 1012);
-//                    return;
-//                }
-//                break;
-//            default:
-//                GMScreenGlobalInfo.playType = 0;
-//                GsSendSocket.sendOnlyCommandSocketToStb(this.tcpSocket, 1012);
-//        }
+
+        Log.d("Client", "stopStream @ Platform: "+ GMScreenGlobalInfo.getCurStbPlatform());
+
+        switch(GMScreenGlobalInfo.getCurStbPlatform()) {
+            case 8:
+            case 9:
+                if(sRtsp != null) {
+                    sRtsp.teardown();
+                    sRtsp = null;
+                    //DVBtoIP.destroyResourceForPlayer();
+                    this.isSat2ipStarted = false;
+                    this.currentSat2ipChannelProgramId = "";
+                    GMScreenGlobalInfo.playType = 0;
+                    GsSendSocket.sendOnlyCommandSocketToStb(this.tcpSocket, 1012);
+                    return;
+                }
+                break;
+            default:
+                GMScreenGlobalInfo.playType = 0;
+                GsSendSocket.sendOnlyCommandSocketToStb(this.tcpSocket, 1012);
+        }
 
     }
 
@@ -1501,8 +1556,69 @@ public class Client {
                 InitJList(tpList,listTp,tpListModel);
 
                 break;
+
+            case 1009:
+                DoSat2IpChannelPlay(responseMsg);
+                break;
+
             default:
                 break;
+        }
+    }
+
+    private void DoSat2IpChannelPlay(Message message) {
+        final byte[] byteArray = message.getData().getByteArray("ReceivedData");
+        if (byteArray != null && bPlayWithOherPlayer) {
+            parser = ParserFactory.getParser();
+            Log.d("GsChannelListActivity", new String(byteArray));
+            final ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray, 0, message.arg1);
+            Map map;
+            try {
+                map = (HashMap) parser.parse(message, 16).get(0);
+                if (map.get("success") == null) {
+                    Log.e("DoSat2IpChannelPlay","map.get('success') == null");
+                    //this.this$0.mainHandler.sendMessage(this.this$0.mainHandler.obtainMessage(4, (Object)this.this$0.getString(2131427592)));
+                    return;
+                }
+            }
+            catch (Exception ex) {
+                //this.this$0.mainHandler.sendMessage(this.this$0.mainHandler.obtainMessage(4, (Object)this.this$0.getString(2131427592)));
+                ex.printStackTrace();
+                return;
+            }
+            if ((Integer)map.get("success") != 1) {
+                String string = "";
+//                String string = this.this$0.getString(2131427592);
+                if (map.get("errormsg") != null) {
+                    string = (String)map.get("errormsg");
+                }
+                else if (map.get("url") == null || ((String)map.get("url")).length() <= 0) {
+                    string = "Get play url fail";
+                }
+                Log.e("DoSat2IpChannelPlay","string = " + string);
+                //this.this$0.mainHandler.sendMessage(this.this$0.mainHandler.obtainMessage(4, (Object)string));
+                return;
+            }
+            final String s = (String)map.get("url");
+            if (s == null) {
+                //this.this$0.mainHandler.sendMessage(this.this$0.mainHandler.obtainMessage(4, (Object)this.this$0.getString(2131427592)));
+                Log.e("DoSat2IpChannelPlay","(String)map.get(\"url\") = NULL");
+                return;
+            }
+            Log.d("GsChannelListActivity", "play url : " + s);
+            Uri uri = null;
+            try {
+                uri = new Uri(s);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                Log.e("DoSat2IpChannelPlay", "uri: MalformedURLException");
+
+            }
+            Log.d("DoSat2IpChannelPlay", "uri = " + uri);
+//            if (this.this$0.mPlayIntent != null) {
+//                this.this$0.mPlayIntent.setDataAndType(Uri.parse(s), "video/*");
+//                this.this$0.mainHandler.sendMessage(this.this$0.mainHandler.obtainMessage(3, (Object)this.this$0.mPlayIntent));
+//            }
         }
     }
 
@@ -1540,7 +1656,7 @@ public class Client {
 
     public void HandleResponse(Message responseMsg) {
 
-
+        DisplayMesssage(responseMsg);
         receiveMessageListModel.addElement(responseMsg);
 
         switch (responseMsg.what) {
@@ -1555,34 +1671,35 @@ public class Client {
                 break;
             }
 
-
             case 0:
-
                 ReceiveChannelListProcess(responseMsg);
                 //HandleChannelListResponse(currentMsgHeader, responseMsg.getData().getByteArray("ReceivedData"));
-
                 break;
+
             case 3:
-
                 ReceiveChannelUpdate(responseMsg);
-
                 break;
+
             case 22:
                 // Sat List
                 ChannelData.getInstance().initSatList(responseMsg);
                 java.util.List satList = ChannelData.getInstance().getmAllSatList();
                 DefaultListModel<DataConvertChannelModel> satListModel = new DefaultListModel<DataConvertChannelModel>();
                 InitJList(satList,listSat,satListModel);
-
                 break;
+
             case 24:
                 // Tp List
                 ChannelData.getInstance().initTpList(responseMsg);
                 java.util.List tpList = ChannelData.getInstance().getmAllTpList();
                 DefaultListModel<DataConvertChannelModel> tpListModel = new DefaultListModel<DataConvertChannelModel>();
                 InitJList(tpList,listTp,tpListModel);
-
                 break;
+            
+            case 1009:
+                DoSat2IpChannelPlay(responseMsg);
+                break;
+            
             default:
                 break;
         }

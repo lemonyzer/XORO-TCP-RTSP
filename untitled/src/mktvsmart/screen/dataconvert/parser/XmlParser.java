@@ -20,10 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser {
 
@@ -868,7 +865,7 @@ public class XmlParser implements mktvsmart.screen.dataconvert.parser.DataParser
                 int i12 = a45.getEventType();
                 java.util.ArrayList a46 = null;
                 java.util.HashMap a47 = null;
-                msg.obj = a47;
+                msg.obj = new HashMap();
                 Object a48 = a45;
                 while(i12 != 1)
                 {

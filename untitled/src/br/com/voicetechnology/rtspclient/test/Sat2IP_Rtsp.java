@@ -1,12 +1,16 @@
 package br.com.voicetechnology.rtspclient.test;
 
+import android.util.Log;
+import br.com.voicetechnology.rtspclient.concepts.Client;
 import br.com.voicetechnology.rtspclient.concepts.Request;
+import br.com.voicetechnology.rtspclient.concepts.Response;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.concurrent.TimeUnit;
 
 public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.ClientListener {
-    private static int[] SWITCH_TABLE;
+    private static int[] mSWITCH_TABLE;
     private static boolean isTearDown;
     private boolean _isSucc;
     br.com.voicetechnology.rtspclient.RTSPClient mClient;
@@ -24,57 +28,64 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
 
     static int[] SWITCH_TABLE()
     {
-        int[] a = SWITCH_TABLE;
-        if (a != null)
+        if (mSWITCH_TABLE != null)
         {
-            return a;
+            return mSWITCH_TABLE;
         }
-        int[] a0 = new int[br.com.voicetechnology.rtspclient.concepts.Request.Method.values().length];
-        br.com.voicetechnology.rtspclient.concepts.Request.Method a1 = br.com.voicetechnology.rtspclient.concepts.Request.Method.DESCRIBE;
-        try
-        {
-            a0[a1.ordinal()] = 2;
-        }
-        catch(NoSuchFieldError ignoredException)
-        {
-        }
-        try
-        {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.OPTIONS.ordinal()] = 1;
-        }
-        catch(NoSuchFieldError ignoredException0)
-        {
-        }
-        try
-        {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.PLAY.ordinal()] = 4;
-        }
-        catch(NoSuchFieldError ignoredException1)
-        {
-        }
-        try
-        {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.RECORD.ordinal()] = 5;
-        }
-        catch(NoSuchFieldError ignoredException2)
-        {
-        }
-        try
-        {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.SETUP.ordinal()] = 3;
-        }
-        catch(NoSuchFieldError ignoredException3)
-        {
-        }
-        try
-        {
-            a0[br.com.voicetechnology.rtspclient.concepts.Request.Method.TEARDOWN.ordinal()] = 6;
-        }
-        catch(NoSuchFieldError ignoredException4)
-        {
-        }
-        SWITCH_TABLE = a0;
-        return a0;
+
+        int[] mSWITCH_TABLE = new int[Request.Method.values().length];
+        mSWITCH_TABLE[Request.Method.OPTIONS.ordinal()] = 1;
+        mSWITCH_TABLE[Request.Method.DESCRIBE.ordinal()] = 2;
+        mSWITCH_TABLE[Request.Method.SETUP.ordinal()] = 3;
+        mSWITCH_TABLE[Request.Method.PLAY.ordinal()] = 4;
+        mSWITCH_TABLE[Request.Method.RECORD.ordinal()] = 5;
+        mSWITCH_TABLE[Request.Method.TEARDOWN.ordinal()] = 6;
+
+//        Request.Method a1 = Request.Method.DESCRIBE;
+//        try
+//        {
+//            a0[a1.ordinal()] = 2;
+//        }
+//        catch(NoSuchFieldError ignoredException)
+//        {
+//        }
+//        try
+//        {
+//            a0[Request.Method.OPTIONS.ordinal()] = 1;
+//        }
+//        catch(NoSuchFieldError ignoredException0)
+//        {
+//        }
+//        try
+//        {
+//            a0[Request.Method.PLAY.ordinal()] = 4;
+//        }
+//        catch(NoSuchFieldError ignoredException1)
+//        {
+//        }
+//        try
+//        {
+//            a0[Request.Method.RECORD.ordinal()] = 5;
+//        }
+//        catch(NoSuchFieldError ignoredException2)
+//        {
+//        }
+//        try
+//        {
+//            a0[Request.Method.SETUP.ordinal()] = 3;
+//        }
+//        catch(NoSuchFieldError ignoredException3)
+//        {
+//        }
+//        try
+//        {
+//            a0[Request.Method.TEARDOWN.ordinal()] = 6;
+//        }
+//        catch(NoSuchFieldError ignoredException4)
+//        {
+//        }
+//        SWITCH_TABLE = a0;
+        return mSWITCH_TABLE;
     }
 
     public Sat2IP_Rtsp()
@@ -97,62 +108,77 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
     }
 
     private void handleRequestFailed(br.com.voicetechnology.rtspclient.concepts.Client a) throws Throwable {
+        Log.e("RTSPClient","handleRequestFailed");
         a.teardown();
         this._isSucc = false;
-        //monenter(this);
-        try
-        {
-            ((Object)this).notify();
-            //monexit(this);
+        synchronized (this) {
+            this.notify();
         }
-        catch(Throwable a0)
-        {
-            Throwable a1 = a0;
-            while(true)
-            {
-                try
-                {
-                    //monexit(this);
-                }
-                catch(IllegalMonitorStateException | NullPointerException a2)
-                {
-                    a1 = a2;
-                    continue;
-                }
-                throw a1;
-            }
-        }
+
+//        a.teardown();
+//        this._isSucc = false;
+//        //monenter(this);
+//        try
+//        {
+//            ((Object)this).notify();
+//            //monexit(this);
+//        }
+//        catch(Throwable a0)
+//        {
+//            Throwable a1 = a0;
+//            while(true)
+//            {
+//                try
+//                {
+//                    //monexit(this);
+//                }
+//                catch(IllegalMonitorStateException | NullPointerException a2)
+//                {
+//                    a1 = a2;
+//                    continue;
+//                }
+//                throw a1;
+//            }
+//        }
     }
 
     private void handleRequestFailed_NoTearDown(br.com.voicetechnology.rtspclient.concepts.Client a) throws Throwable {
+        Log.e("RTSPClient","handleRequestFailed_NoTearDown");
         this._isSucc = false;
-        //monenter(this);
-        try
-        {
-            ((Object)this).notify();
-            //monexit(this);
+        synchronized (this) {
+            this.notify();
         }
-        catch(Throwable a0)
-        {
-            Throwable a1 = a0;
-            while(true)
-            {
-                try
-                {
-                    //monexit(this);
-                }
-                catch(IllegalMonitorStateException | NullPointerException a2)
-                {
-                    a1 = a2;
-                    continue;
-                }
-                throw a1;
-            }
-        }
+
+//        this._isSucc = false;
+//        //monenter(this);
+//        try
+//        {
+//            ((Object)this).notify();
+//            //monexit(this);
+//        }
+//        catch(Throwable a0)
+//        {
+//            Throwable a1 = a0;
+//            while(true)
+//            {
+//                try
+//                {
+//                    //monexit(this);
+//                }
+//                catch(IllegalMonitorStateException | NullPointerException a2)
+//                {
+//                    a1 = a2;
+//                    continue;
+//                }
+//                throw a1;
+//            }
+//        }
     }
 
     private void handleSessionNotFound()
     {
+        Log.e("RTSPClient","handleSessionNotFound");
+
         if (this.eofListener != null)
         {
             this.eofListener.onEndOfFile();
@@ -161,9 +187,37 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
 
     public static void main(String[] a)
     {
-        br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp a0 = new br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp();
-        a0.setup("rtsp://192.168.0.101:554/", "?src=1&fe=1&freq=3840&pol=h&msys=dvbs2&mtype=8psk&ro=0.35&plts=on&sr=27500&fec=2&pids=0,16,17,20,257,512,8190,8191,8191,650");
-        System.out.println(new StringBuilder("get rtp port: ").append(a0.get_rtp_port()).toString());
+
+        /*
+        0/6 : SWITCH_TABLE[0] = 1
+        1/6 : SWITCH_TABLE[1] = 2
+        2/6 : SWITCH_TABLE[2] = 3
+        3/6 : SWITCH_TABLE[3] = 4
+        4/6 : SWITCH_TABLE[4] = 5
+        5/6 : SWITCH_TABLE[5] = 6
+         */
+        if(SWITCH_TABLE() != null) {
+            for (int i = 0; i < SWITCH_TABLE().length; i++) {
+                System.out.println(i + "/" + SWITCH_TABLE().length + " : SWITCH_TABLE["+i+"] = " + SWITCH_TABLE()[i]);
+            }
+        }
+        System.out.println("--");
+
+        /*
+        0/6 = OPTIONS ordinal = 0
+        1/6 = DESCRIBE ordinal = 1
+        2/6 = SETUP ordinal = 2
+        3/6 = PLAY ordinal = 3
+        4/6 = RECORD ordinal = 4
+        5/6 = TEARDOWN ordinal = 5
+         */
+
+        for (int i=0; i< Request.Method.values().length; i++) {
+            System.out.println(i+"/"+Request.Method.values().length + " : " + (Request.Method.values()[i]) + " ordinal = " + (Request.Method.values()[i]).ordinal() );
+        }
+//        br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp a0 = new br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp();
+//        a0.setup("rtsp://192.168.0.101:554/", "?src=1&fe=1&freq=3840&pol=h&msys=dvbs2&mtype=8psk&ro=0.35&plts=on&sr=27500&fec=2&pids=0,16,17,20,257,512,8190,8191,8191,650");
+//        System.out.println(new StringBuilder("get rtp port: ").append(a0.get_rtp_port()).toString());
     }
 
     private int nextPort()
@@ -191,7 +245,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
     {
         System.out.println(new StringBuilder("Request failed \n").append((Object)a0).toString());
         a1.printStackTrace();
-        if (a0.getMethod() != br.com.voicetechnology.rtspclient.concepts.Request.Method.TEARDOWN)
+        if (a0.getMethod() != Request.Method.TEARDOWN)
         {
             try {
                 this.handleRequestFailed(a);
@@ -201,7 +255,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
     }
 
-    public void response(br.com.voicetechnology.rtspclient.concepts.Client a, br.com.voicetechnology.rtspclient.concepts.Request a0, br.com.voicetechnology.rtspclient.concepts.Response a1)
+    public void response(Client client, Request request, Response response)
     {
         label5: {
             label4: {
@@ -210,70 +264,61 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                         label6: {
                             label12: {
                                 label8: {
-                                    Object a2 = null;
                                     label10: try
                                     {
-                                        a2 = a;
-                                        if (a0.getMethod() == br.com.voicetechnology.rtspclient.concepts.Request.Method.OPTIONS)
+                                        if (request.getMethod() == Request.Method.OPTIONS)
                                         {
                                             java.io.PrintStream a3 = System.out;
-                                            a2 = a;
                                             a3.println("Got response for OPTIONS\n");
                                         }
                                         else
                                         {
                                             java.io.PrintStream a4 = System.out;
-                                            a2 = a;
-                                            a4.println(new StringBuilder("Got response: ").append((Object)a1).toString());
-                                            System.out.println(new StringBuilder("for the request: \n").append((Object)a0).toString());
+                                            a4.println(new StringBuilder("Got response: ").append((Object)response).toString());
+                                            System.out.println(new StringBuilder("for the request: \n").append((Object)request).toString());
                                         }
-                                        a2 = a;
-                                        int i = a1.getStatusCode();
+//                                        int i = response.getStatusCode();
                                         label11: {
-                                            if (i == 200)
+                                            if (response.getStatusCode() == 200)
                                             {
                                                 break label11;
                                             }
-                                            a2 = a;
-                                            int i0 = a1.getStatusCode();
+//                                            int i0 = response.getStatusCode();
                                             label9: {
-                                                if (i0 == 454)
+                                                if (response.getStatusCode() == 454)
                                                 {
                                                     break label9;
                                                 }
-                                                a2 = a;
-                                                this.handleRequestFailed(a);
+//                                                a2 = client;
+                                                this.handleRequestFailed(client);
                                                 break label10;
                                             }
-                                            a2 = a;
-                                            br.com.voicetechnology.rtspclient.concepts.Request.Method a5 = a0.getMethod();
-                                            br.com.voicetechnology.rtspclient.concepts.Request.Method a6 = br.com.voicetechnology.rtspclient.concepts.Request.Method.OPTIONS;
+//                                            Request.Method a5 = request.getMethod();
+//                                            Request.Method a6 = Request.Method.OPTIONS;
                                             label7: {
-                                                if (a5 == a6)
+                                                if (request.getMethod() == Request.Method.OPTIONS)
                                                 {
                                                     break label7;
                                                 }
-                                                a2 = a;
-                                                this.handleRequestFailed_NoTearDown(a);
+                                                this.handleRequestFailed_NoTearDown(client);
                                                 break label8;
                                             }
-                                            a2 = a;
                                             this.handleSessionNotFound();
                                             break label12;
                                         }
-                                        a2 = a;
-                                        int i1 = br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp.SWITCH_TABLE()[a0.getMethod().ordinal()];
+                                        int i1 = Sat2IP_Rtsp.SWITCH_TABLE()[request.getMethod().ordinal()];
                                         label2: {
                                             label3: {
                                                 label1: {
                                                     switch(i1){
                                                         case 4: {
-                                                            a2 = a;
+                                                            // request.getMethod() == 3 == PLAY
                                                             this._isSucc = true;
                                                             //monenter(this);
                                                             break label3;
                                                         }
                                                         case 3: {
+                                                            // request.getMethod() == 2 == SETUP
                                                             if (mktvsmart.screen.GMScreenGlobalInfo.playType != 2)
                                                             {
                                                                 break label2;
@@ -281,6 +326,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                                             break;
                                                         }
                                                         case 1: {
+                                                            // request.getMethod() == 0 == OPTIONS
                                                             if (isTearDown)
                                                             {
                                                                 break label0;
@@ -291,57 +337,71 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                                             break label0;
                                                         }
                                                     }
-                                                    a2 = a;
-                                                    this.streamId = Integer.parseInt(a1.getHeader("com.ses.streamID").getRawValue());
-                                                    a.play(new StringBuilder(String.valueOf((Object)this.mBaseUrl)).append("stream=").append(this.streamId).toString());
+
+                                                    // request SETUP
+                                                    this.streamId = Integer.parseInt(response.getHeader("com.ses.streamID").getRawValue());
+                                                    client.play(new StringBuilder(String.valueOf((Object)this.mBaseUrl)).append("stream=").append(this.streamId).toString());
                                                     break label4;
+                                                    // ende label 1
                                                 }
-                                                a2 = a;
+                                                // request OPTIONS
                                                 Thread.sleep(10000L);
-                                                a.options("*", new java.net.URI(this.mBaseUrl));
+                                                client.options("*", new java.net.URI(this.mBaseUrl));
                                                 break label5;
+
+                                                // ende label 5
                                             }
-                                            try
-                                            {
-                                                ((Object)this).notify();
-                                                //monexit(this);
-                                            }
-                                            catch(Throwable a7)
-                                            {
-                                                Throwable a8 = a7;
-                                                a2 = a;
-                                                while(true)
-                                                {
-                                                    try
-                                                    {
-                                                        //monexit(this);
-                                                    }
-                                                    catch(IllegalMonitorStateException | NullPointerException a9)
-                                                    {
-                                                        Object a10 = a2;
-                                                        a8 = a9;
-                                                        a2 = a10;
-                                                        continue;
-                                                    }
-                                                    throw a8;
+                                            // request PLAY
+                                            synchronized (this) {
+                                                try {
+                                                    this.notify();
+                                                } catch (IllegalMonitorStateException a9) {
+                                                    System.out.println(this.toString() + ": loop @ IllegalMonitorStateException ");
+                                                } catch (NullPointerException a9) {
+                                                    System.out.println(this.toString() + ": loop @ NullPointerException ");
                                                 }
                                             }
-                                            a2 = a;
+//                                            try
+//                                            {
+//                                                ((Object)this).notify();
+//                                                //monexit(this);
+//                                            }
+//                                            catch(Throwable a7)
+//                                            {
+//                                                Throwable a8 = a7;
+////                                                a2 = client;
+//                                                while(true)
+//                                                {
+//                                                    System.out.println(this.toString() + ": loop @ IllegalMonitorStateException ");
+//                                                    try
+//                                                    {
+//                                                        //monexit(this);
+//                                                    }
+//                                                    catch(IllegalMonitorStateException | NullPointerException a9)
+//                                                    {
+////                                                        Object a10 = a2;
+//                                                        a8 = a9;
+////                                                        a2 = a10;
+//                                                        continue;
+//                                                    }
+//                                                    throw a8;
+//                                                }
+//                                            }
                                             Thread.sleep(10000L);
-                                            a.options("*", new java.net.URI(this.mBaseUrl));
+                                            client.options("*", new java.net.URI(this.mBaseUrl));
                                             break label6;
                                         }
                                         if (mktvsmart.screen.GMScreenGlobalInfo.playType != 1)
                                         {
                                             break label0;
                                         }
-                                        a2 = a;
-                                        a.play(this.mBaseUrl);
+//                                        a2 = client;
+                                        client.play(this.mBaseUrl);
                                         break label13;
                                     }
                                     catch(Throwable a11)
                                     {
-                                        this.generalError((br.com.voicetechnology.rtspclient.concepts.Client)a2, a11);
+                                        this.generalError(client, a11);
                                         return;
                                     }
                                     return;
@@ -381,6 +441,12 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         isTearDown = false;
     }
 
+    public void setup_not_blocked(String rtspUriBase, String rtspUriQuery)
+    {
+        this._isSucc = false;
+        this.setup(rtspUriBase, rtspUriQuery);
+    }
+
     public boolean setup_blocked(String rtspUriBase, String rtspUriQuery)
     {
         boolean b = false;
@@ -391,14 +457,22 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
             {
                 this._isSucc = false;
                 this.setup(rtspUriBase, rtspUriQuery);
+                long begin = System.currentTimeMillis();
                 ((Object)this).wait(5000L);
+                long end = System.currentTimeMillis();
+                long duration = end-begin;
+                Log.d("setup_blocked:"," wait in Seconds= " + TimeUnit.MILLISECONDS.toSeconds(duration));
+
+//                ((Object)this).wait(5000L);
             }
             catch(Exception ignoredException)
             {
+                ignoredException.printStackTrace();
             }
         }
         catch(Throwable ignoredException0)
         {
+            ignoredException0.printStackTrace();
         }
         try
         {
@@ -407,6 +481,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         catch(NullPointerException a)
         {
             //monexit(this);
+            a.printStackTrace();
             throw a;
         }
         //monexit(this);

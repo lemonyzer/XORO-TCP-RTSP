@@ -101,8 +101,7 @@ public class RTSPClient implements Client, TransportListener
 	{
 		try
 		{
-			RTSPOptionsRequest message = (RTSPOptionsRequest) messageFactory
-					.outgoingRequest(uri, Method.OPTIONS, nextCSeq());
+			RTSPOptionsRequest message = (RTSPOptionsRequest) messageFactory.outgoingRequest(uri, Method.OPTIONS, nextCSeq(), session);
 			if(!getTransport().isConnected())
 				message.addHeader(new Header("Connection", "close"));
 			send(message, endpoint);
