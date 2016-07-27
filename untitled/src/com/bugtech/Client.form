@@ -323,24 +323,71 @@
               <text value="use Auto Send Commands after Login"/>
             </properties>
           </component>
-          <component id="6123a" class="javax.swing.JButton" binding="btnStartStream">
+          <grid id="c92bb" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints/>
-            <properties>
-              <text value="Start Streaming"/>
-            </properties>
-          </component>
-          <component id="71044" class="javax.swing.JButton" binding="btnStreamRequest">
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="6123a" class="javax.swing.JButton" binding="btnStartStream">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Start Streaming"/>
+                </properties>
+              </component>
+              <component id="6e37c" class="javax.swing.JCheckBox" binding="checkBoxSetupBlocked">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="Setup Blocked"/>
+                </properties>
+              </component>
+              <component id="f8004" class="javax.swing.JCheckBox" binding="checkBoxPlayType">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="PlayType = 1"/>
+                </properties>
+              </component>
+              <component id="ef491" class="javax.swing.JCheckBox" binding="checkBoxBuiltInPlayer">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="BuiltInPlayer"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="654ed" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints/>
-            <properties>
-              <text value="Stream Request 1009"/>
-            </properties>
-          </component>
-          <component id="f8004" class="javax.swing.JCheckBox" binding="checkBoxPlayType">
-            <constraints/>
-            <properties>
-              <text value="PlayType = 1"/>
-            </properties>
-          </component>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="71044" class="javax.swing.JButton" binding="btnStreamRequest">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Stream Request 1009"/>
+                </properties>
+              </component>
+              <component id="b1df2" class="javax.swing.JButton" binding="btnStreamRequest1012">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Stream Request 1012"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
           <component id="5e45f" class="javax.swing.JButton" binding="btnStopStreaming">
             <constraints/>
             <properties>

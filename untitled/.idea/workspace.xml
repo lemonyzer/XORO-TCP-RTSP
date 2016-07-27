@@ -21,21 +21,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="298" column="74" selection-start-line="298" selection-start-column="74" selection-end-line="298" selection-end-column="74" />
+            <state relative-caret-position="520">
+              <caret line="401" column="42" selection-start-line="401" selection-start-column="42" selection-end-line="401" selection-end-column="42" />
               <folding>
-                <element signature="e#6848#6849#0" expanded="true" />
-                <element signature="e#6910#6911#0" expanded="true" />
-                <element signature="e#7067#7068#0" expanded="true" />
-                <element signature="e#7111#7112#0" expanded="true" />
                 <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
                 <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
                 <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
-                <element signature="e#38043#38109#0" expanded="false" />
-                <marker date="1469590123398" expanded="false" signature="61381:61406" ph="&lt;~&gt;" />
+                <element signature="e#42769#42835#0" expanded="false" />
+                <marker date="1469636233547" expanded="false" signature="66107:66132" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
@@ -44,7 +40,7 @@
       <file leaf-file-name="GsSendSocket.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/GsSendSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="608">
               <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
               <folding />
             </state>
@@ -61,79 +57,9 @@
       <file leaf-file-name="LivePlayActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/vlc/LivePlayActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="17">
               <caret line="1831" column="22" selection-start-line="1831" selection-start-column="22" selection-end-line="1831" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#17793#17794#0" expanded="true" />
-                <element signature="e#17892#17893#0" expanded="true" />
-                <element signature="e#20467#20468#0" expanded="true" />
-                <element signature="e#20513#20514#0" expanded="true" />
-                <element signature="e#20567#20568#0" expanded="true" />
-                <element signature="e#20612#20613#0" expanded="true" />
-                <element signature="e#21680#21681#0" expanded="true" />
-                <element signature="e#21723#21724#0" expanded="true" />
-                <element signature="e#21809#21810#0" expanded="true" />
-                <element signature="e#21855#21856#0" expanded="true" />
-                <element signature="e#40121#40146#0" expanded="true" />
-                <element signature="e#41786#41811#0" expanded="true" />
-                <element signature="e#43643#43644#0" expanded="true" />
-                <element signature="e#43694#43695#0" expanded="true" />
-                <element signature="e#44548#44549#0" expanded="true" />
-                <element signature="e#44609#44610#0" expanded="true" />
-                <element signature="e#45114#45115#0" expanded="true" />
-                <element signature="e#45193#45194#0" expanded="true" />
-                <element signature="e#48717#48718#0" expanded="true" />
-                <element signature="e#48789#48790#0" expanded="true" />
-                <element signature="e#49169#49170#0" expanded="true" />
-                <element signature="e#49216#49217#0" expanded="true" />
-                <element signature="e#49848#49849#0" expanded="true" />
-                <element signature="e#49894#49895#0" expanded="true" />
-                <element signature="e#49945#49946#0" expanded="true" />
-                <element signature="e#49994#49995#0" expanded="true" />
-                <element signature="e#50038#50039#0" expanded="true" />
-                <element signature="e#50079#50080#0" expanded="true" />
-                <element signature="e#50126#50127#0" expanded="true" />
-                <element signature="e#50168#50169#0" expanded="true" />
-                <element signature="e#50211#50212#0" expanded="true" />
-                <element signature="e#50251#50252#0" expanded="true" />
-                <element signature="e#57870#57871#0" expanded="true" />
-                <element signature="e#57902#57903#0" expanded="true" />
-                <element signature="e#57943#57944#0" expanded="true" />
-                <element signature="e#58008#58009#0" expanded="true" />
-                <element signature="e#58452#58460#0" expanded="true" />
-                <element signature="e#60443#60468#0" expanded="true" />
-                <element signature="e#61694#61695#0" expanded="true" />
-                <element signature="e#61741#61742#0" expanded="true" />
-                <element signature="e#61786#61787#0" expanded="true" />
-                <element signature="e#61869#61870#0" expanded="true" />
-                <element signature="e#61906#61907#0" expanded="true" />
-                <element signature="e#61961#61962#0" expanded="true" />
-                <element signature="e#61997#61998#0" expanded="true" />
-                <element signature="e#62051#62052#0" expanded="true" />
-                <element signature="e#68758#68759#0" expanded="true" />
-                <element signature="e#68810#68811#0" expanded="true" />
-                <element signature="e#71766#71767#0" expanded="true" />
-                <element signature="e#71824#71825#0" expanded="true" />
-                <element signature="e#78648#78649#0" expanded="true" />
-                <element signature="e#78686#78687#0" expanded="true" />
-                <element signature="e#80177#80178#0" expanded="true" />
-                <element signature="e#80234#80235#0" expanded="true" />
-                <element signature="e#81572#81573#0" expanded="true" />
-                <element signature="e#81619#81620#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GsPvr2SmallActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/GsPvr2SmallActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="330" column="61" selection-start-line="330" selection-start-column="50" selection-end-line="330" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,23 +67,21 @@
       <file leaf-file-name="XmlParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/XmlParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2459">
-              <caret line="918" column="50" selection-start-line="918" selection-start-column="47" selection-end-line="918" selection-end-column="50" />
-              <folding>
-                <element signature="e#2444#2445#0" expanded="true" />
-                <element signature="e#2467#2468#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2006">
+              <caret line="6315" column="39" selection-start-line="6315" selection-start-column="39" selection-end-line="6315" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sat2IP_Rtsp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sat2IP_Rtsp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Sat2IP_Rtsp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="443" column="15" selection-start-line="443" selection-start-column="15" selection-end-line="443" selection-end-column="15" />
+            <state relative-caret-position="61">
+              <caret line="540" column="16" selection-start-line="540" selection-start-column="16" selection-end-line="540" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#7909#7910#0" expanded="true" />
+                <element signature="e#7964#7965#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,8 +90,8 @@
       <file leaf-file-name="Sat2IP_Rtsp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1925">
-              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="85" selection-end-column="9" />
+            <state relative-caret-position="112">
+              <caret line="215" column="19" selection-start-line="215" selection-start-column="19" selection-end-line="215" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -238,8 +162,8 @@
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/Pvr2smallData.java" />
         <option value="$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/RTSPClient.java" />
         <option value="$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java" />
-        <option value="$PROJECT_DIR$/src/com/bugtech/Client.form" />
         <option value="$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Sat2IP_Rtsp.java" />
+        <option value="$PROJECT_DIR$/src/com/bugtech/Client.form" />
         <option value="$PROJECT_DIR$/src/com/bugtech/Client.java" />
       </list>
     </option>
@@ -282,12 +206,163 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pvr2small" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bugtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Client" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bugtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtspclient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtspclient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -676,9 +751,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33713692" sideWeight="0.48333332" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -776,16 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#1362#1363#0" expanded="false" />
-            <element signature="e#1386#1387#0" expanded="false" />
-            <element signature="e#1430#1431#0" expanded="false" />
-            <element signature="e#1455#1456#0" expanded="false" />
-            <element signature="e#1490#1491#0" expanded="false" />
-            <element signature="e#1517#1518#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,29 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11169">
           <caret line="677" column="36" selection-start-line="677" selection-start-column="36" selection-end-line="677" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#12423#12424#0" expanded="false" />
-            <element signature="e#12496#12497#0" expanded="false" />
-            <element signature="e#23409#23410#0" expanded="false" />
-            <element signature="e#23490#23491#0" expanded="false" />
-            <element signature="e#23540#23541#0" expanded="false" />
-            <element signature="e#23579#23580#0" expanded="false" />
-            <element signature="e#23628#23629#0" expanded="false" />
-            <element signature="e#23666#23667#0" expanded="false" />
-            <element signature="e#23722#23723#0" expanded="false" />
-            <element signature="e#23767#23768#0" expanded="false" />
-            <element signature="e#23820#23821#0" expanded="false" />
-            <element signature="e#23862#23863#0" expanded="false" />
-            <element signature="e#26299#26300#0" expanded="false" />
-            <element signature="e#26335#26336#0" expanded="false" />
-            <element signature="e#26390#26391#0" expanded="false" />
-            <element signature="e#26425#26426#0" expanded="false" />
-            <element signature="e#26487#26488#0" expanded="false" />
-            <element signature="e#26529#26530#0" expanded="false" />
-            <element signature="e#26588#26589#0" expanded="false" />
-            <element signature="e#26627#26628#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,12 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#5118#5119#0" expanded="false" />
-            <element signature="e#5154#5155#0" expanded="false" />
-            <element signature="e#5191#5192#0" expanded="false" />
-            <element signature="e#5227#5228#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,7 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,7 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,7 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,10 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="102" column="22" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="22" />
-          <folding>
-            <element signature="e#2979#2980#0" expanded="false" />
-            <element signature="e#3009#3010#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,7 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,7 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="586">
           <caret line="104" column="34" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,15 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-862">
           <caret line="27" column="18" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/DataParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,7 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="42" column="127" selection-start-line="42" selection-start-column="127" selection-end-line="42" selection-end-column="127" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,36 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/Pvr2smallData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#2510#2511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/os/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding>
-            <element signature="e#1125#1126#0" expanded="false" />
-            <element signature="e#1152#1153#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,15 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
           <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/concepts/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1133,7 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,148 +1117,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
           <caret line="103" column="133" selection-start-line="103" selection-start-column="133" selection-end-line="103" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/DataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/concepts/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/Pvr2smallData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="215" column="19" selection-start-line="215" selection-start-column="19" selection-end-line="215" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/XmlParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="6315" column="39" selection-start-line="6315" selection-start-column="39" selection-end-line="6315" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/GsPvr2SmallActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="438" column="54" selection-start-line="438" selection-start-column="49" selection-end-line="438" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/vlc/LivePlayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1831" column="22" selection-start-line="1831" selection-start-column="22" selection-end-line="1831" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/GsSendSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="608">
           <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/vlc/LivePlayActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="1831" column="22" selection-start-line="1831" selection-start-column="22" selection-end-line="1831" selection-end-column="22" />
+        <state relative-caret-position="520">
+          <caret line="401" column="42" selection-start-line="401" selection-start-column="42" selection-end-line="401" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#17793#17794#0" expanded="true" />
-            <element signature="e#17892#17893#0" expanded="true" />
-            <element signature="e#20467#20468#0" expanded="true" />
-            <element signature="e#20513#20514#0" expanded="true" />
-            <element signature="e#20567#20568#0" expanded="true" />
-            <element signature="e#20612#20613#0" expanded="true" />
-            <element signature="e#21680#21681#0" expanded="true" />
-            <element signature="e#21723#21724#0" expanded="true" />
-            <element signature="e#21809#21810#0" expanded="true" />
-            <element signature="e#21855#21856#0" expanded="true" />
-            <element signature="e#40121#40146#0" expanded="true" />
-            <element signature="e#41786#41811#0" expanded="true" />
-            <element signature="e#43643#43644#0" expanded="true" />
-            <element signature="e#43694#43695#0" expanded="true" />
-            <element signature="e#44548#44549#0" expanded="true" />
-            <element signature="e#44609#44610#0" expanded="true" />
-            <element signature="e#45114#45115#0" expanded="true" />
-            <element signature="e#45193#45194#0" expanded="true" />
-            <element signature="e#48717#48718#0" expanded="true" />
-            <element signature="e#48789#48790#0" expanded="true" />
-            <element signature="e#49169#49170#0" expanded="true" />
-            <element signature="e#49216#49217#0" expanded="true" />
-            <element signature="e#49848#49849#0" expanded="true" />
-            <element signature="e#49894#49895#0" expanded="true" />
-            <element signature="e#49945#49946#0" expanded="true" />
-            <element signature="e#49994#49995#0" expanded="true" />
-            <element signature="e#50038#50039#0" expanded="true" />
-            <element signature="e#50079#50080#0" expanded="true" />
-            <element signature="e#50126#50127#0" expanded="true" />
-            <element signature="e#50168#50169#0" expanded="true" />
-            <element signature="e#50211#50212#0" expanded="true" />
-            <element signature="e#50251#50252#0" expanded="true" />
-            <element signature="e#57870#57871#0" expanded="true" />
-            <element signature="e#57902#57903#0" expanded="true" />
-            <element signature="e#57943#57944#0" expanded="true" />
-            <element signature="e#58008#58009#0" expanded="true" />
-            <element signature="e#58452#58460#0" expanded="true" />
-            <element signature="e#60443#60468#0" expanded="true" />
-            <element signature="e#61694#61695#0" expanded="true" />
-            <element signature="e#61741#61742#0" expanded="true" />
-            <element signature="e#61786#61787#0" expanded="true" />
-            <element signature="e#61869#61870#0" expanded="true" />
-            <element signature="e#61906#61907#0" expanded="true" />
-            <element signature="e#61961#61962#0" expanded="true" />
-            <element signature="e#61997#61998#0" expanded="true" />
-            <element signature="e#62051#62052#0" expanded="true" />
-            <element signature="e#68758#68759#0" expanded="true" />
-            <element signature="e#68810#68811#0" expanded="true" />
-            <element signature="e#71766#71767#0" expanded="true" />
-            <element signature="e#71824#71825#0" expanded="true" />
-            <element signature="e#78648#78649#0" expanded="true" />
-            <element signature="e#78686#78687#0" expanded="true" />
-            <element signature="e#80177#80178#0" expanded="true" />
-            <element signature="e#80234#80235#0" expanded="true" />
-            <element signature="e#81572#81573#0" expanded="true" />
-            <element signature="e#81619#81620#0" expanded="true" />
+            <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
+            <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
+            <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
+            <element signature="e#42769#42835#0" expanded="false" />
+            <marker date="1469636233547" expanded="false" signature="66107:66132" ph="&lt;~&gt;" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/GsPvr2SmallActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="330" column="61" selection-start-line="330" selection-start-column="50" selection-end-line="330" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/XmlParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2459">
-          <caret line="918" column="50" selection-start-line="918" selection-start-column="47" selection-end-line="918" selection-end-column="50" />
-          <folding>
-            <element signature="e#2444#2445#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1925">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="85" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Sat2IP_Rtsp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="443" column="15" selection-start-line="443" selection-start-column="15" selection-end-line="443" selection-end-column="15" />
+        <state relative-caret-position="61">
+          <caret line="540" column="16" selection-start-line="540" selection-start-column="16" selection-end-line="540" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="298" column="74" selection-start-line="298" selection-start-column="74" selection-end-line="298" selection-end-column="74" />
-          <folding>
-            <element signature="e#6848#6849#0" expanded="true" />
-            <element signature="e#6910#6911#0" expanded="true" />
-            <element signature="e#7067#7068#0" expanded="true" />
-            <element signature="e#7111#7112#0" expanded="true" />
-            <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
-            <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
-            <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
-            <element signature="e#38043#38109#0" expanded="false" />
-            <marker date="1469590123398" expanded="false" signature="61381:61406" ph="&lt;~&gt;" />
+            <element signature="e#7909#7910#0" expanded="true" />
+            <element signature="e#7964#7965#0" expanded="true" />
           </folding>
         </state>
       </provider>

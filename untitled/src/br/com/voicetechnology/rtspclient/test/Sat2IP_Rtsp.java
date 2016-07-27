@@ -1,11 +1,14 @@
 package br.com.voicetechnology.rtspclient.test;
 
 import android.util.Log;
+import br.com.voicetechnology.rtspclient.MissingHeaderException;
 import br.com.voicetechnology.rtspclient.concepts.Client;
 import br.com.voicetechnology.rtspclient.concepts.Request;
 import br.com.voicetechnology.rtspclient.concepts.Response;
+import mktvsmart.screen.GMScreenGlobalInfo;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
@@ -107,7 +110,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
     }
 
-    private void handleRequestFailed(br.com.voicetechnology.rtspclient.concepts.Client a) throws Throwable {
+    private void handleRequestFailed(br.com.voicetechnology.rtspclient.concepts.Client a) {
         Log.e("RTSPClient","handleRequestFailed");
         a.teardown();
         this._isSucc = false;
@@ -142,7 +145,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
 //        }
     }
 
-    private void handleRequestFailed_NoTearDown(br.com.voicetechnology.rtspclient.concepts.Client a) throws Throwable {
+    private void handleRequestFailed_NoTearDown(br.com.voicetechnology.rtspclient.concepts.Client a) {
         Log.e("RTSPClient","handleRequestFailed_NoTearDown");
         this._isSucc = false;
         synchronized (this) {
@@ -255,7 +258,117 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         }
     }
 
+    @Override
     public void response(Client client, Request request, Response response)
+    {
+        responseLuyten(client,request,response);
+    }
+
+    public void responseLuyten(final Client client, final Request request, final Response response) {
+        Label_0286: {
+            Label_0254: {
+                Label_0210: {
+                    try {
+                        if (request.getMethod() != Request.Method.OPTIONS) {
+                            System.out.println("Got response: " + response);
+                            System.out.println("for the request: \n" + request);
+                        }
+                        else {
+//                            System.out.println("Got response for OPTIONS\n");
+                            System.out.println("Got response for OPTIONS" + response);
+                            System.out.println("for the request: \n" + request);
+                        }
+                        if (response.getStatusCode() != 200) {
+                            break Label_0286;
+                        }
+                        switch (SWITCH_TABLE()[request.getMethod().ordinal()]) {
+                            case 3: {
+                                // request.getMethod() == 2 == SETUP
+                                break;
+                            }
+                            case 4: {
+                                // request.getMethod() == 3 == PLAY
+                                break Label_0210;
+                            }
+                            case 1: {
+                                // request.getMethod() == 0 == OPTIONS
+                                break Label_0254;
+                            }
+                            default: {
+                                return;
+                            }
+                        }
+                    }
+                    catch (Throwable t) {
+                        this.generalError(client, t);
+                        return;
+                    }
+                    if (GMScreenGlobalInfo.playType == 2) {
+                        try {
+                            this.streamId = Integer.parseInt(response.getHeader("com.ses.streamID").getRawValue());
+                            client.play(String.valueOf(this.mBaseUrl) + "stream=" + this.streamId);
+                        } catch (MissingHeaderException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        return;
+                    }
+                    if (GMScreenGlobalInfo.playType == 1) {
+                        try {
+                            client.play(this.mBaseUrl);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        return;
+                    }
+                    return;
+                }
+                this._isSucc = true;
+                synchronized (this) {
+                    this.notify();
+                    // monitorexit(this)
+                    try {
+                        Thread.sleep(10000L);
+                        client.options("*", new URI(this.mBaseUrl));
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    }
+                    return;
+                }
+            }
+            if (!Sat2IP_Rtsp.isTearDown) {
+                try {
+                    Thread.sleep(10000L);
+                    client.options("*", new URI(this.mBaseUrl));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+            return;
+        }
+        if (response.getStatusCode() != 454) {
+            this.handleRequestFailed(client);
+            return;
+        }
+        if (request.getMethod() == Request.Method.OPTIONS) {
+            this.handleSessionNotFound();
+            return;
+        }
+        this.handleRequestFailed_NoTearDown(client);
+    }
+
+    public void responseKarakatau(Client client, Request request, Response response)
     {
         label5: {
             label4: {
@@ -447,7 +560,37 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         this.setup(rtspUriBase, rtspUriQuery);
     }
 
-    public boolean setup_blocked(String rtspUriBase, String rtspUriQuery)
+    public boolean setup_blocked(String rtspUriBase, String rtspUriQuery) {
+        synchronized(this){}
+
+        label55:
+        try {
+            try {
+                this._isSucc = false;
+                this.setup(rtspUriBase, rtspUriQuery);
+                this.wait(5000L);
+            } catch (Exception var11) {
+                var11.printStackTrace();
+            }
+        }
+        catch (Exception var11) {
+            var11.printStackTrace();
+        }finally {
+            break label55;
+        }
+
+        boolean var3;
+        try {
+            var3 = this._isSucc;
+        } finally {
+
+        }
+
+        return var3;
+    }
+
+
+    public boolean setup_blockedKrakatau(String rtspUriBase, String rtspUriQuery)
     {
         boolean b = false;
         //monenter(this);

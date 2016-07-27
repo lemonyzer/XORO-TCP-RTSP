@@ -16,6 +16,7 @@ import mktvsmart.screen.dataconvert.parser.DataParser;
 import mktvsmart.screen.dataconvert.parser.ParserFactory;
 import mktvsmart.screen.dataconvert.parser.SerializedDataModel;
 import mktvsmart.screen.exception.ProgramNotFoundException;
+import mktvsmart.screen.pvr2small.Pvr2smallData;
 import mktvsmart.screen.socketthread.UdpSocketReceiveBroadcastThread;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -120,6 +121,9 @@ public class Client {
     private JCheckBox checkBoxPlayType;
     private JTextArea textAreaRTSP;
     private JButton btnStopStreaming;
+    private JButton btnStreamRequest1012;
+    private JCheckBox checkBoxSetupBlocked;
+    private JCheckBox checkBoxBuiltInPlayer;
     private static br.com.voicetechnology.rtspclient.test.Sat2IP_Rtsp sRtsp;
 
 
@@ -207,6 +211,20 @@ public class Client {
                 stopStream();
             }
         });
+        btnStreamRequest1012.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnStopStreamRequestClicked();
+            }
+        });
+    }
+
+    private void btnStopStreamRequestClicked() {
+
+        if(!tcpSocket.isConnected())
+            return;
+
+        GsSendSocket.sendOnlyCommandSocketToStb(this.tcpSocket, 1012);
     }
 
     private void btnStartStreamRequestClicked() {
@@ -234,11 +252,12 @@ public class Client {
 //        final FindPlayerAndPlayChannel findPlayerAndPlayChannel = new FindPlayerAndPlayChannel((Context)this.getParent());
 //        findPlayerAndPlayChannel.implementPlayByDesignatedPlayer(this.mPlayByDesignatedPlayer);
 //        findPlayerAndPlayChannel.selectPlayer(n);
-        if(checkBoxPlayType.isSelected())
+        if(checkBoxBuiltInPlayer.isSelected())
         {
             // playType = 1 ... ?
             GMScreenGlobalInfo.playType = 1;
             bPlayWithOherPlayer = true;
+            GsPvr2SmallActivityStartPlayStream(value);
             // GsPvr2SmallAcitivity.startPlayStream(value);
         }
         else
@@ -248,6 +267,76 @@ public class Client {
             // bPlayWithOherPlayer = false ???
             startPlayStream(value);
         }
+    }
+
+    // GsPvr2SmallActivity.startPlayStream
+    Pvr2smallData mPvr2SmallData;
+    private void GsPvr2SmallActivityStartPlayStream(final int n) {
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                sRtsp=  new Sat2IP_Rtsp();
+                //sRtsp.set_eof_listener((Sat2IP_Rtsp.EndOfFileListener));
+//                if (mPvr2SmallData.getPvr2smallList().get(n).getmPvrCrypto() == 1) {
+//                    //DVBtoIP.getChannelUserKey(tcpSocket.getInetAddress().toString().substring(1));
+//                }
+//                final String playUrlBase = Pvr2smallData.getInstance().getPlayUrlBase(n, tcpSocket.getInetAddress().toString());
+//                final String playUrlQuery = Pvr2smallData.getInstance().getPlayUrlQuery();
+                final String playUrlBase = Sat2ipUtil.getRtspUriBase(tcpSocket.getInetAddress().toString());
+                final String playUrlQuery = Sat2ipUtil.getRtspUriQuery(mCurrentChannelList.get(n));
+                if(checkBoxPlayType.isSelected())
+                    GMScreenGlobalInfo.playType = 1;
+                else
+                    GMScreenGlobalInfo.playType = 2;
+
+                if (!sRtsp.setup_blocked(playUrlBase, playUrlQuery)) {
+                    Log.d("GsPvr2SmallActivityStartPlayStream", "setup_blocked FAILED");
+//                    if (this.this$0.waitDialog.isShowing()) {
+//                        this.this$0.waitDialog.dismiss();
+//                    }
+//                    final CommonErrorDialog commonErrorDialog = new CommonErrorDialog((Context)this.this$0.getParent());
+//                    commonErrorDialog.setmContent(this.this$0.getResources().getString(2131427592));
+//                    commonErrorDialog.show();
+                    sRtsp.teardown();
+                    sRtsp = null;
+                    return;
+                }
+                Log.d("GsPvr2SmallActivityStartPlayStream", "setup_blocked SUCCESS");
+                sendSat2ipChannelRequestToStb(n);
+
+
+//                DVBtoIP.initResourceForPlayer(sRtsp.get_rtp_port(), FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)this.this$0), 1);
+//                this.runOnUiThread((Runnable)new Runnable() {
+//                    final /* synthetic */ GsPvr2SmallActivity$11 this$1;
+//                    private final /* synthetic */ Intent val$playIntent;
+//
+//                    GsPvr2SmallActivity$11$1() {
+//                        this.this$1 = this$1;
+//                        super();
+//                    }
+//
+//                    @Override
+//                    public void run() {
+////                        if (this.this$1.this$0.waitDialog.isShowing()) {
+////                            this.this$1.this$0.waitDialog.dismiss();
+////                        }
+////                        while (true) {
+////                            try {
+////                                this.this$1.this$0.startActivity(intent);
+////                                Toast.makeText((Context)this.this$1.this$0, 2131427593, 1).show();
+////                            }
+////                            catch (ActivityNotFoundException ex) {
+////                                System.out.println("MX Player activity not found");
+////                                GsPvr2SmallActivity.this.stopStream();
+////                                continue;
+////                            }
+////                            break;
+////                        }
+//                    }
+//                });
+            }
+        }).start();
     }
 
     private void startPlayStream(final int n) {
@@ -284,24 +373,36 @@ public class Client {
                         final String rtspUriQuery = Sat2ipUtil.getRtspUriQuery(mCurrentChannelList.get(n));
                         Log.d("abtainPlayUrl", "rtspUriBase = "+ rtspUriBase);
                         Log.d("abtainPlayUrl", "rtspUriQuery = "+ rtspUriQuery);
-                        GMScreenGlobalInfo.playType = 2;
-//                        if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
-//                            Log.d("abtainPlayUrl", "setup_blocked FAILED");
-//
-//                            if (((DataConvertChannelModel)listChan.getModel().getElementAt(n)).GetIsProgramScramble() == 0) {
-//                                Log.d("abtainPlayUrl", "currentChannel isProgramScrambled == 0 -> msg.what 4");
-////                                mainHandler.sendMessage(mainHandler.obtainMessage(4, (Object).this.getString(2131427592)));
-//                            }
-//                            sRtsp = null;
-//                            return;
-//                        }
-//                        Log.d("abtainPlayUrl", "setup_blocked SUCCESS");
-                        sRtsp.setup_not_blocked(rtspUriBase, rtspUriQuery);
-                        sendSat2ipChannelRequestToStb(n);
-//                        DVBtoIP.initResourceForPlayer(GsChannelListActivity.sRtsp.get_rtp_port(), FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this), 2);
-//                        intent.setDataAndType(Uri.parse("file://" + FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this)), "video/*");
-//                        GsChannelListActivity.this.mainHandler.sendMessage(GsChannelListActivity.this.mainHandler.obtainMessage(3, (Object)intent));
-                        break;
+                        if(checkBoxPlayType.isSelected())
+                            GMScreenGlobalInfo.playType = 1;
+                        else
+                            GMScreenGlobalInfo.playType = 2;
+
+                        if(checkBoxSetupBlocked.isSelected()){
+                            if (!sRtsp.setup_blocked(rtspUriBase, rtspUriQuery)) {
+                                Log.d("abtainPlayUrl", "setup_blocked FAILED");
+
+                                if (((DataConvertChannelModel)listChan.getModel().getElementAt(n)).GetIsProgramScramble() == 0) {
+                                    Log.d("abtainPlayUrl", "currentChannel isProgramScrambled == 0 -> msg.what 4");
+//                                mainHandler.sendMessage(mainHandler.obtainMessage(4, (Object).this.getString(2131427592)));
+                                }
+                                sRtsp.teardown();
+                                sRtsp = null;
+                                return;
+                            }
+                            Log.d("abtainPlayUrl", "setup_blocked SUCCESS");
+                            sendSat2ipChannelRequestToStb(n);
+    //                        DVBtoIP.initResourceForPlayer(GsChannelListActivity.sRtsp.get_rtp_port(), FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this), 2);
+    //                        intent.setDataAndType(Uri.parse("file://" + FindPlayerAndPlayChannel.getRtspPipeFilePath((Context)GsChannelListActivity.this)), "video/*");
+    //                        GsChannelListActivity.this.mainHandler.sendMessage(GsChannelListActivity.this.mainHandler.obtainMessage(3, (Object)intent));
+                            break;
+                        }
+                        else{
+                            // not blocked
+                            sRtsp.setup_not_blocked(rtspUriBase, rtspUriQuery);
+                            sendSat2ipChannelRequestToStb(n);
+                            break;
+                        }
                     }
                 }
                 bPlayWithOherPlayer = true;
