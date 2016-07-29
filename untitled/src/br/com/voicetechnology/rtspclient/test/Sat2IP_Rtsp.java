@@ -112,79 +112,186 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
 
     private void handleRequestFailed(br.com.voicetechnology.rtspclient.concepts.Client a) {
         Log.e("RTSPClient","handleRequestFailed");
+
+        switch (current) {
+            case jdgui:
+                break;
+            case krakatau:
+                handleRequestFailed_Krakatau(a);
+                break;
+            case luyten:
+                break;
+            case procyon:
+                handleRequestFailed_Procyon(a);
+                break;
+        }
+    }
+
+    private void handleRequestFailed_Krakatau(br.com.voicetechnology.rtspclient.concepts.Client a) {
+        Log.e("RTSPClient","handleRequestFailed_Krakatau");
+
+        a.teardown();
+        this._isSucc = false;
+        //monenter(this);
+        try
+        {
+            ((Object)this).notify();
+            //monexit(this);
+        }
+        catch(Throwable a0)
+        {
+            Throwable a1 = a0;
+            while(true)
+            {
+                try
+                {
+                    //monexit(this);
+                }
+                catch(IllegalMonitorStateException | NullPointerException a2)
+                {
+                    a2.printStackTrace();
+                    a1 = a2;
+                    continue;
+                }
+//                throw a1;
+            }
+        }
+    }
+
+    private void handleRequestFailed_Procyon(br.com.voicetechnology.rtspclient.concepts.Client a) {
+        Log.e("RTSPClient","handleRequestFailed_Procyon");
         a.teardown();
         this._isSucc = false;
         synchronized (this) {
             this.notify();
         }
 
-//        a.teardown();
-//        this._isSucc = false;
-//        //monenter(this);
-//        try
-//        {
-//            ((Object)this).notify();
-//            //monexit(this);
-//        }
-//        catch(Throwable a0)
-//        {
-//            Throwable a1 = a0;
-//            while(true)
-//            {
-//                try
-//                {
-//                    //monexit(this);
-//                }
-//                catch(IllegalMonitorStateException | NullPointerException a2)
-//                {
-//                    a1 = a2;
-//                    continue;
-//                }
+        a.teardown();
+        this._isSucc = false;
+        //monenter(this);
+        try
+        {
+            ((Object)this).notify();
+            //monexit(this);
+        }
+        catch(Throwable a0)
+        {
+            Throwable a1 = a0;
+            while(true)
+            {
+                try
+                {
+                    //monexit(this);
+                }
+                catch(IllegalMonitorStateException | NullPointerException a2)
+                {
+                    a1 = a2;
+                    continue;
+                }
 //                throw a1;
-//            }
-//        }
+            }
+        }
     }
+
+    private void handleRequestFailed_NoTearDown_Krakatau(br.com.voicetechnology.rtspclient.concepts.Client a) {
+        Log.e("RTSPClient","handleRequestFailed_NoTearDown_Krakatau");
+
+        this._isSucc = false;
+        //monenter(this);
+        try
+        {
+            ((Object)this).notify();
+            //monexit(this);
+        }
+        catch(Throwable a0)
+        {
+            Throwable a1 = a0;
+            while(true)
+            {
+                try
+                {
+                    //monexit(this);
+                }
+                catch(IllegalMonitorStateException | NullPointerException a2)
+                {
+                    a1 = a2;
+                    a2.printStackTrace();
+                    continue;
+                }
+//                throw a1;
+            }
+        }
+    }
+    enum Source {
+        jdgui,
+        krakatau,
+        luyten,
+        procyon
+    }
+    Source current = Source.krakatau;
 
     private void handleRequestFailed_NoTearDown(br.com.voicetechnology.rtspclient.concepts.Client a) {
         Log.e("RTSPClient","handleRequestFailed_NoTearDown");
+
+        switch (current) {
+            case jdgui:
+                break;
+            case krakatau:
+                handleRequestFailed_NoTearDown_Krakatau(a);
+                break;
+            case luyten:
+                break;
+            case procyon:
+                handleRequestFailed_NoTearDown_Procyon(a);
+                break;
+        }
+
+    }
+
+    private void handleRequestFailed_NoTearDown_Procyon(br.com.voicetechnology.rtspclient.concepts.Client a) {
+        Log.e("RTSPClient","handleRequestFailed_NoTearDown_Procyon");
+
         this._isSucc = false;
         synchronized (this) {
             this.notify();
         }
-
-//        this._isSucc = false;
-//        //monenter(this);
-//        try
-//        {
-//            ((Object)this).notify();
-//            //monexit(this);
-//        }
-//        catch(Throwable a0)
-//        {
-//            Throwable a1 = a0;
-//            while(true)
-//            {
-//                try
-//                {
-//                    //monexit(this);
-//                }
-//                catch(IllegalMonitorStateException | NullPointerException a2)
-//                {
-//                    a1 = a2;
-//                    continue;
-//                }
-//                throw a1;
-//            }
-//        }
     }
 
-    private void handleSessionNotFound()
+    private void handleSessionNotFound_Procyon()
     {
-        Log.e("RTSPClient","handleSessionNotFound");
+        Log.e("RTSPClient","handleSessionNotFound_Procyon");
 
         if (this.eofListener != null)
         {
             this.eofListener.onEndOfFile();
+        }
+    }
+
+    private void handleSessionNotFound_Krakatau()
+    {
+        Log.e("RTSPClient","handleSessionNotFound_Krakatau");
+
+        if (this.eofListener != null)
+        {
+            this.eofListener.onEndOfFile();
+        }
+
+    }
+
+    private void handleSessionNotFound() {
+        Log.e("RTSPClient","handleSessionNotFound");
+
+        switch (current) {
+            case jdgui:
+                break;
+            case krakatau:
+                handleSessionNotFound_Krakatau();
+                break;
+            case luyten:
+                break;
+            case procyon:
+                handleSessionNotFound_Procyon();
+                break;
         }
     }
 
@@ -261,10 +368,21 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
     @Override
     public void response(Client client, Request request, Response response)
     {
-        responseLuyten(client,request,response);
+        switch (current) {
+            case jdgui:
+                break;
+            case krakatau:
+                response_Karakatau(client,request,response);
+                break;
+            case luyten:
+                response_Luyten(client,request,response);
+                break;
+            case procyon:
+                break;
+        }
     }
 
-    public void responseLuyten(final Client client, final Request request, final Response response) {
+    public void response_Luyten(final Client client, final Request request, final Response response) {
         Label_0286: {
             Label_0254: {
                 Label_0210: {
@@ -368,7 +486,7 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
         this.handleRequestFailed_NoTearDown(client);
     }
 
-    public void responseKarakatau(Client client, Request request, Response response)
+    public void response_Karakatau(Client client, Request request, Response response)
     {
         label5: {
             label4: {
@@ -462,44 +580,45 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
                                                 client.options("*", new java.net.URI(this.mBaseUrl));
                                                 break label5;
 
-                                                // ende label 5
+                                                // ende label 3
                                             }
                                             // request PLAY
-                                            synchronized (this) {
-                                                try {
-                                                    this.notify();
-                                                } catch (IllegalMonitorStateException a9) {
-                                                    System.out.println(this.toString() + ": loop @ IllegalMonitorStateException ");
-                                                } catch (NullPointerException a9) {
-                                                    System.out.println(this.toString() + ": loop @ NullPointerException ");
-                                                }
-                                            }
-//                                            try
-//                                            {
-//                                                ((Object)this).notify();
-//                                                //monexit(this);
-//                                            }
-//                                            catch(Throwable a7)
-//                                            {
-//                                                Throwable a8 = a7;
-////                                                a2 = client;
-//                                                while(true)
-//                                                {
+//                                            synchronized (this) {
+//                                                try {
+//                                                    this.notify();
+//                                                } catch (IllegalMonitorStateException a9) {
 //                                                    System.out.println(this.toString() + ": loop @ IllegalMonitorStateException ");
-//                                                    try
-//                                                    {
-//                                                        //monexit(this);
-//                                                    }
-//                                                    catch(IllegalMonitorStateException | NullPointerException a9)
-//                                                    {
-////                                                        Object a10 = a2;
-//                                                        a8 = a9;
-////                                                        a2 = a10;
-//                                                        continue;
-//                                                    }
-//                                                    throw a8;
+//                                                } catch (NullPointerException a9) {
+//                                                    System.out.println(this.toString() + ": loop @ NullPointerException ");
 //                                                }
 //                                            }
+                                            try
+                                            {
+                                                this.notify();
+//                                                ((Object)this).notify();
+                                                //monexit(this);
+                                            }
+                                            catch(Throwable a7)
+                                            {
+                                                Throwable a8 = a7;
+//                                                a2 = client;
+                                                while(true)
+                                                {
+                                                    System.out.println(this.toString() + ": loop @ IllegalMonitorStateException ");
+                                                    try
+                                                    {
+                                                        //monexit(this);
+                                                    }
+                                                    catch(IllegalMonitorStateException | NullPointerException a9)
+                                                    {
+//                                                        Object a10 = a2;
+                                                        a8 = a9;
+//                                                        a2 = a10;
+                                                        continue;
+                                                    }
+                                                    throw a8;
+                                                }
+                                            }
                                             Thread.sleep(10000L);
                                             client.options("*", new java.net.URI(this.mBaseUrl));
                                             break label6;
@@ -561,32 +680,32 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
     }
 
     public boolean setup_blocked(String rtspUriBase, String rtspUriQuery) {
-        synchronized(this){}
-
-        label55:
-        try {
+        synchronized(this){
+            label55:
             try {
-                this._isSucc = false;
-                this.setup(rtspUriBase, rtspUriQuery);
-                this.wait(5000L);
-            } catch (Exception var11) {
-                var11.printStackTrace();
+                try {
+                    this._isSucc = false;
+                    this.setup(rtspUriBase, rtspUriQuery);
+                    this.wait(5000L);
+                } catch (Exception var11) {
+                    var11.printStackTrace();
+                }
             }
-        }
-        catch (Exception var11) {
-            var11.printStackTrace();
-        }finally {
-            break label55;
-        }
+            catch (Exception var11) {
+                var11.printStackTrace();
+            }finally {
+                break label55;
+            }
 
-        boolean var3;
-        try {
-            var3 = this._isSucc;
-        } finally {
+            boolean var3;
+            try {
+                var3 = this._isSucc;
+            } finally {
+
+            }
+            return var3;
 
         }
-
-        return var3;
     }
 
 
@@ -594,41 +713,35 @@ public class Sat2IP_Rtsp implements br.com.voicetechnology.rtspclient.concepts.C
     {
         boolean b = false;
         //monenter(this);
-        try
-        {
-            try
-            {
-                this._isSucc = false;
-                this.setup(rtspUriBase, rtspUriQuery);
-                long begin = System.currentTimeMillis();
-                ((Object)this).wait(5000L);
-                long end = System.currentTimeMillis();
-                long duration = end-begin;
-                Log.d("setup_blocked:"," wait in Seconds= " + TimeUnit.MILLISECONDS.toSeconds(duration));
+        synchronized(this) {
 
-//                ((Object)this).wait(5000L);
+            try {
+                try {
+                    this._isSucc = false;
+                    this.setup(rtspUriBase, rtspUriQuery);
+                    long begin = System.currentTimeMillis();
+                    ((Object) this).wait(5000L);
+                    long end = System.currentTimeMillis();
+                    long duration = end - begin;
+                    Log.d("setup_blocked:", " wait in Seconds= " + TimeUnit.MILLISECONDS.toSeconds(duration));
+
+                    //                ((Object)this).wait(5000L);
+                } catch (Exception ignoredException) {
+                    ignoredException.printStackTrace();
+                }
+            } catch (Throwable ignoredException0) {
+                ignoredException0.printStackTrace();
             }
-            catch(Exception ignoredException)
-            {
-                ignoredException.printStackTrace();
+            try {
+                b = this._isSucc;
+            } catch (NullPointerException a) {
+                //monexit(this);
+                a.printStackTrace();
+                throw a;
             }
         }
-        catch(Throwable ignoredException0)
-        {
-            ignoredException0.printStackTrace();
-        }
-        try
-        {
-            b = this._isSucc;
-        }
-        catch(NullPointerException a)
-        {
             //monexit(this);
-            a.printStackTrace();
-            throw a;
-        }
-        //monexit(this);
-        return b;
+            return b;
     }
 
     public void teardown()

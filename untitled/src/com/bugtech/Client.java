@@ -254,6 +254,20 @@ public class Client {
 //        findPlayerAndPlayChannel.selectPlayer(n);
         if(checkBoxBuiltInPlayer.isSelected())
         {
+            //com.mktech.player
+
+            // private PlayByDesignatedPlayer mPlayByDesignatedPlayer = new 4(this);    (GsChannelListActivity$4)
+            // playStream(int chanId)
+            //      findPlayerAndPlayChannel = new FindPlayerAndPlayChannel((Context)this.getParent());
+            //      findPlayerAndPlayChannel.implementPlayByDesignatedPlayer(mPlayByDesignatedPlayer)
+            //      findPlayerAndPlayChannel.selectPlayer(int chanId)
+            //          selectPlayer(int chanId)
+            //              if(mPlayByDesignatedPlayer == mktech.player
+            //                  otherPlatformPlay(int chanId)                                   (access$3)
+            //              else
+            //                  startPlayStream( int chanId, ... )                              (access$4)
+
+
             // playType = 1 ... ?
             GMScreenGlobalInfo.playType = 1;
             bPlayWithOherPlayer = true;
@@ -268,6 +282,18 @@ public class Client {
             startPlayStream(value);
         }
     }
+
+    private void otherPlatformPlay(int var1) {
+//        var1 = this.mChannelData.getIndexByProgIdInCurTvRadioProgList(((DataConvertChannelModel)this.channelListAdapter.getItem(var1)).GetProgramId());
+        GMScreenGlobalInfo.playType = 2;
+        this.bPlayWithOherPlayer = false;
+//        Intent var2 = new Intent("android.intent.action.VIEW");
+//        var2.setClass(this.getParent(), LivePlayActivity.class);
+//        var2.putExtra("position", var1);
+//        var2.setFlags(268435456);
+//        this.getApplication().startActivity(var2);
+    }
+
 
     // GsPvr2SmallActivity.startPlayStream
     Pvr2smallData mPvr2SmallData;
