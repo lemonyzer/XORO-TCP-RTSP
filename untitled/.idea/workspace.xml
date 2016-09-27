@@ -21,17 +21,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40150">
-              <caret line="1783" column="16" selection-start-line="1783" selection-start-column="16" selection-end-line="1783" selection-end-column="16" />
+            <state relative-caret-position="126">
+              <caret line="229" column="83" selection-start-line="229" selection-start-column="83" selection-end-line="229" selection-end-column="83" />
               <folding>
+                <element signature="e#7688#7689#0" expanded="true" />
+                <element signature="e#7740#7741#0" expanded="true" />
                 <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
                 <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
                 <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
-                <element signature="e#44157#44223#0" expanded="false" />
-                <marker date="1469653690233" expanded="false" signature="67495:67520" ph="&lt;~&gt;" />
+                <element signature="e#45113#45179#0" expanded="false" />
+                <marker date="1475013154172" expanded="false" signature="68451:68476" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
@@ -40,7 +42,7 @@
       <file leaf-file-name="ReceiveSocketThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8925">
+            <state relative-caret-position="1300">
               <caret line="369" column="65" selection-start-line="369" selection-start-column="65" selection-end-line="369" selection-end-column="65" />
               <folding />
             </state>
@@ -50,8 +52,8 @@
       <file leaf-file-name="MessageProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/message/process/MessageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="25">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -60,22 +62,10 @@
       <file leaf-file-name="MessageProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/message/process/luyten/MessageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="25">
               <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2474#2475#0" expanded="true" />
-                <element signature="e#2574#2575#0" expanded="true" />
-                <element signature="e#2862#2863#0" expanded="true" />
-                <element signature="e#2962#2963#0" expanded="true" />
-                <element signature="e#5693#5694#0" expanded="true" />
-                <element signature="e#5751#5752#0" expanded="true" />
-                <element signature="e#6226#6227#0" expanded="true" />
-                <element signature="e#6285#6286#0" expanded="true" />
-                <element signature="e#6880#6881#0" expanded="true" />
-                <element signature="e#6966#6967#0" expanded="true" />
-                <element signature="e#8192#8193#0" expanded="true" />
-                <element signature="e#8278#8279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,7 +74,7 @@
       <file leaf-file-name="Sat2IP_Rtsp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5050">
+            <state relative-caret-position="522">
               <caret line="215" column="19" selection-start-line="215" selection-start-column="19" selection-end-line="215" selection-end-column="19" />
               <folding />
             </state>
@@ -94,88 +84,48 @@
       <file leaf-file-name="Sat2IP_Rtsp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Krakatau/Sat2IP_Rtsp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6350">
+            <state relative-caret-position="25">
               <caret line="260" column="70" selection-start-line="260" selection-start-column="62" selection-end-line="260" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GsChannelListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/procyon/GsChannelListActivity.java">
+      <file leaf-file-name="Client.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UdpSocketReceiveBroadcastThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/UdpSocketReceiveBroadcastThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23300">
-              <caret line="960" column="17" selection-start-line="960" selection-start-column="17" selection-end-line="960" selection-end-column="17" />
+            <state relative-caret-position="249">
+              <caret line="139" column="102" selection-start-line="139" selection-start-column="102" selection-end-line="139" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GsChannelListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/Luyten/GsChannelListActivity.java">
+      <file leaf-file-name="GsMobileLoginInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/GsMobileLoginInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62000">
-              <caret line="2522" column="51" selection-start-line="2522" selection-start-column="51" selection-end-line="2522" selection-end-column="51" />
+            <state relative-caret-position="227">
+              <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11574#11575#0" expanded="true" />
-                <element signature="e#11664#11665#0" expanded="true" />
-                <element signature="e#12484#12485#0" expanded="true" />
-                <element signature="e#12563#12564#0" expanded="true" />
-                <element signature="e#24067#24068#0" expanded="true" />
-                <element signature="e#24188#24189#0" expanded="true" />
-                <element signature="e#26167#26168#0" expanded="true" />
-                <element signature="e#26259#26260#0" expanded="true" />
-                <element signature="e#31545#31546#0" expanded="true" />
-                <element signature="e#31596#31597#0" expanded="true" />
-                <element signature="e#110880#110881#0" expanded="true" />
-                <element signature="e#110993#110994#0" expanded="true" />
-                <element signature="e#142267#142268#0" expanded="true" />
-                <element signature="e#142376#142377#0" expanded="true" />
-                <element signature="e#150062#150063#0" expanded="true" />
-                <element signature="e#150099#150100#0" expanded="true" />
-                <element signature="e#189197#189198#0" expanded="true" />
-                <element signature="e#189239#189240#0" expanded="true" />
-                <element signature="e#190644#190645#0" expanded="true" />
-                <element signature="e#190688#190689#0" expanded="true" />
-                <element signature="e#192683#192684#0" expanded="true" />
-                <element signature="e#192747#192748#0" expanded="true" />
-                <element signature="e#192793#192794#0" expanded="true" />
-                <element signature="e#192857#192858#0" expanded="true" />
-                <element signature="e#192903#192904#0" expanded="true" />
-                <element signature="e#192935#192936#0" expanded="true" />
-                <element signature="e#194235#194236#0" expanded="true" />
-                <element signature="e#194303#194304#0" expanded="true" />
-                <element signature="e#196671#196672#0" expanded="true" />
-                <element signature="e#196703#196704#0" expanded="true" />
-                <element signature="e#223880#223881#0" expanded="true" />
-                <element signature="e#223972#223973#0" expanded="true" />
-                <element signature="e#231615#231616#0" expanded="true" />
-                <element signature="e#231647#231648#0" expanded="true" />
-                <element signature="e#233147#233148#0" expanded="true" />
-                <element signature="e#233209#233210#0" expanded="true" />
-                <element signature="e#233272#233273#0" expanded="true" />
-                <element signature="e#233336#233337#0" expanded="true" />
+                <element signature="e#6313#6314#0" expanded="true" />
+                <element signature="e#6360#6361#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindPlayerAndPlayChannel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/FindPlayerAndPlayChannel.java">
+      <file leaf-file-name="SocketReceiveThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="32" column="57" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RTSPClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/RTSPClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4175">
-              <caret line="224" column="27" selection-start-line="224" selection-start-column="27" selection-end-line="224" selection-end-column="27" />
+            <state relative-caret-position="187">
+              <caret line="216" column="50" selection-start-line="216" selection-start-column="49" selection-end-line="216" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -216,7 +166,6 @@
         <option value="C:/../_mktvsmart.screen-dex2jar-v2.2.95.src/mktvsmart/screen/channel/GsChannelListActivity.java" />
         <option value="$PROJECT_DIR$/src/android/os/Bundle.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/model/DataConvertChannelModel.java" />
-        <option value="$PROJECT_DIR$/src/mktvsmart/screen/GsMobileLoginInfo.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/socketthread/UdpSocketReceiveBroadcastThread.java" />
         <option value="$PROJECT_DIR$/src/android/os/SystemClock.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/exception/AppDebug.java" />
@@ -244,11 +193,12 @@
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/Pvr2smallData.java" />
         <option value="$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/RTSPClient.java" />
         <option value="$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java" />
-        <option value="$PROJECT_DIR$/src/com/bugtech/Client.form" />
-        <option value="$PROJECT_DIR$/src/com/bugtech/Client.java" />
         <option value="$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Sat2IP_Rtsp.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/message/process/luyten/MessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/mktvsmart/screen/channel/Luyten/GsChannelListActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/bugtech/Client.form" />
+        <option value="$PROJECT_DIR$/src/mktvsmart/screen/GsMobileLoginInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/bugtech/Client.java" />
       </list>
     </option>
   </component>
@@ -260,10 +210,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1934" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -530,9 +480,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -543,7 +493,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mktvsmart/screen/channel/Luyten/GsChannelListActivity.java" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="343" />
   </component>
   <component name="RecentsManager">
@@ -906,60 +856,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1934" height="1060" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33110368" sideWeight="0.49375" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.51666665" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27952328" sideWeight="0.48333332" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27759197" sideWeight="0.48333332" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1914226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33667782" sideWeight="0.48333332" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21548118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152762" sideWeight="0.49375" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33713692" sideWeight="0.48333332" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33195022" sideWeight="0.49375" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.51666665" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.280083" sideWeight="0.48333332" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33713692" sideWeight="0.48333332" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1003,20 +927,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/xmlpull/v1/XmlPullParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="139" column="104" selection-start-line="139" selection-start-column="104" selection-end-line="139" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/ChannelData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11169">
-          <caret line="677" column="36" selection-start-line="677" selection-start-column="36" selection-end-line="677" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/dataconvert/parser/JsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1206,16 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/GsSendSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
@@ -1248,28 +1148,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4175">
           <caret line="224" column="27" selection-start-line="224" selection-start-column="27" selection-end-line="224" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40150">
-          <caret line="1783" column="16" selection-start-line="1783" selection-start-column="16" selection-end-line="1783" selection-end-column="16" />
           <folding>
-            <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
-            <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
-            <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
-            <element signature="e#44157#44223#0" expanded="false" />
-            <marker date="1469653690233" expanded="false" signature="67495:67520" ph="&lt;~&gt;" />
+            <element signature="e#0#8544#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2557#2558#0" expanded="false" />
+            <element signature="e#2580#2581#0" expanded="false" />
+            <element signature="e#2642#2643#0" expanded="false" />
+            <element signature="e#2671#2672#0" expanded="false" />
+            <element signature="e#2729#2730#0" expanded="false" />
+            <element signature="e#2757#2758#0" expanded="false" />
+            <element signature="e#2793#2794#0" expanded="false" />
+            <element signature="e#2810#2811#0" expanded="false" />
+            <element signature="e#4090#4091#0" expanded="false" />
+            <element signature="e#4122#4123#0" expanded="false" />
+            <element signature="e#4180#4181#0" expanded="false" />
+            <element signature="e#4208#4209#0" expanded="false" />
+            <element signature="e#7150#7151#0" expanded="false" />
+            <element signature="e#7197#7198#0" expanded="false" />
+            <element signature="e#7682#7683#0" expanded="false" />
+            <element signature="e#7702#7703#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="216" column="50" selection-start-line="216" selection-start-column="49" selection-end-line="216" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1280,47 +1178,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java">
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/FindPlayerAndPlayChannel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8925">
-          <caret line="369" column="65" selection-start-line="369" selection-start-column="65" selection-end-line="369" selection-end-column="65" />
+        <state relative-caret-position="771">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/message/process/MessageProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/Luyten/GsChannelListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="2082">
+          <caret line="2576" column="36" selection-start-line="2576" selection-start-column="36" selection-end-line="2576" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/procyon/GsChannelListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="960" column="17" selection-start-line="960" selection-start-column="17" selection-end-line="960" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/ReceiveSocketThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="369" column="65" selection-start-line="369" selection-start-column="65" selection-end-line="369" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/message/process/luyten/MessageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
+        <state relative-caret-position="25">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
-            <element signature="e#2574#2575#0" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2962#2963#0" expanded="true" />
-            <element signature="e#5693#5694#0" expanded="true" />
-            <element signature="e#5751#5752#0" expanded="true" />
-            <element signature="e#6226#6227#0" expanded="true" />
-            <element signature="e#6285#6286#0" expanded="true" />
-            <element signature="e#6880#6881#0" expanded="true" />
-            <element signature="e#6966#6967#0" expanded="true" />
-            <element signature="e#8192#8193#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/SocketReceiveThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="216" column="50" selection-start-line="216" selection-start-column="49" selection-end-line="216" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten/Sat2IP_Rtsp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5050">
+        <state relative-caret-position="522">
           <caret line="215" column="19" selection-start-line="215" selection-start-column="19" selection-end-line="215" selection-end-column="19" />
           <folding />
         </state>
@@ -1328,73 +1240,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Krakatau/Sat2IP_Rtsp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6350">
+        <state relative-caret-position="25">
           <caret line="260" column="70" selection-start-line="260" selection-start-column="62" selection-end-line="260" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/procyon/GsChannelListActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.form">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/message/process/MessageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23300">
-          <caret line="960" column="17" selection-start-line="960" selection-start-column="17" selection-end-line="960" selection-end-column="17" />
+        <state relative-caret-position="25">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/Luyten/GsChannelListActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/socketthread/UdpSocketReceiveBroadcastThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62000">
-          <caret line="2522" column="51" selection-start-line="2522" selection-start-column="51" selection-end-line="2522" selection-end-column="51" />
+        <state relative-caret-position="249">
+          <caret line="139" column="102" selection-start-line="139" selection-start-column="102" selection-end-line="139" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/GsMobileLoginInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11574#11575#0" expanded="true" />
-            <element signature="e#11664#11665#0" expanded="true" />
-            <element signature="e#12484#12485#0" expanded="true" />
-            <element signature="e#12563#12564#0" expanded="true" />
-            <element signature="e#24067#24068#0" expanded="true" />
-            <element signature="e#24188#24189#0" expanded="true" />
-            <element signature="e#26167#26168#0" expanded="true" />
-            <element signature="e#26259#26260#0" expanded="true" />
-            <element signature="e#31545#31546#0" expanded="true" />
-            <element signature="e#31596#31597#0" expanded="true" />
-            <element signature="e#110880#110881#0" expanded="true" />
-            <element signature="e#110993#110994#0" expanded="true" />
-            <element signature="e#142267#142268#0" expanded="true" />
-            <element signature="e#142376#142377#0" expanded="true" />
-            <element signature="e#150062#150063#0" expanded="true" />
-            <element signature="e#150099#150100#0" expanded="true" />
-            <element signature="e#189197#189198#0" expanded="true" />
-            <element signature="e#189239#189240#0" expanded="true" />
-            <element signature="e#190644#190645#0" expanded="true" />
-            <element signature="e#190688#190689#0" expanded="true" />
-            <element signature="e#192683#192684#0" expanded="true" />
-            <element signature="e#192747#192748#0" expanded="true" />
-            <element signature="e#192793#192794#0" expanded="true" />
-            <element signature="e#192857#192858#0" expanded="true" />
-            <element signature="e#192903#192904#0" expanded="true" />
-            <element signature="e#192935#192936#0" expanded="true" />
-            <element signature="e#194235#194236#0" expanded="true" />
-            <element signature="e#194303#194304#0" expanded="true" />
-            <element signature="e#196671#196672#0" expanded="true" />
-            <element signature="e#196703#196704#0" expanded="true" />
-            <element signature="e#223880#223881#0" expanded="true" />
-            <element signature="e#223972#223973#0" expanded="true" />
-            <element signature="e#231615#231616#0" expanded="true" />
-            <element signature="e#231647#231648#0" expanded="true" />
-            <element signature="e#233147#233148#0" expanded="true" />
-            <element signature="e#233209#233210#0" expanded="true" />
-            <element signature="e#233272#233273#0" expanded="true" />
-            <element signature="e#233336#233337#0" expanded="true" />
+            <element signature="e#6313#6314#0" expanded="true" />
+            <element signature="e#6360#6361#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mktvsmart/screen/FindPlayerAndPlayChannel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bugtech/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="57" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="229" column="83" selection-start-line="229" selection-start-column="83" selection-end-line="229" selection-end-column="83" />
+          <folding>
+            <element signature="e#7688#7689#0" expanded="true" />
+            <element signature="e#7740#7741#0" expanded="true" />
+            <element signature="method#XmlTest#0;class#Client#0" expanded="false" />
+            <element signature="method#XmlDOMTest#0;class#Client#0" expanded="false" />
+            <element signature="method#XmlPullParserIteratorTest#0;class#Client#0" expanded="false" />
+            <element signature="e#45113#45179#0" expanded="false" />
+            <marker date="1475013154172" expanded="false" signature="68451:68476" ph="&lt;~&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -217,6 +217,37 @@ public class Client {
                 btnStopStreamRequestClicked();
             }
         });
+        listStbBroadcast.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                connectSelectedStb();
+            }
+        });
+    }
+
+    private void connectSelectedStb() {
+
+        if (tcpSocket != null)  // TODO: check if tcpSocket is representativ for connection
+        {
+            if (tcpSocket.isConnected()) {
+
+                Log.d("connectSelectedStb", "is already connected");
+                return;
+            }
+
+        }
+
+        if(!listStbBroadcast.isSelectionEmpty()) {
+            GsMobileLoginInfo selected = (GsMobileLoginInfo) listStbBroadcast.getSelectedValue();
+
+            if (selected != null)
+                tfIP.setText(selected.getStb_ip_address_disp());
+            else
+                Log.d("connectSelectedStb", "selected == null");
+        }
+        else
+            Log.d("connectSelectedStb", "nothing selected");
+
     }
 
     private void btnStopStreamRequestClicked() {

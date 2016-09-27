@@ -16,6 +16,7 @@
       <directory url="file://$PROJECT_DIR$/src/br/com/voicetechnology/rtspclient/test/Luyten" includeSubdirectories="true" />
       <file url="file://$PROJECT_DIR$/src/mktvsmart/screen/vlc/LivePlayActivity.java" />
       <file url="file://$PROJECT_DIR$/src/mktvsmart/screen/pvr2small/GsPvr2SmallActivity.java" />
+      <file url="file://$PROJECT_DIR$/src/mktvsmart/screen/channel/Luyten/GsChannelListActivity.java" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

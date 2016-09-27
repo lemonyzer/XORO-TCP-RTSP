@@ -125,6 +125,7 @@ public class GsMobileLoginInfo {
         return "GsMobileLoginInfo{" +
                 "model_name='" + model_name + '\'' +
                 ", platform_id=" + platform_id +
+                ", " + stb_ip_address_disp +
                 '}';
     }
 

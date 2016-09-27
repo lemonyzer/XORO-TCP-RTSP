@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.bugtech.Client">
   <grid id="27dc6" binding="panelMain" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="1569" height="879"/>
+      <xy x="20" y="20" width="1654" height="879"/>
     </constraints>
     <properties/>
     <border type="none"/>
