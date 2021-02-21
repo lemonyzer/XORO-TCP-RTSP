@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <favMaxNum>8</favMaxNum>
+  <parm>
+    <favorGroupName>News</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Movies</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Music</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Sports</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Education</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Weather</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Children</favorGroupName>
+  </parm>
+  <parm>
+    <favorGroupName>Culture</favorGroupName>
+  </parm>
+</Command>

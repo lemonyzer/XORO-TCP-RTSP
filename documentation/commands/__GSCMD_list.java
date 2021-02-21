@@ -1,0 +1,17 @@
+    public static final int GSCMD_OBTAIN_MESSENGER = 4096;
+    public static final int GSCMD_START_SEND_DEBUG_DATA = 4097;
+    public static final int GSCMD_RECV_DATA_FINISH = 4098;
+    public static final int GSCMD_RECV_DEBUG_DATA_FINISH = 4099;
+    public static final int GSCMD_TO_SEND_EMAIL = 4100;
+    public static final int GSCMD_SEND_EMAIL_FINISH = 4101;
+    public static final int GSCMD_COMPRESS_DEBUG_FILE = 4102;
+    public static final int GSCMD_SEND_DATA_TO_ACTIVITY = 4103;
+    public static final int GSCMD_UPDATE_CHANNEL_LIST_FAILED = 4104;
+    public static final int GSCMD_SEND_EMAIL_EXCEPTION = 4105;
+    public static final int GSCMD_NOTIFY_SOCKET_CLOSED = 4112;
+    public static final int GSCMD_NOTIFY_BROADCAST_LOGIN_INFO_UPDATED = 4113;
+    public static final int GSCMD_PLAY_SAT2IP_CHANNEL_FAILED = 4114;
+    public static final int GSCMD_REFRESH_SAT_LIST = 4115;
+    public static final int GSCMD_GET_IP_BY_SN = 4116;
+    public static final int GSCMD_STB_IN_STANDBY = 4117;
+    public static final int GSCMD_NOTIFY_CALL_AND_SMS_REMIND_CHANGED = 4118;

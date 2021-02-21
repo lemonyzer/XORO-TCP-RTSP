@@ -1,0 +1,37 @@
+
+
+select Astra
+Start0000128End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1060"><SatIndexSelected>3</SatIndexSelected></Command>
+
+select all
+Start0000130End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1060"><SatIndexSelected>100</SatIndexSelected></Command>
+
+
+GsMainTabHostActivity
+
+      localListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+      {
+        public void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        {
+          paramAnonymousAdapterView = new ArrayList();
+          paramAnonymousView = new DataConvertSatModel();
+          GMScreenGlobalInfo.setmSatIndexSelected(((DataConvertSatModel)GsMainTabHostActivity.this.satList.get(paramAnonymousInt)).getmSatIndex());
+          paramAnonymousView.setmSatIndex(((DataConvertSatModel)GsMainTabHostActivity.this.satList.get(paramAnonymousInt)).getmSatIndex());
+          paramAnonymousAdapterView.add(paramAnonymousView);
+          paramAnonymousView = ParserFactory.getParser();
+          try
+          {
+            paramAnonymousAdapterView = paramAnonymousView.serialize(paramAnonymousAdapterView, 1060).getBytes("UTF-8");
+            GsSendSocket.sendSocketToStb(paramAnonymousAdapterView, GsMainTabHostActivity.this.tcpSocket, 0, paramAnonymousAdapterView.length, 1060);
+            GsMainTabHostActivity.this.mSatInfoDialog.dismiss();
+            return;
+          }
+          catch (Exception paramAnonymousAdapterView)
+          {
+            for (;;)
+            {
+              paramAnonymousAdapterView.printStackTrace();
+            }
+          }
+        }
+      });

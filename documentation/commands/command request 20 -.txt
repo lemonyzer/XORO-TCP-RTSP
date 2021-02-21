@@ -1,0 +1,27 @@
+
+
+GsChannelListActivity$19
+
+this.msgProc.setOnMessageProcess(20, (Activity)this, (MessageProcessor$PerformOnForeground)new GsChannelListActivity.GsChannelListActivity$19(this));
+
+
+class GsChannelListActivity$19 implements MessageProcessor$PerformOnForeground {
+    public void doInForeground(final Message message) {
+        if (message.arg2 == 5) {
+            GsSendSocket.sendOnlyCommandSocketToStb(GsChannelListActivity.access$6(this.this$0), 20);
+            return;
+        }
+        final byte[] byteArray = message.getData().getByteArray("ReceivedData");
+        if (byteArray == null) {
+            Log.e("GSChannelListActivity", "recvData = " + byteArray);
+            return;
+        }
+        final ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray, 0, byteArray.length);
+        try {
+            GsChannelListActivity.access$89(this.this$0, GsChannelListActivity.access$11(this.this$0).parse((InputStream)byteArrayInputStream, 2));
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+}

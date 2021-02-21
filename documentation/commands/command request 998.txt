@@ -1,0 +1,9 @@
+
+iOS Login:
+Start0000081End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="998" />
+
+Android Login:
+Start0000156End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="998"><data>GT-I9100</data><uuid>359778043456670-98:0C:82:A4:AC:4C</uuid></Command>
+
+MyLogin
+Start0000138End<?xml version="1.0" encoding="UTF-8"?><Command request="998"><data>GT-I9100</data><uuid>123456789012345-98:0C:82:AA:AA:AA</uuid></Command>

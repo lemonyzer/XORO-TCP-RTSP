@@ -1,0 +1,295 @@
+
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>00</ToIndex></parm></Command>
+
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>1</FromIndex><ToIndex>01</ToIndex></parm></Command>
+
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>10</ToIndex></parm></Command>
+
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>99</ToIndex></parm></Command>
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>100</FromIndex><ToIndex>199</ToIndex></parm></Command>
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>200</FromIndex><ToIndex>299</ToIndex></parm></Command>
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>300</FromIndex><ToIndex>399</ToIndex></parm></Command>
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>400</FromIndex><ToIndex>499</ToIndex></parm></Command>
+Start0000146End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>500</FromIndex><ToIndex>599</ToIndex></parm></Command>
+
+
+
+		case 0: {
+                    List<?> list6 = null;
+                    DataConvertChannelModel dataConvertChannelModel = null;
+                    final XmlPullParser pullParser3 = Xml.newPullParser();
+                    pullParser3.setInput(inputStream, "UTF-8");
+                    i = pullParser3.getEventType();
+                Label_0911_Outer:
+                    while (i != 1) {
+                        DataConvertChannelModel dataConvertChannelModel2 = dataConvertChannelModel;
+                        List<?> list7 = list6;
+                    Label_0911:
+                        while (true) {
+                            switch (i) {
+                                default: {
+                                    list7 = list6;
+                                    dataConvertChannelModel2 = dataConvertChannelModel;
+                                    break Label_0911;
+                                }
+                                case 0: {
+                                    list7 = new ArrayList<Object>();
+                                    dataConvertChannelModel2 = dataConvertChannelModel;
+                                }
+                                case 1: {
+                                    i = pullParser3.next();
+                                    dataConvertChannelModel = dataConvertChannelModel2;
+                                    list6 = list7;
+                                    continue Label_0911_Outer;
+                                }
+                                case 2: {
+                                    if (pullParser3.getName().equals("parm")) {
+                                        dataConvertChannelModel2 = new DataConvertChannelModel();
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("SatIndexSelected")) {
+                                        pullParser3.next();
+                                        GMScreenGlobalInfo.setmSatIndexSelected(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ProgramId")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.SetProgramId(pullParser3.getText());
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ProgramName")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setProgramName(pullParser3.getText());
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ProgramIndex")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.SetProgramIndex(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("SatName")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.SetSatName(pullParser3.getText());
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ProgramType")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.SetIsProgramScramble(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("IsProgramHD")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setIsProgramHd(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("FavMark")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.SetFavMark(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("LockMark")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setLockMark(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("HaveEPG")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.SetHaveEPG(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("IsPlaying")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setIsPlaying(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("WillBePlayed")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setmWillBePlayed(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ChannelType")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setChannelTpye(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("Frequency")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setFreq(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("Polar")) {
+                                        char pol = 'h';
+                                        pullParser3.next();
+                                        final String text = pullParser3.getText();
+                                        if (text.equals("0")) {
+                                            pol = 'h';
+                                        }
+                                        else if (text.equals("1")) {
+                                            pol = 'v';
+                                        }
+                                        else if (text.equals("2")) {
+                                            pol = 'l';
+                                        }
+                                        else if (text.equals("3")) {
+                                            pol = 'r';
+                                        }
+                                        dataConvertChannelModel.setPol(pol);
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ModulationSystem")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setModulationSystem(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("ModulationType")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setModulationType(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("RollOff")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setRollOff(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("PilotTones")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setPilotTones(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("SymbolRate")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setSymRate(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("Fec")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setFec(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("VideoPid")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setVideoPid(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("AudioPid")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setAudioPid(pullParser3.getText());
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("TtxPid")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setTtxPid(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("SubPid")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setSubPid(pullParser3.getText());
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("PmtPid")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setPmtPid(Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    if (pullParser3.getName().equals("IsTuner2")) {
+                                        pullParser3.next();
+                                        dataConvertChannelModel.setIsTuner2((short)Integer.parseInt(pullParser3.getText()));
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        continue Label_0911;
+                                    }
+                                    dataConvertChannelModel2 = dataConvertChannelModel;
+                                    list7 = list6;
+                                    if (!pullParser3.getName().equals("FavorGroupID")) {
+                                        continue Label_0911;
+                                    }
+                                    pullParser3.next();
+                                    final String[] split2 = pullParser3.getText().split(":");
+                                    dataConvertChannelModel2 = dataConvertChannelModel;
+                                    list7 = list6;
+                                    if (split2 == null) {
+                                        continue Label_0911;
+                                    }
+                                    i = 0;
+                                    while (true) {
+                                        dataConvertChannelModel2 = dataConvertChannelModel;
+                                        list7 = list6;
+                                        if (i >= split2.length) {
+                                            continue Label_0911;
+                                        }
+                                        dataConvertChannelModel.mfavGroupIDs.add(Integer.parseInt(split2[i]));
+                                        ++i;
+                                    }
+                                    break;
+                                }
+                                case 3: {
+                                    dataConvertChannelModel2 = dataConvertChannelModel;
+                                    list7 = list6;
+                                    if (pullParser3.getName().equals("parm")) {
+                                        if (GMScreenGlobalInfo.isSdsOpen() == 0 || dataConvertChannelModel.getIsTuner2() == 0) {
+                                            list6.add(dataConvertChannelModel);
+                                        }
+                                        dataConvertChannelModel2 = null;
+                                        list7 = list6;
+                                    }
+                                    continue Label_0911;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    return list6;
+                }

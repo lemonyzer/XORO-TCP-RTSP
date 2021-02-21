@@ -1,0 +1,6 @@
+
+TV
+Start0000104End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1042"><data>0</data></Command>
+
+Radio
+Start0000104End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1042"><data>1</data></Command>

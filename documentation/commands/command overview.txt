@@ -1,0 +1,279 @@
+        //ChannelData localDataParser.parse (..., i)
+        // cmd     : i == 0 : init Channel List
+        // cmd     : i == 18 : init Sat List
+        // cmd     : i == 19 : init TP list
+
+        //GsChannelListActivity GsChannelListActivity.this.parser.parse (..., i)
+        // cmd    5: i == 6 : EPG? GsEPGTableChannel List
+        // cmd    3: i == 15 : update active channel
+        // cmd 4112: GsChannelListActivity.enable_edit = false;
+        // cmd   20: i == 2 : ControlModel
+        // cmd   18: i == 13 : DataConvertSortModel
+        // cmd   16: i == 17 : ... cur_channel_list_type .... search "msgProc.setOnMessageProcess(16"
+        // cmd   17: i == 15 : List<String> tvRadioTypeModels
+        // cmd 1056: i == 15 : Send Password for Locked Channel? -  List<String> verifyResult
+        // cmd   23: i == 15 : GMScreenGlobalInfo.setmSatIndexSelected; GsChannelListActivity.this.mCurrentChannelList; GsChannelListActivity.this.setCurrentChannelListDispIndex();
+        // cmd 1002: i == 15 : delete? i + " channel is playing by the mobile, it can not be deleted!
+        // cmd 1100: i == 21 : chat?
+        // cmd 1009: i == 16 : stream ??? ((Map)localObject).get("success")
+
+
+                switch (message.what) {
+                    default: {}
+                    case 1009: {
+                        Log.d(LivePlayActivity.TAG, "GMS_MSG_DO_SAT2IP_CHANNEL_PLAY");
+                        LivePlayActivity.this.handleSat2TpReturn(message);
+                    }
+                    case 3: {
+                        Log.d(LivePlayActivity.TAG, "GMS_MSG_REQUEST_PLAYING_CHANNEL");
+                        LivePlayActivity.this.handleSTBChannelPlayChange(message);
+                    }
+                    case 1056: {
+                        LivePlayActivity.this.handlePasswordCheckBack(message);
+                    }
+                    case 4112: {
+                        Log.d(LivePlayActivity.TAG, "GSCMD_NOTIFY_SOCKET_CLOSED");
+                        LivePlayActivity.this.finish();
+                    }
+                    case 2016:
+                    case 2017:
+                    case 2018: {
+                        LivePlayActivity.this.handleFactoryReset(message);
+                    }
+                }
+
+
+command 
+
+3	current active channel		- localObject1 = ((DataParser)localObject2).parse(new ByteArrayInputStream((byte[])localObject1, 0, localObject1.length), 15);
+            				  paramAnonymousMessage = (Message)localObject1;
+            				  localObject1 = (String)paramAnonymousMessage.get(0);
+
+
+
+0 	channel list			- paramAnonymousMessage = GsChannelListActivity.this.mChannelData.initChannelListData(paramAnonymousMessage);
+  public List<DataConvertChannelModel> initChannelListData(byte[] paramArrayOfByte)
+  {
+    DataParser localDataParser = ParserFactory.getParser();
+    ArrayList localArrayList = new ArrayList();
+    try
+    {
+      paramArrayOfByte = localDataParser.parse(new ByteArrayInputStream(paramArrayOfByte, 0, paramArrayOfByte.length), 0);
+      separateRadioAndTv(paramArrayOfByte, this.mTvChannelList, this.mRadioChannelList);
+      return paramArrayOfByte;
+    }
+    catch (Exception paramArrayOfByte)
+    {
+      for (;;)
+      {
+        paramArrayOfByte.printStackTrace();
+        paramArrayOfByte = localArrayList;
+      }
+    }
+  }
+  
+
+22	sat list			- GsChannelListActivity.this.mChannelData.initSatList(paramAnonymousMessage);
+24	tp list				- GsChannelListActivity.this.mChannelData.initTpList(paramAnonymousMessage);
+
+
+17	radio type models		- parse (15
+
+
+23					- GMScreenGlobalInfo.setmSatIndexSelected(Integer.parseInt((String)GsChannelListActivity.this.parser.parse(paramAnonymousMessage, 15).get(0)));
+
+            
+
+    this.msgProc.setOnMessageProcess(22, this, new MessageProcessor.PerformOnForeground()
+    {
+      public void doInForeground(Message paramAnonymousMessage)
+      {
+        if (paramAnonymousMessage.arg1 > 0)
+        {
+          paramAnonymousMessage = paramAnonymousMessage.getData().getByteArray("ReceivedData");
+          if (paramAnonymousMessage == null) {
+            Log.e("GSChannelListActivity", "recvData = " + paramAnonymousMessage);
+          }
+        }
+        else
+        {
+          return;
+        }
+        GsChannelListActivity.this.mChannelData.initSatList(paramAnonymousMessage);
+      }
+    });
+
+    this.msgProc.setOnMessageProcess(24, this, new MessageProcessor.PerformOnForeground()
+    {
+      public void doInForeground(Message paramAnonymousMessage)
+      {
+        if (paramAnonymousMessage.arg1 > 0)
+        {
+          paramAnonymousMessage = paramAnonymousMessage.getData().getByteArray("ReceivedData");
+          if (paramAnonymousMessage == null) {
+            Log.e("GSChannelListActivity", "recvData = " + paramAnonymousMessage);
+          }
+        }
+        else
+        {
+          return;
+        }
+        GsChannelListActivity.this.mChannelData.initTpList(paramAnonymousMessage);
+      }
+    });
+
+    this.msgProc.setOnMessageProcess(0, this, new MessageProcessor.PerformOnForeground()
+    {
+      public void doInForeground(Message paramAnonymousMessage)
+      {
+        if (paramAnonymousMessage.arg1 > 0)
+        {
+          i = GsChannelListActivity.this.mChannelData.getTotalProgramNum();
+          paramAnonymousMessage = paramAnonymousMessage.getData().getByteArray("ReceivedData");
+          if (paramAnonymousMessage == null) {
+            Log.e("GSChannelListActivity", "recvData = " + paramAnonymousMessage);
+          }
+        }
+        label383:
+        label429:
+        label457:
+        label466:
+        label486:
+        label786:
+        label836:
+        label895:
+        label952:
+        while ((paramAnonymousMessage.arg1 != 0) || (paramAnonymousMessage.arg2 != -1))
+        {
+          do
+          {
+            do
+            {
+              do
+              {
+                int i;
+                return;
+                paramAnonymousMessage = GsChannelListActivity.this.mChannelData.initChannelListData(paramAnonymousMessage);
+                if (GsChannelListActivity.this.waitDialog.isShowing()) {
+                  GsChannelListActivity.this.waitDialog.dismiss();
+                }
+                if ((paramAnonymousMessage.size() == 0) && (i == GsChannelListActivity.this.mChannelData.getTotalProgramNum())) {
+                  break;
+                }
+                GsChannelListActivity.this.mCurrentChannelList = GsChannelListActivity.this.mChannelData.getChannelListByProgramType(GsChannelListActivity.this.mChannelData.getChannelListByTvRadioType(), GsChannelListActivity.this.currentChannelListType);
+                if ((GsChannelListActivity.this.mCurrentChannelList == null) || (GsChannelListActivity.this.mCurrentChannelList.isEmpty()))
+                {
+                  GsChannelListActivity.this.mCurrentChannelList = GsChannelListActivity.this.mChannelData.getChannelListByProgramType(GsChannelListActivity.this.mChannelData.getChannelListByTvRadioType(), 0);
+                  GsChannelListActivity.this.currentChannelListType = 0;
+                  GsChannelListActivity.this.titleText.setText(GsChannelListActivity.this.getResources().getStringArray(2131558412)[GsChannelListActivity.this.currentChannelListType]);
+                }
+                if (GsChannelListActivity.this.mGetChannelListWhenLogin) {}
+                Iterator localIterator;
+                switch (DataConvertChannelTypeModel.getCurrent_channel_tv_radio_type())
+                {
+                default: 
+                  switch (GMScreenGlobalInfo.getCurStbPlatform())
+                  {
+                  default: 
+                    if ((GsChannelListActivity.this.currentChannelListType >= 0) && (GsChannelListActivity.this.currentChannelListType <= 3))
+                    {
+                      GsChannelListActivity.this.titleText.setText(GsChannelListActivity.this.getResources().getStringArray(2131558412)[GsChannelListActivity.this.currentChannelListType]);
+                      GsChannelListActivity.this.setCurrentChannelListDispIndex();
+                      GsChannelListActivity.this.mOriginalChannelListModels = GsChannelListActivity.this.mCurrentChannelList;
+                      if (!GsChannelListActivity.this.mEnterSearchFlag) {
+                        break label786;
+                      }
+                      GsChannelListActivity.this.mChannelListChangeFlag = true;
+                      GsChannelListActivity.this.findChannel();
+                      if (GsChannelListActivity.this.mGetChannelListWhenLogin)
+                      {
+                        i = 0;
+                        localIterator = GsChannelListActivity.this.mChannelData.getmTvChannelList().iterator();
+                        if (localIterator.hasNext()) {
+                          break label836;
+                        }
+                        if (i == 0)
+                        {
+                          localIterator = GsChannelListActivity.this.mChannelData.getmRadioChannelList().iterator();
+                          if (localIterator.hasNext()) {
+                            break label895;
+                          }
+                        }
+                      }
+                    }
+                    break;
+                  }
+                  break;
+                }
+                for (;;)
+                {
+                  GsChannelListActivity.this.mGetChannelListWhenLogin = false;
+                  if ((paramAnonymousMessage == null) || (paramAnonymousMessage.size() != GMScreenGlobalInfo.getMaxProgramNumPerRequest())) {
+                    break label952;
+                  }
+                  GsChannelListActivity.this.requestProgramListFromTo(GsChannelListActivity.this.mChannelData.getTotalProgramNum(), GsChannelListActivity.this.mChannelData.getTotalProgramNum() + GMScreenGlobalInfo.getMaxProgramNumPerRequest() - 1);
+                  return;
+                  GsChannelListActivity.this.TypeSwitch.setText(GsChannelListActivity.this.getResources().getText(2131427585));
+                  break;
+                  GsChannelListActivity.this.TypeSwitch.setText(GsChannelListActivity.this.getResources().getText(2131427584));
+                  break;
+                  if ((GsChannelListActivity.this.currentChannelListType >= 0) && (GsChannelListActivity.this.currentChannelListType <= 3))
+                  {
+                    GsChannelListActivity.this.titleText.setText(GsChannelListActivity.this.getResources().getStringArray(2131558412)[GsChannelListActivity.this.currentChannelListType]);
+                    break label383;
+                  }
+                  if (GsChannelListActivity.this.currentChannelListType < 4) {
+                    break label383;
+                  }
+                  localIterator = GMScreenGlobalInfo.favGroups.iterator();
+                  while (localIterator.hasNext())
+                  {
+                    localObject = (DataConvertFavorModel)localIterator.next();
+                    if (((DataConvertFavorModel)localObject).getFavorTypeID() == GsChannelListActivity.this.currentChannelListType - 4) {
+                      GsChannelListActivity.this.titleText.setText(((DataConvertFavorModel)localObject).GetFavorName());
+                    }
+                  }
+                  break label383;
+                  if ((GsChannelListActivity.this.currentChannelListType < 4) || (GsChannelListActivity.this.currentChannelListType > 11)) {
+                    break label383;
+                  }
+                  GsChannelListActivity.this.titleText.setText((CharSequence)GMScreenGlobalInfo.favType.get(GsChannelListActivity.this.currentChannelListType - 4));
+                  break label383;
+                  GsChannelListActivity.this.channelListAdapter = new GsChannelListActivity.list_single_button_adapter(GsChannelListActivity.this, GsChannelListActivity.this);
+                  GsChannelListActivity.this.ChannelListView.setAdapter(GsChannelListActivity.this.channelListAdapter);
+                  GsChannelListActivity.this.adjustSelectionOfChannelListView(true);
+                  break label429;
+                  Object localObject = (DataConvertChannelModel)localIterator.next();
+                  if ((((DataConvertChannelModel)localObject).getmWillBePlayed() != 1) || (((DataConvertChannelModel)localObject).getLockMark() != 1)) {
+                    break label457;
+                  }
+                  if (!GsChannelListActivity.this.isInForeground) {
+                    break label466;
+                  }
+                  GsChannelListActivity.this.passwordType = 2;
+                  GsChannelListActivity.this.inputPermissionPassword();
+                  i = 1;
+                  break label466;
+                  localObject = (DataConvertChannelModel)localIterator.next();
+                  if ((((DataConvertChannelModel)localObject).getmWillBePlayed() != 1) || (((DataConvertChannelModel)localObject).getLockMark() != 1)) {
+                    break label486;
+                  }
+                  if (GsChannelListActivity.this.isInForeground)
+                  {
+                    GsChannelListActivity.this.passwordType = 2;
+                    GsChannelListActivity.this.inputPermissionPassword();
+                  }
+                }
+              } while (GMScreenGlobalInfo.getCurStbInfo().getmSatEnable() != 1);
+              GsChannelListActivity.this.msgProc.postEmptyMessage(4115);
+              return;
+            } while (paramAnonymousMessage.size() != 0);
+            Toast.makeText(GsChannelListActivity.this, 2131427648, 0).show();
+          } while (GsChannelListActivity.this.mGetChannelListWhenLogin);
+          GsChannelListActivity.this.mCurrentChannelList.removeAll(GsChannelListActivity.this.mCurrentChannelList);
+          GsChannelListActivity.this.channelListAdapter.notifyDataSetChanged();
+          return;
+        }
+        GsChannelListActivity.this.requestProgramListFromTo(GsChannelListActivity.this.mChannelData.getTotalProgramNum(), GsChannelListActivity.this.mChannelData.getTotalProgramNum() + GMScreenGlobalInfo.getMaxProgramNumPerRequest() - 1);
+      }
+    });

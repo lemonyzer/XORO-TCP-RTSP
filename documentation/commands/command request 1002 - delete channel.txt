@@ -1,0 +1,11 @@
+
+
+
+
+
+
+GsChannelListActivity
+
+	localObject = GsChannelListActivity.this.parser.serialize((List)localObject, 1002).getBytes("UTF-8");
+        GsChannelListActivity.this.tcpSocket.setSoTimeout(3000);
+        GsSendSocket.sendSocketToStb((byte[])localObject, GsChannelListActivity.this.tcpSocket, 0, localObject.length, 1002);

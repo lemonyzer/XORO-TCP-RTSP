@@ -1,0 +1,150 @@
+
+parsing
+
+    public static final int DATACONVERTSORTMODEL = 13;
+    public static final int DATACONVERTCHANNELTYPPEMODEL = 12;
+    public static final int DATACONVERTCHANNELMODEL = 0;
+    public static final int DATACONVERTTIMEMODEL_1 = 7;
+    public static final int DATACONVERTTIMEMODEL_2 = 9 ;
+    public static final int DATACONVERTTIMEMODEL_3 = 1;
+    public static final int DATACONVERTTIMEMODEL_4 = 4;
+    public static final int DATACONVERTCONTROLMODEL = 2;
+    public static final int DATACONVERTUPDATEMODEL = 3;
+    public static final int GSEPGEVENT = 6;
+    public static final int DATACONVERTCHANNELMODEL_2 = 8;
+    public static final int DATACONVERTFAVORMODEL = 10;
+    public static final int DATACONVERTCONTROLMODEL_2 = 11;
+    public static final int DATACONVERTSTBINFOMODEL = 14;
+    public static final int STRING_DATACONVERTONEDATAMODEL = 15;
+    public static final int GMSCREENGLOBALINFO_AND_CURRENT_CHANNEL_TV_RADIO_TYPE = 17;
+    public static final int MAP = 16;
+    public static final int DATACONVERTSATMODEL = 18;
+    public static final int DATACONVERTTPMODEL = 19;
+    public static final int DATACONVERTPVRINFOMODEL = 20;
+    public static final int GSCHATSETTINGS = 21;
+    public static final int GSCHATSETTINGS_2 = 25;
+    public static final int DATACONVERTCHATMSGMODEL = 23;
+    public static final int GSCHATROOMINFO_AND_GSCHATUSER = 22;
+    public static final int GSCHATUSER = 24;
+    public static final int DATACONVERTGCHATCHANNELINFOMODEL = 26;
+    public static final int DATACONVERTUSERNAMEMODEL = 27;
+
+serialize
+
+/**
+     * serialize cmd's with element == DataConvertChannelModel.class
+     */
+    public static final int CHANNEL_DATA_REQUEST = 0;
+    public static final int CHANGE_CHANNEL_REQUEST = 1000;
+    public static final int START_STREAM_REQUEST = 1009;
+    public static final int RENAME_CHANNEL_REQUEST = 1001;
+    public static final int DELETE_CHANNEL_REQUEST = 1002;
+    public static final int ADD_TO_FAVO_CHANNEL_REQUEST = 1004;
+    public static final int MOVE_CHANNEL_REQUEST = 1005;
+    public static final int EPG_REQUEST = 5;
+    public static final int UNKNOWN = 1100;
+    public static final int UNKNOWN_2 = 104;
+
+    /**
+     * serialize cmd's with element == DataConvertFavChannelModel.class
+     */
+    public static final int UNKNOWN_FAV = 1011;
+
+    /**
+     * serialize cmd's with element == DataConvertEditChannelLockModel.class
+     */
+    // 1003
+
+    /**
+     * serialize cmd's with element == DataConvertTimeModel.class
+     */
+    // 1020
+    // 1021
+    // 1022
+    // 1023
+
+    /**
+     * serialize cmd's with element == DataConvertControlModel.class
+     */
+    // 1050
+    // 1051
+    // 1052
+
+    /**
+     * serialize cmd's with element == DataConvertUpdateModel.class
+     */
+    // 1010
+
+    /**
+     * serialize cmd's with element == DataConvertDebugModel.class
+     */
+    // 1054
+
+    /**
+     * serialize cmd's with element == DataConvertRcuModel.class
+     */
+    // 1040
+
+    /**
+     * serialize cmd's with element == DataConvertFavorModel.class
+     */
+    // 1055
+
+    /**
+     * serialize cmd's with element == DataConvertChannelTypeModel.class
+     */
+    // 1007
+
+
+    /**
+     * serialize cmd's with element == DataConvertInputMethodModel.class
+     */
+    // 1059
+
+
+    /**
+     * serialize cmd's with element == DataConvertSortModel.class
+     */
+    // 1006
+
+
+    /**
+     * serialize cmd's with element == DataConvertOneDataModel.class
+     */
+    // -
+
+
+    /**
+     * serialize cmd's with element == DataConvertSatModel.class
+     */
+    // 1060
+
+
+    /**
+     * serialize cmd's with element == instanceof Map
+     */
+    // -
+
+
+    /**
+     * serialize cmd's with element == instanceof DataConvertChatMsgModel
+     */
+    // 1102
+
+
+    /**
+     * serialize cmd's with element == instanceof GsChatSetting
+     */
+    // 1104
+
+
+    /**
+     * serialize cmd's with element == instanceof GsChatUser
+     */
+    // 1103
+
+
+    /**
+     * serialize cmd's with element == instanceof DataConvertUsernameModel
+     */
+    // 1105

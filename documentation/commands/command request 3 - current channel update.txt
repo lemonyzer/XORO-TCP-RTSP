@@ -1,0 +1,13 @@
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+
+
+
+????
+
+box wechselt kanal .... handy führt command request 3 aus .... woher weiß handy das kanal gewechselt wurde?
+
+
+
+

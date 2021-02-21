@@ -1,0 +1,24 @@
+
+Das Erste HD
+
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1009"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId></parm></Command>
+[16 bytes missing in capture file]
+[16 bytes missing in capture file]
+Start0000082End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1012" />
+
+
+
+RTL Television
+
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1009"><parm><TvState>0</TvState><ProgramId>00030031912003</ProgramId></parm></Command>
+[190 bytes missing in capture file]
+Start0000082End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1012" />
+
+
+GsChannelListActivity
+
+
+      ((ArrayList)localObject).add((DataConvertChannelModel)this.channelListAdapter.getItem(paramInt));
+      localObject = this.parser.serialize((List)localObject, 1009).getBytes("UTF-8");
+      this.tcpSocket.setSoTimeout(3000);
+      GsSendSocket.sendSocketToStb((byte[])localObject, this.tcpSocket, 0, localObject.length, 1009);

@@ -1,0 +1,4 @@
+
+GsChannelListActivity
+                  GsChannelListActivity.this.dataBuff = GsChannelListActivity.this.parser.serialize(paramAnonymous2AdapterView, 1006).getBytes("UTF-8");
+                  GsSendSocket.sendSocketToStb(GsChannelListActivity.this.dataBuff, GsChannelListActivity.this.tcpSocket, 0, GsChannelListActivity.this.dataBuff.length, 1006);

@@ -1,0 +1,6 @@
+
+
+GsChannelListActivity
+              paramAnonymousCharSequence = GsChannelListActivity.this.parser.serialize(paramAnonymousCharSequence, paramAnonymousInt1).getBytes("UTF-8");
+              GsChannelListActivity.this.tcpSocket.setSoTimeout(3000);
+              GsSendSocket.sendSocketToStb(paramAnonymousCharSequence, GsChannelListActivity.this.tcpSocket, 0, paramAnonymousCharSequence.length, paramAnonymousInt1);

@@ -1,0 +1,26 @@
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>00</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>1</FromIndex><ToIndex>01</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>2</FromIndex><ToIndex>02</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>3</FromIndex><ToIndex>03</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>4</FromIndex><ToIndex>04</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>04</ToIndex></parm></Command>
+Start0000229End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1005"><parm><TvState>0</TvState><MoveToPosition>00030031912003</MoveToPosition><ProgramId>00030027411110</ProgramId></parm><TotalNum>1</TotalNum></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>00</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>1</FromIndex><ToIndex>01</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>2</FromIndex><ToIndex>02</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>3</FromIndex><ToIndex>03</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>4</FromIndex><ToIndex>04</ToIndex></parm></Command>
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>04</ToIndex></parm></Command>
+
+
+
+read single channel 0 bis 4 (5 Channels)
+
+read channel-collection 0 bis 4 (5 Channels) 
+
+switch 1 und 2 (ZDF und RTL)
+
+
+read single channel 0 bis 4 (5 Channels)
+
+read channel-collection 0 bis 4 (5 Channels) 

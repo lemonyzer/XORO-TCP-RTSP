@@ -1,0 +1,10 @@
+
+
+
+GsMainTabHostActivity
+
+            if (paramAnonymousString.equals(GsMainTabHostActivity.this.tabSpecTag[1]))
+            {
+              GsMainTabHostActivity.this.currentTab = 1;
+              GsSendSocket.sendOnlyCommandSocketToStb(GsMainTabHostActivity.this.tcpSocket, 19);
+            }

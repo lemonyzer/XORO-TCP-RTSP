@@ -1,0 +1,10 @@
+
+Keepalive
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+184 18.282
+231 26.286
+275 34.480
+308 42.660
+368 50.840

@@ -1,0 +1,8 @@
+
+Lauter:
+
+	Start0000125End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1040"><parm><KeyValue>3</KeyValue></parm></Command>
+
+Leiser:
+
+	Start0000125End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1040"><parm><KeyValue>4</KeyValue></parm></Command>

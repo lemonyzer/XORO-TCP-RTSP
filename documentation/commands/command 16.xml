@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <parm>
+    <cur_channel_list_type>0</cur_channel_list_type>
+    <max_password_num>4</max_password_num>
+    <cur_channel_type>0</cur_channel_type>
+    <is_support_pvr2ip_server>0</is_support_pvr2ip_server>
+    <is_sds_open>0</is_sds_open>
+  </parm>
+</Command>

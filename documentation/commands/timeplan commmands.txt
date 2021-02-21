@@ -1,0 +1,61 @@
+Start0000156End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="998"><data>GT-I9100</data><uuid>359778043456670-98:0C:82:A4:AC:4C</uuid></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="23" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="16" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="20" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="22" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="24" />
+Start0000145End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>0</FromIndex><ToIndex>99</ToIndex></parm></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="12" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="20" />
+--
+Start0000148End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>100</FromIndex><ToIndex>199</ToIndex></parm></Command>
+--
+Start0000148End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>200</FromIndex><ToIndex>299</ToIndex></parm></Command>
+--
+Start0000148End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>300</FromIndex><ToIndex>399</ToIndex></parm></Command>
+--
+Start0000148End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>400</FromIndex><ToIndex>499</ToIndex></parm></Command>
+--
+Start0000148End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="0"><parm><FromIndex>500</FromIndex><ToIndex>599</ToIndex></parm></Command>
+--
+Start0000186End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1054"><EnableDebug>1</EnableDebug><RequestDataFrom>0</RequestDataFrom><RequestDataTo>0</RequestDataTo></Command>
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="25" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="25" />
+--
+Start0000186End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1054"><EnableDebug>0</EnableDebug><RequestDataFrom>0</RequestDataFrom><RequestDataTo>0</RequestDataTo></Command>
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="20" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000137End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="5"><parm><ProgramId>00030033028325</ProgramId></parm></Command>
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="20" />
+--
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1009"><parm><TvState>0</TvState><ProgramId>00030033028325</ProgramId></parm></Command>
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000082End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1012" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="20" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+--
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />

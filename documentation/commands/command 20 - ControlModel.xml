@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <parm>
+    <PasswordLock>0</PasswordLock>
+    <InstallationLock>1</InstallationLock>
+    <EditChannelLock>1</EditChannelLock>
+    <SettingsLock>1</SettingsLock>
+    <AgeRating>0</AgeRating>
+    <PowerMode>1</PowerMode>
+  </parm>
+</Command>

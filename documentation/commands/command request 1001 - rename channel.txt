@@ -1,0 +1,444 @@
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD</ProgramName></parm></Command>
+
+
+GsChannelListActivity
+
+              paramAnonymous2View = GsChannelListActivity.this.parser.serialize(localArrayList, 1001).getBytes("UTF-8");
+              GsChannelListActivity.this.tcpSocket.setSoTimeout(3000);
+              GsSendSocket.sendSocketToStb(paramAnonymous2View, GsChannelListActivity.this.tcpSocket, 0, paramAnonymous2View.length, 1001);
+
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD0</ProgramName></parm></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD1</ProgramName></parm></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD2</ProgramName></parm></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1000"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId></parm></Command>
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1000"><parm><TvState>0</TvState><ProgramId>00030027411110</ProgramId></parm></Command>
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1000"><parm><TvState>0</TvState><ProgramId>00030031912003</ProgramId></parm></Command>
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1000"><parm><TvState>0</TvState><ProgramId>00030033617500</ProgramId></parm></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1000"><parm><TvState>0</TvState><ProgramId>00030033617501</ProgramId></parm></Command>
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000079End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="3" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027411110</ProgramId><ProgramName>ZDF HD0</ProgramName></parm></Command>
+
+
+#### RADIO
+
+## rename
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>1</TvState><ProgramId>00030030728012</ProgramId><ProgramName>DKULTUR</ProgramName></parm></Command>
+##
+
+## stream
+Start0000160End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1009"><parm><TvState>1</TvState><ProgramId>00030030728012</ProgramId></parm></Command>
+Start0000082End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1012" />
+##
+
+####
+
+
+
+Search and Replace
+
+Start
+\r\nStart
+
+q..P....q...M.K........*
+_
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+_
+
+^\s+$\n
+_
+
+/>.*\r\n
+/>\r\n
+
+/Command>.*\r\n
+/Command>\r\n
+
+/Command>.*
+/Command>
+
+
+
+
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000193End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027411110</ProgramId><ProgramName>ZDF HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912003</ProgramId><ProgramName>RTL Television</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000192End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617500</ProgramId><ProgramName>SAT.1</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617501</ProgramId><ProgramName>ProSieben</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110304</ProgramId><ProgramName>SWR RP HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310355</ProgramId><ProgramName>hr-fernsehen HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710325</ProgramId><ProgramName>BR S..d HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912020</ProgramId><ProgramName>RTL2</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912060</ProgramId><ProgramName>VOX</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617502</ProgramId><ProgramName>kabel eins</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027311160</ProgramId><ProgramName>KiKA HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310352</ProgramId><ProgramName>MDR Sachsen HD</ProgramName></parm></Command>
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028325</ProgramId><ProgramName>WDR HD K..ln</ProgramName></parm></Command>
+
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710327</ProgramId><ProgramName>NDR FS NDS HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110302</ProgramId><ProgramName>arte HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027311150</ProgramId><ProgramName>3sat HD</ProgramName></parm></Command>
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912040</ProgramId><ProgramName>SUPER RTL</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617503</ProgramId><ProgramName>N24</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030029004422</ProgramId><ProgramName>CNN Int.</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710331</ProgramId><ProgramName>PHOENIX HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+
+
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110303</ProgramId><ProgramName>SWR BW HD</ProgramName></parm></Command>
+
+
+Start0000192End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617500</ProgramId><ProgramName>SAT.1</ProgramName></parm></Command>
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617501</ProgramId><ProgramName>ProSieben</ProgramName></parm></Command>
+
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617502</ProgramId><ProgramName>kabel eins</ProgramName></parm></Command>
+
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617503</ProgramId><ProgramName>N24</ProgramName></parm></Command>
+
+
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD</ProgramName></parm></Command>
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110304</ProgramId><ProgramName>SWR RP HD</ProgramName></parm></Command>
+
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110302</ProgramId><ProgramName>arte HD</ProgramName></parm></Command>
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110303</ProgramId><ProgramName>SWR BW HD</ProgramName></parm></Command>
+
+
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710325</ProgramId><ProgramName>BR S..d HD</ProgramName></parm></Command>
+
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710327</ProgramId><ProgramName>NDR FS NDS HD</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710331</ProgramId><ProgramName>PHOENIX HD</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710326</ProgramId><ProgramName>BR Nord HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710328</ProgramId><ProgramName>NDR FS MV HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710329</ProgramId><ProgramName>NDR FS HH HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710330</ProgramId><ProgramName>NDR FS SH HD</ProgramName></parm></Command>
+
+
+
+
+
+
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328721</ProgramId><ProgramName>tagesschau24</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328722</ProgramId><ProgramName>Einsfestival</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328723</ProgramId><ProgramName>EinsPlus</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328725</ProgramId><ProgramName>PHOENIX</ProgramName></parm></Command>
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000205End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310350</ProgramId><ProgramName>rbb Brandenburg HD</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128106</ProgramId><ProgramName>Das Erste</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000206End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128107</ProgramId><ProgramName>Bayerisches FS S..d</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128111</ProgramId><ProgramName>WDR K..ln</ProgramName></parm></Command>
+
+
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128113</ProgramId><ProgramName>SWR Fernsehen BW</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728006</ProgramId><ProgramName>ZDF</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728007</ProgramId><ProgramName>3sat</ProgramName></parm></Command>
+
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="26" />
+Start0000080End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328721</ProgramId><ProgramName>tagesschau24</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328722</ProgramId><ProgramName>Einsfestival</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328723</ProgramId><ProgramName>EinsPlus</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328725</ProgramId><ProgramName>PHOENIX</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+Start0000205End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310350</ProgramId><ProgramName>rbb Brandenburg HD</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128106</ProgramId><ProgramName>Das Erste</ProgramName></parm></Command>
+Start0000206End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128107</ProgramId><ProgramName>Bayerisches FS S..d</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128111</ProgramId><ProgramName>WDR K..ln</ProgramName></parm></Command>
+
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128113</ProgramId><ProgramName>SWR Fernsehen BW</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728006</ProgramId><ProgramName>ZDF</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728007</ProgramId><ProgramName>3sat</ProgramName></parm></Command>
+
+
+
+
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328721</ProgramId><ProgramName>tagesschau24</ProgramName></parm></Command>
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328722</ProgramId><ProgramName>Einsfestival</ProgramName></parm></Command>
+
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328723</ProgramId><ProgramName>EinsPlus</ProgramName></parm></Command>
+
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328725</ProgramId><ProgramName>PHOENIX</ProgramName></parm></Command>
+
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+
+Start0000205End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310350</ProgramId><ProgramName>rbb Brandenburg HD</ProgramName></parm></Command>
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128106</ProgramId><ProgramName>Das Erste</ProgramName></parm></Command>
+
+Start0000206End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128107</ProgramId><ProgramName>Bayerisches FS S..d</ProgramName></parm></Command>
+
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128111</ProgramId><ProgramName>WDR K..ln</ProgramName></parm></Command>
+
+
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128113</ProgramId><ProgramName>SWR Fernsehen BW</ProgramName></parm></Command>
+
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728006</ProgramId><ProgramName>ZDF</ProgramName></parm></Command>
+
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728007</ProgramId><ProgramName>3sat</ProgramName></parm></Command>
+
+
+
+
+
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110301</ProgramId><ProgramName>Das Erste HD</ProgramName></parm></Command>
+Start0000193End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027411110</ProgramId><ProgramName>ZDF HD</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912003</ProgramId><ProgramName>RTL Television</ProgramName></parm></Command>
+Start0000192End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617500</ProgramId><ProgramName>SAT.1</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617501</ProgramId><ProgramName>ProSieben</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110304</ProgramId><ProgramName>SWR RP HD</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310355</ProgramId><ProgramName>hr-fernsehen HD</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710325</ProgramId><ProgramName>BR S..d HD</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912020</ProgramId><ProgramName>RTL2</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912060</ProgramId><ProgramName>VOX</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617502</ProgramId><ProgramName>kabel eins</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027311160</ProgramId><ProgramName>KiKA HD</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310352</ProgramId><ProgramName>MDR Sachsen HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028325</ProgramId><ProgramName>WDR HD K..ln</ProgramName></parm></Command>
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710327</ProgramId><ProgramName>NDR FS NDS HD</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110302</ProgramId><ProgramName>arte HD</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027311150</ProgramId><ProgramName>3sat HD</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912040</ProgramId><ProgramName>SUPER RTL</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033617503</ProgramId><ProgramName>N24</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030029004422</ProgramId><ProgramName>CNN Int.</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710331</ProgramId><ProgramName>PHOENIX HD</ProgramName></parm></Command>
+Start0000193End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300051</ProgramId><ProgramName>TELE 5</ProgramName></parm></Command>
+Start0000193End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300900</ProgramId><ProgramName>SPORT1</ProgramName></parm></Command>
+Start0000208End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030032131200</ProgramId><ProgramName>Eurosport Deutschland</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912090</ProgramId><ProgramName>n-tv</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033201793</ProgramId><ProgramName>Disney Channel</ProgramName></parm></Command>
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034212614</ProgramId><ProgramName>rhein main tv</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200776</ProgramId><ProgramName>SIXX</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034212601</ProgramId><ProgramName>K-TV</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026713224</ProgramId><ProgramName>Bibel TV HD</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300063</ProgramId><ProgramName>DMAX</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200772</ProgramId><ProgramName>TLC</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024521100</ProgramId><ProgramName>ANIXE HD</ProgramName></parm></Command>
+Start0000210End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027004914</ProgramId><ProgramName>ServusTV HD Deutschland</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030828680</ProgramId><ProgramName>NICK/COMEDY</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030828676</ProgramId><ProgramName>VIVA Germany</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024521112</ProgramId><ProgramName>iM1 Hits</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700065</ProgramId><ProgramName>DELUXE MUSIC</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200074</ProgramId><ProgramName>joiz</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030032131220</ProgramId><ProgramName>EuroNews</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026010375</ProgramId><ProgramName>tagesschau24 HD</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027311170</ProgramId><ProgramName>ZDFinfo HD</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026010376</ProgramId><ProgramName>Einsfestival HD</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026010377</ProgramId><ProgramName>EinsPlus HD</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027411130</ProgramId><ProgramName>zdf_neo HD</ProgramName></parm></Command>
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027411140</ProgramId><ProgramName>zdf.kultur HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128108</ProgramId><ProgramName>hr-fernsehen</ProgramName></parm></Command>
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310351</ProgramId><ProgramName>rbb Berlin HD</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028110303</ProgramId><ProgramName>SWR BW HD</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028385</ProgramId><ProgramName>Radio Bremen TV</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030032328487</ProgramId><ProgramName>ARD-alpha</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026713227</ProgramId><ProgramName>DAF Neu</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033805411</ProgramId><ProgramName>TecTime TV</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034413103</ProgramId><ProgramName>Welt der Wunder</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304600</ProgramId><ProgramName>a.tv</ProgramName></parm></Command>
+Start0000204End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304601</ProgramId><ProgramName>Franken Fernsehen</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304602</ProgramId><ProgramName>intv</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304603</ProgramId><ProgramName>Ulm-Allg..u</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304604</ProgramId><ProgramName>m..nchen.tv</ProgramName></parm></Command>
+Start0000210End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304605</ProgramId><ProgramName>rfo Regional Oberbayern</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304606</ProgramId><ProgramName>Mainfranken</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304607</ProgramId><ProgramName>TV Oberfranken</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304608</ProgramId><ProgramName>TVA-OTV</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028304609</ProgramId><ProgramName>Niederbayern</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025610105</ProgramId><ProgramName>m..nchen.tv HD</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700070</ProgramId><ProgramName>BB-MV Lokal-TV</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700768</ProgramId><ProgramName>RNF</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300047</ProgramId><ProgramName>REGIO TV</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034413113</ProgramId><ProgramName>L-TV/TVM</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034413141</ProgramId><ProgramName>BTV</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034413104</ProgramId><ProgramName>LT1-OOE</ProgramName></parm></Command>
+Start0000207End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200062</ProgramId><ProgramName>EWTN katholisches TV</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027704712</ProgramId><ProgramName>SOPHIA TV</ProgramName></parm></Command>
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027704713</ProgramId><ProgramName>Die Neue Zeit TV</ProgramName></parm></Command>
+Start0000207End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700071</ProgramId><ProgramName>HOPE Channel deutsch</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700774</ProgramId><ProgramName>GOD Channel</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300661</ProgramId><ProgramName>AstroTV</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024521104</ProgramId><ProgramName>HSE24 HD</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024705501</ProgramId><ProgramName>HSE24 EXTRA HD</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300077</ProgramId><ProgramName>HSE24 TREND</ProgramName></parm></Command>
+Start0000193End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024521103</ProgramId><ProgramName>QVC HD</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024705504</ProgramId><ProgramName>QVC PLUS HD</ProgramName></parm></Command>
+Start0000207End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200064</ProgramId><ProgramName>QVC BEAUTY&amp;STYLE</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025610102</ProgramId><ProgramName>mediaspar HD</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024705502</ProgramId><ProgramName>1-2-3.tv HD</ProgramName></parm></Command>
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033805400</ProgramId><ProgramName>sonnenklar.TV HD</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033805403</ProgramId><ProgramName>Juwelo HD</ProgramName></parm></Command>
+Start0000211End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030027704703</ProgramId><ProgramName>mediasparTV Homeshopping</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700054</ProgramId><ProgramName>Beauty TV</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700514</ProgramId><ProgramName>JML Shop</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700769</ProgramId><ProgramName>Channel21</ProgramName></parm></Command>
+Start0000213End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031700775</ProgramId><ProgramName>MediaShop- Meine Einkaufsw</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200048</ProgramId><ProgramName>ManouLenz.tv</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033200659</ProgramId><ProgramName>collection</ProgramName></parm></Command>
+Start0000211End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300046</ProgramId><ProgramName>mediasparTV Homeshopping</ProgramName></parm></Command>
+Start0000207End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300898</ProgramId><ProgramName>MediaShop- Neuheiten</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300899</ProgramId><ProgramName>meinTVshop</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034212633</ProgramId><ProgramName>Shop24Direct</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026713222</ProgramId><ProgramName>Volksmusik</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034613018</ProgramId><ProgramName>Folx TV</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026713229</ProgramId><ProgramName>MELODIE TV</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033300076</ProgramId><ProgramName>EBRU TV</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030026713225</ProgramId><ProgramName>Schau TV</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030034613019</ProgramId><ProgramName>RiC</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710326</ProgramId><ProgramName>BR Nord HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710328</ProgramId><ProgramName>NDR FS MV HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710329</ProgramId><ProgramName>NDR FS HH HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030028710330</ProgramId><ProgramName>NDR FS SH HD</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328721</ProgramId><ProgramName>tagesschau24</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328722</ProgramId><ProgramName>Einsfestival</ProgramName></parm></Command>
+Start0000195End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328723</ProgramId><ProgramName>EinsPlus</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328724</ProgramId><ProgramName>arte</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030024328725</ProgramId><ProgramName>PHOENIX</ProgramName></parm></Command>
+Start0000205End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310350</ProgramId><ProgramName>rbb Brandenburg HD</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310353</ProgramId><ProgramName>MDR S-Anhalt HD</ProgramName></parm></Command>
+Start0000204End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030025310354</ProgramId><ProgramName>MDR Th..ringen HD</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128106</ProgramId><ProgramName>Das Erste</ProgramName></parm></Command>
+Start0000206End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128107</ProgramId><ProgramName>Bayerisches FS S..d</ProgramName></parm></Command>
+Start0000206End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128110</ProgramId><ProgramName>Bayerisches FS Nord</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128111</ProgramId><ProgramName>WDR K..ln</ProgramName></parm></Command>
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030128113</ProgramId><ProgramName>SWR Fernsehen BW</ProgramName></parm></Command>
+Start0000190End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728006</ProgramId><ProgramName>ZDF</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728007</ProgramId><ProgramName>3sat</ProgramName></parm></Command>
+Start0000191End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728008</ProgramId><ProgramName>KiKA</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728011</ProgramId><ProgramName>ZDFinfo</ProgramName></parm></Command>
+Start0000194End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728014</ProgramId><ProgramName>zdf_neo</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030030728016</ProgramId><ProgramName>zdf.kultur</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031220008</ProgramId><ProgramName>SAT.1 HH/SH</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031220009</ProgramId><ProgramName>SAT.1 NS/Bremen</ProgramName></parm></Command>
+Start0000205End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031220010</ProgramId><ProgramName>SAT.1 RhlPf/Hessen</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528205</ProgramId><ProgramName>rbb Brandenburg</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528206</ProgramId><ProgramName>rbb Berlin</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528224</ProgramId><ProgramName>NDR FS MV</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528225</ProgramId><ProgramName>NDR FS HH</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528226</ProgramId><ProgramName>NDR FS NDS</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528227</ProgramId><ProgramName>NDR FS SH</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528228</ProgramId><ProgramName>MDR Sachsen</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528229</ProgramId><ProgramName>MDR S-Anhalt</ProgramName></parm></Command>
+Start0000201End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528230</ProgramId><ProgramName>MDR Th..ringen</ProgramName></parm></Command>
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031528231</ProgramId><ProgramName>SWR Fernsehen RP</ProgramName></parm></Command>
+Start0000203End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912004</ProgramId><ProgramName>RTL Regional NRW</ProgramName></parm></Command>
+Start0000197End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912005</ProgramId><ProgramName>RTL HB NDS</ProgramName></parm></Command>
+Start0000193End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030031912006</ProgramId><ProgramName>RTL FS</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030032128800</ProgramId><ProgramName>RTL Austria</ProgramName></parm></Command>
+Start0000198End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030032131210</ProgramId><ProgramName>HSE24 EXTRA</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030032328486</ProgramId><ProgramName>SR Fernsehen</ProgramName></parm></Command>
+Start0000200End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028306</ProgramId><ProgramName>WDR Bielefeld</ProgramName></parm></Command>
+Start0000199End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028307</ProgramId><ProgramName>WDR Dortmund</ProgramName></parm></Command>
+Start0000202End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028308</ProgramId><ProgramName>WDR D..sseldorf</ProgramName></parm></Command>
+Start0000196End<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Command request="1001"><parm><TvState>0</TvState><ProgramId>00030033028309</ProgramId><ProgramName>WDR Essen</ProgramName></parm></Command>
