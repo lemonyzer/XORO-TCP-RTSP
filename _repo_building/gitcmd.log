@@ -1,0 +1,42 @@
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ.rar" --date "Wed, 13 Jul 2016 05:31:48 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - encoding debug -20160723190638.rar" --date "Sat, 23 Jul 2016 19:06:39 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - encoding debug v2 -20160723193854.rar" --date "Sat, 23 Jul 2016 19:38:55 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - UDP Discovery - 20160723224442.rar" --date "Sat, 23 Jul 2016 22:44:42 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - UDP Discovery, ReceiveSocketThread - 20160724040505.rar" --date "Sun, 24 Jul 2016 04:05:05 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - UDP Discovery, ReceiveSocketThread 2 - 20160724041842.rar" --date "Sun, 24 Jul 2016 04:18:43 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - UDP Discovery, ReceiveSocketThread 3 - 20160724165408.rar" --date "Sun, 24 Jul 2016 16:54:10 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - UDP Discovery, ReceiveSocketThread 4 - 20160724231909.rar" --date "Sun, 24 Jul 2016 23:19:10 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - cmd 2001, cmd 3 UpdatePlayingChannel - 20160725044124.rar" --date "Mon, 25 Jul 2016 04:41:25 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - UpdatePlayingChannel, tx rx Msg List + type - 20160725172919.rar" --date "Mon, 25 Jul 2016 17:29:21 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - tx rx Msg List + type - 20160725175901.rar" --date "Mon, 25 Jul 2016 17:59:03 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rx Msg List + type - 20160726000115.rar" --date "Tue, 26 Jul 2016 00:01:16 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rx Msg List + type - maybe no change - 20160726015326.rar" --date "Tue, 26 Jul 2016 01:53:28 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp query string - 20160726034009.rar" --date "Tue, 26 Jul 2016 03:40:10 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp SETUP PLAY static - 20160726204256.rar" --date "Tue, 26 Jul 2016 20:42:58 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp implementation - 20160727000448.rar" --date "Wed, 27 Jul 2016 00:04:49 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp worked but not stabel - 20160727053158.rar" --date "Wed, 27 Jul 2016 05:31:58 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp debug progress - 20160727182045.rar" --date "Wed, 27 Jul 2016 18:20:46 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp worked still not stable - 20160729155847.rar" --date "Fri, 29 Jul 2016 15:58:50 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp worked still not stable - 20160729155847 - venue1120160927154138.rar" --date "Tue, 27 Sep 2016 15:41:42 +0200"
+repo.git.add(A=True)
+repo.git.commit (git commit) --allow-empty -m "XORO TCP-RTSP Java IntelliJ - rtsp worked still not stable - 20160729155847 - venue11 (discovery selectionListener)20160927235346.rar" --date "Tue, 27 Sep 2016 23:53:49 +0200"
